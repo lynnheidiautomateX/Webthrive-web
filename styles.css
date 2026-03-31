@@ -741,10 +741,10 @@ nav {
 
 /* Featured card (Ask for Help) */
 .feature-card.featured {
-  background: linear-gradient(135deg, var(--purple-deep), var(--purple-mid));
+  background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
   color: white;
   border: none;
-  box-shadow: 0 8px 32px rgba(107, 79, 160, 0.25);
+  box-shadow: 0 8px 32px rgba(168, 153, 230, 0.3);
 }
 
 .feature-card.featured h3 {
