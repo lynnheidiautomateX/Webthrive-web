@@ -3,27 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ThriveMom | Mental Wellness for ADHD Moms</title>
-  <meta name="description" content="ThriveMom: the app that helps ADHD moms go from overwhelmed to relief in under 60 seconds. Join the pre-launch waitlist.">
+  <title>ThriveMom | ADHD Mom Mental Wellness App | Relief in 60 Seconds</title>
+  <meta name="description" content="ThriveMom is the mental wellness app for ADHD moms. Go from overwhelmed to relief in under 60 seconds with guided resets, mood tracking, AI support, and pre-written help messages. Join the pre-launch waitlist.">
+  <meta name="keywords" content="ADHD mom app, mental wellness, ADHD motherhood, overwhelmed mom help, ADHD support app, mom mental health, ADHD tools for moms">
+  <meta name="theme-color" content="#6b4fa0">
   <link rel="canonical" href="https://thrivemom.app">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="ThriveMom | Mental Wellness for ADHD Moms">
-  <meta property="og:description" content="From overwhelmed to relief in under 60 seconds. The app built by an ADHD mom, for ADHD moms. Join the pre-launch waitlist.">
+  <meta property="og:title" content="ThriveMom | ADHD Mom Mental Wellness App">
+  <meta property="og:description" content="From overwhelmed to relief in 60 seconds. The mental wellness app built by an ADHD mom, for ADHD moms. Guided resets, AI support, mood tracking. Join the pre-launch waitlist.">
   <meta property="og:url" content="https://thrivemom.app">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ThriveMom">
+  <meta property="og:locale" content="en_US">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ThriveMom | Mental Wellness for ADHD Moms">
-  <meta name="twitter:description" content="From overwhelmed to relief in under 60 seconds. Built by an ADHD mom, for ADHD moms.">
+  <meta name="twitter:title" content="ThriveMom | ADHD Mom Mental Wellness App">
+  <meta name="twitter:description" content="From overwhelmed to relief in 60 seconds. Built by an ADHD mom, for ADHD moms. Join the waitlist.">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ThriveMom",
+    "applicationCategory": "HealthApplication",
+    "operatingSystem": "iOS, Android",
+    "description": "Mental wellness app for ADHD moms. Go from overwhelmed to relief in under 60 seconds with guided resets, AI chat support, mood tracking, focus timers, and pre-written help messages.",
+    "url": "https://thrivemom.app",
+    "author": {
+      "@type": "Organization",
+      "name": "ThriveMom",
+      "url": "https://thrivemom.app"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free tier available. Early access pricing for waitlist members."
+    }
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
@@ -42,7 +70,7 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="top">
+  <section class="hero" id="top" aria-label="ThriveMom ADHD wellness app pre-launch">
     <div class="hero-content">
       <div class="hero-badge">Pre-Launch: May 9, 2026</div>
       <h1>From overwhelmed to<br><span class="gradient-text">relief in 60 seconds.</span></h1>
@@ -72,8 +100,8 @@
       </div>
 
       <!-- Waitlist form -->
-      <form id="heroForm" class="hero-form" onsubmit="return handleWaitlist(event, 'hero')">
-        <input type="email" id="heroEmail" placeholder="Enter your email" autocomplete="email" required>
+      <form id="heroForm" class="hero-form" onsubmit="return handleWaitlist(event, 'hero')" aria-label="Join the ThriveMom waitlist">
+        <input type="email" id="heroEmail" placeholder="mama@overwhelmed.com" autocomplete="email" required aria-label="Email address for waitlist">
         <button type="submit" id="heroBtn">Join the Waitlist</button>
       </form>
       <div id="heroSuccess" class="form-success" style="display:none;">
@@ -92,7 +120,7 @@
     </div>
 
     <!-- App mockup placeholder -->
-    <div class="hero-mockup">
+    <div class="hero-mockup" role="img" aria-label="ThriveMom app preview showing mood selection and quick reset feature">
       <div class="phone-frame">
         <div class="phone-screen">
           <div class="mock-header">ThriveMom</div>
@@ -112,8 +140,8 @@
     </div>
   </section>
 
-  <!-- PROBLEM -->
-  <section class="problem" id="problem">
+  <!-- PROBLEM: ADHD Mom Struggles -->
+  <section class="problem" id="problem" aria-label="Common ADHD mom struggles">
     <div class="container">
       <h2 class="section-title">Sound <span class="highlight">familiar?</span></h2>
       <div class="problem-grid">
@@ -138,8 +166,8 @@
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section class="features" id="features">
+  <!-- FEATURES: ADHD Wellness Tools -->
+  <section class="features" id="features" aria-label="ThriveMom app features for ADHD moms">
     <div class="container">
       <h2 class="section-title">Your new <span class="highlight">support system</span></h2>
       <p class="section-desc">Every feature is designed for the ADHD mom brain. Simple. Fast. No overwhelm.</p>
@@ -170,16 +198,16 @@
           <p>Streaks, confetti, and little wins. Because your ADHD brain deserves dopamine hits for showing up.</p>
         </div>
         <div class="feature-card">
-          <div class="feature-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;">&#128218;</div>
-          <h3>Reflection Journal</h3>
-          <p>Guided prompts so you don't stare at a blank page. Process your day in 2 minutes flat.</p>
+          <div class="feature-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;">&#128172;</div>
+          <h3>Ask for Help</h3>
+          <p>Pre-written messages to send your partner, family, or friend when you can't find the words. One tap to ask for the support you need.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- HOW IT WORKS -->
-  <section class="how-it-works" id="how-it-works">
+  <section class="how-it-works" id="how-it-works" aria-label="How ThriveMom works in 3 steps">
     <div class="container">
       <h2 class="section-title">Stupid <span class="highlight">simple</span></h2>
       <p class="section-desc">Three taps. That's it. No tutorials, no setup wizard, no 47-step onboarding.</p>
@@ -216,7 +244,7 @@
             <div class="proof-avatar">H</div>
             <div>
               <strong>Heidi</strong>
-              <span>Founder, ADHD Mom of 2</span>
+              <span>Founder, ADHD Mom of 3</span>
             </div>
           </div>
         </div>
@@ -245,8 +273,8 @@
         <div class="waitlist-badge">Early Access</div>
         <h2>Be the first to try ThriveMom</h2>
         <p>First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.</p>
-        <form id="waitlistForm" class="waitlist-form" onsubmit="return handleWaitlist(event, 'waitlist')">
-          <input type="email" id="waitlistEmail" placeholder="Your best email" autocomplete="email" required>
+        <form id="waitlistForm" class="waitlist-form" onsubmit="return handleWaitlist(event, 'waitlist')" aria-label="Save your spot on the ThriveMom waitlist">
+          <input type="email" id="waitlistEmail" placeholder="Your best email" autocomplete="email" required aria-label="Email address for early access">
           <button type="submit" id="waitlistBtn">Save My Spot</button>
         </form>
         <div id="waitlistSuccess" class="form-success" style="display:none;">
@@ -267,7 +295,7 @@
   </section>
 
   <!-- FAQ -->
-  <section class="faq" id="faq">
+  <section class="faq" id="faq" aria-label="Frequently asked questions about ThriveMom">
     <div class="container">
       <h2 class="section-title">Quick <span class="highlight">answers</span></h2>
       <div class="faq-list">
@@ -328,6 +356,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=1"></script>
+  <script src="script.js?v=2"></script>
 </body>
 </html>
