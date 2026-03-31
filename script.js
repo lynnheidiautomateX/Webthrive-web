@@ -49,12 +49,8 @@ function handleWaitlist(e, formId) {
   };
 
   if (SHEETS_WEBHOOK.indexOf('script.google.com') !== -1) {
-    fetch(SHEETS_WEBHOOK, {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    }).catch(function() {});
+    var url = SHEETS_WEBHOOK + '?email=' + encodeURIComponent(payload.email) + '&source=' + encodeURIComponent(payload.source) + '&submittedAt=' + encodeURIComponent(payload.submittedAt);
+    fetch(url, { method: 'GET', mode: 'no-cors' }).catch(function() {});
   }
 
   console.log('Waitlist signup:', payload);
