@@ -41,7 +41,7 @@ function handleWaitlist(e, formId) {
   btn.disabled = true;
 
   // Send to Google Sheets webhook
-  var SHEETS_WEBHOOK = 'PASTE_YOUR_GOOGLE_SHEETS_URL_HERE';
+  var SHEETS_WEBHOOK = 'https://script.google.com/macros/s/AKfycbxz_Nt9WLtOl8T2LBCiu38CrJhf6K8dpLEhqTAa4xtDUyuF6Uy2KNbNYCFbqXTX9Tv1/exec';
   var payload = {
     email: email,
     source: formId,
