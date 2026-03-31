@@ -569,37 +569,42 @@ nav {
 .chat-bubble:nth-child(6) { animation-delay: 1.2s; }
 
 /* Pre-written help message card */
-.help-msg {
+.help-msg-card {
   background: var(--white) !important;
   border: 1.5px solid var(--purple-light) !important;
   border-radius: 14px !important;
   padding: 0.65rem 0.75rem !important;
-  max-width: 90% !important;
+  max-width: 75% !important;
+  text-align: center;
 }
 
-.help-msg-label {
-  font-size: 0.55rem;
-  font-weight: 700;
-  color: var(--purple-mid);
-  margin-bottom: 0.3rem;
-}
-
-.help-msg-text {
-  font-size: 0.65rem;
-  color: var(--text);
-  line-height: 1.5;
-  font-style: italic;
+.help-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
   margin-bottom: 0.5rem;
 }
 
-.help-msg-btn {
+.help-card-icon {
+  font-size: 0.85rem;
+}
+
+.help-card-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--purple-mid);
+}
+
+.help-card-btn {
   display: inline-block;
   background: var(--gradient);
   color: white;
   font-size: 0.6rem;
   font-weight: 700;
-  padding: 0.3rem 0.85rem;
+  padding: 0.35rem 1rem;
   border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(107,79,160,0.2);
 }
 
 .chat-input-bar {
