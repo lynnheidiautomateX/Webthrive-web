@@ -1003,10 +1003,30 @@ nav {
 
 .waitlist-form button:hover { opacity: 0.9; transform: translateY(-1px); }
 
+.waitlist-progress {
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  max-width: 300px;
+  height: 6px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 6px;
+  margin: 0 auto 0.5rem;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: white;
+  border-radius: 6px;
+  transition: width 0.5s ease;
+}
+
 .waitlist-count {
   font-size: 0.8rem;
   color: rgba(255,255,255,0.6);
-  margin-top: 0.75rem;
 }
 
 .waitlist-cta .form-success p { color: white; }
