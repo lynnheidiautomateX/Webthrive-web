@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThriveMom | Mental Wellness for ADHD Moms</title>
+  <meta name="description" content="ThriveMom: the app that helps ADHD moms go from overwhelmed to relief in under 60 seconds. Join the pre-launch waitlist.">
+  <link rel="canonical" href="https://thrivemom.app">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ThriveMom | Mental Wellness for ADHD Moms">
+  <meta property="og:description" content="From overwhelmed to relief in under 60 seconds. The app built by an ADHD mom, for ADHD moms. Join the pre-launch waitlist.">
+  <meta property="og:url" content="https://thrivemom.app">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="ThriveMom">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ThriveMom | Mental Wellness for ADHD Moms">
+  <meta name="twitter:description" content="From overwhelmed to relief in under 60 seconds. Built by an ADHD mom, for ADHD moms.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">ThriveMom</a>
+    <div class="nav-links" id="navLinks">
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#waitlist" class="nav-cta">Join Waitlist</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="hero-content">
+      <div class="hero-badge">Pre-Launch: May 9, 2026</div>
+      <h1>From overwhelmed to<br><span class="gradient-text">relief in 60 seconds.</span></h1>
+      <p class="hero-sub">The app that actually gets your ADHD mom brain.<br>No judgment. Just support, when you need it most.</p>
+
+      <!-- Countdown -->
+      <div class="countdown" id="countdown">
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-days">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-hours">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-mins">00</span>
+          <span class="countdown-label">Min</span>
+        </div>
+        <div class="countdown-sep">:</div>
+        <div class="countdown-block">
+          <span class="countdown-num" id="cd-secs">00</span>
+          <span class="countdown-label">Sec</span>
+        </div>
+      </div>
+
+      <!-- Waitlist form -->
+      <form id="heroForm" class="hero-form" onsubmit="return handleWaitlist(event, 'hero')">
+        <input type="email" id="heroEmail" placeholder="Enter your email" autocomplete="email" required>
+        <button type="submit" id="heroBtn">Join the Waitlist</button>
+      </form>
+      <div id="heroSuccess" class="form-success" style="display:none;">
+        <span class="success-icon">&#10003;</span>
+        <p>You're on the list! Check your inbox.</p>
+        <div class="share-prompt">
+          <p>Share with a friend, help another mom:</p>
+          <div class="share-btns">
+            <button onclick="shareOn('twitter')" class="share-btn twitter" aria-label="Share on X">&#120143;</button>
+            <button onclick="shareOn('facebook')" class="share-btn facebook" aria-label="Share on Facebook">f</button>
+            <button onclick="shareOn('copy')" class="share-btn copy" aria-label="Copy link">&#128279;</button>
+          </div>
+        </div>
+      </div>
+      <p class="hero-proof">&#128156; <span id="waitlistCount">127</span> moms already on the waitlist</p>
+    </div>
+
+    <!-- App mockup placeholder -->
+    <div class="hero-mockup">
+      <div class="phone-frame">
+        <div class="phone-screen">
+          <div class="mock-header">ThriveMom</div>
+          <div class="mock-greeting">Hi mama, how are you feeling?</div>
+          <div class="mock-moods">
+            <span class="mock-mood">&#128553; Overwhelmed</span>
+            <span class="mock-mood active">&#128524; Need a Reset</span>
+            <span class="mock-mood">&#128522; Doing OK</span>
+          </div>
+          <div class="mock-card">
+            <div class="mock-card-title">Quick Reset</div>
+            <div class="mock-card-desc">60-second breathing exercise</div>
+            <div class="mock-card-btn">Start</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <h2 class="section-title">Sound <span class="highlight">familiar?</span></h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-icon">&#129504;</div>
+          <p>Your brain has <strong>47 tabs open</strong> and none of them are loading.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#128556;</div>
+          <p>Everyone needs something from you. <strong>Right now.</strong></p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#128164;</div>
+          <p>You're <strong>exhausted</strong> but your mind won't stop racing at 2am.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-icon">&#128557;</div>
+          <p>You forgot why you walked into the room. <strong>Again.</strong></p>
+        </div>
+      </div>
+      <p class="problem-cta">You're not failing. Your brain just works differently.<br><strong>ThriveMom was built for brains like yours.</strong></p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2 class="section-title">Your new <span class="highlight">support system</span></h2>
+      <p class="section-desc">Every feature is designed for the ADHD mom brain. Simple. Fast. No overwhelm.</p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(107,79,160,0.12); color: #6b4fa0;">&#127800;</div>
+          <h3>Quick Reset</h3>
+          <p>60-second guided breathing and grounding exercises. Relief when you're about to lose it.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(168,153,230,0.15); color: #7c5fb8;">&#129302;</div>
+          <h3>AI Chat Support</h3>
+          <p>Talk to an AI that actually understands ADHD motherhood. No judgment, just real strategies.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(236,72,153,0.1); color: #ec4899;">&#9201;</div>
+          <h3>Focus Timer</h3>
+          <p>ADHD-friendly timer that breaks tasks into tiny, doable chunks. With celebration when you finish.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(52,211,153,0.1); color: #10b981;">&#128200;</div>
+          <h3>Mood Tracking</h3>
+          <p>Spot your patterns. See what triggers overwhelm and what brings you back. Zero effort logging.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(251,191,36,0.1); color: #d97706;">&#127775;</div>
+          <h3>Rewards System</h3>
+          <p>Streaks, confetti, and little wins. Because your ADHD brain deserves dopamine hits for showing up.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon" style="background: rgba(59,130,246,0.1); color: #3b82f6;">&#128218;</div>
+          <h3>Reflection Journal</h3>
+          <p>Guided prompts so you don't stare at a blank page. Process your day in 2 minutes flat.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2 class="section-title">Stupid <span class="highlight">simple</span></h2>
+      <p class="section-desc">Three taps. That's it. No tutorials, no setup wizard, no 47-step onboarding.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Open the app</h3>
+          <p>That's literally step one. You did it.</p>
+        </div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Tell us how you feel</h3>
+          <p>Tap a mood. One tap. Done.</p>
+        </div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Get instant support</h3>
+          <p>Personalized help in under 60 seconds.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF -->
+  <section class="social-proof" id="proof">
+    <div class="container">
+      <h2 class="section-title">Built by a mom <span class="highlight">who gets it</span></h2>
+      <div class="proof-grid">
+        <div class="proof-card founder">
+          <p class="proof-quote">"I built ThriveMom because I needed it myself. As an ADHD mom, I was tired of wellness apps that felt like another chore. This app meets you where you are, even if where you are is hiding in the bathroom for 60 seconds of peace."</p>
+          <div class="proof-author">
+            <div class="proof-avatar">H</div>
+            <div>
+              <strong>Heidi</strong>
+              <span>Founder, ADHD Mom of 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="proof-stats">
+          <div class="stat">
+            <span class="stat-num">60s</span>
+            <span class="stat-label">Average time to feel relief</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">6</span>
+            <span class="stat-label">Core tools, zero overwhelm</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Built for ADHD brains</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WAITLIST CTA -->
+  <section class="waitlist-cta" id="waitlist">
+    <div class="container">
+      <div class="waitlist-box">
+        <div class="waitlist-badge">Early Access</div>
+        <h2>Be the first to try ThriveMom</h2>
+        <p>First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.</p>
+        <form id="waitlistForm" class="waitlist-form" onsubmit="return handleWaitlist(event, 'waitlist')">
+          <input type="email" id="waitlistEmail" placeholder="Your best email" autocomplete="email" required>
+          <button type="submit" id="waitlistBtn">Save My Spot</button>
+        </form>
+        <div id="waitlistSuccess" class="form-success" style="display:none;">
+          <span class="success-icon">&#10003;</span>
+          <p>You're in! We'll email you before anyone else.</p>
+          <div class="share-prompt">
+            <p>Know another ADHD mom who needs this?</p>
+            <div class="share-btns">
+              <button onclick="shareOn('twitter')" class="share-btn twitter" aria-label="Share on X">&#120143;</button>
+              <button onclick="shareOn('facebook')" class="share-btn facebook" aria-label="Share on Facebook">f</button>
+              <button onclick="shareOn('copy')" class="share-btn copy" aria-label="Copy link">&#128279;</button>
+            </div>
+          </div>
+        </div>
+        <p class="waitlist-count">&#128156; <span id="waitlistCount2">127</span> moms already waiting</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <h2 class="section-title">Quick <span class="highlight">answers</span></h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            When does ThriveMom launch?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Is this only for moms with an ADHD diagnosis?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom is designed for you. If the "47 tabs open" feeling resonated, you're in the right place.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            Is it free?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">ThriveMom will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version. We believe every mom deserves support, regardless of budget.</div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" onclick="toggleFaq(this)">
+            What makes this different from other wellness apps?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">Most wellness apps are built for neurotypical brains. ThriveMom is specifically designed for ADHD: low friction, instant gratification, no guilt trips, no 30-day programs you'll abandon on day 3. Everything takes under 60 seconds to start.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <span class="footer-logo">ThriveMom</span>
+        <p>Mental wellness for ADHD moms.<br>Built with love by a mom who gets it.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:support@thrivemom.app">Contact</a>
+        <a href="/privacy.html">Privacy Policy</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ThriveMom. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js?v=1"></script>
+</body>
+</html>
