@@ -638,9 +638,20 @@ nav {
 
 @media (max-width: 768px) {
   .chat-phone {
-    width: 260px;
-    height: 520px;
+    width: min(260px, 85vw);
+    height: 500px;
   }
+  .chat-preview { padding: 4rem 0; }
+}
+
+@media (max-width: 380px) {
+  .chat-phone {
+    width: 240px;
+    height: 460px;
+  }
+  .countdown-block { min-width: 50px; padding: 0.5rem 0.6rem; }
+  .countdown-num { font-size: 1.2rem; }
+  .phone-frame { width: 200px; height: 380px; }
 }
 
 /* ===== PROBLEM ===== */
