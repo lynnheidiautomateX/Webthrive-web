@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    @font-face {
+      font-family: 'Lexend';
+      font-weight: 400 800;
+      src: url('fonts/lexend-latin.woff2') format('woff2');
+    }
+    body {
+      width: 1200px;
+      height: 630px;
+      font-family: 'Lexend', sans-serif;
+      background: linear-gradient(135deg, #2c1a47 0%, #6b4fa0 60%, #a899e6 100%);
+      display: flex;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Subtle background circles */
+    body::before {
+      content: '';
+      position: absolute;
+      top: -100px; right: -50px;
+      width: 400px; height: 400px;
+      background: rgba(168, 153, 230, 0.15);
+      border-radius: 50%;
+    }
+    body::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: 200px;
+      width: 300px; height: 300px;
+      background: rgba(236, 72, 153, 0.08);
+      border-radius: 50%;
+    }
+
+    .left {
+      flex: 1;
+      padding: 60px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.9);
+      padding: 6px 16px;
+      border-radius: 50px;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      background: linear-gradient(135deg, #e8e0f5, #a899e6);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+
+    .proof {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 15px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 600;
+    }
+
+    .proof-dot {
+      width: 8px; height: 8px;
+      background: #10b981;
+      border-radius: 50%;
+    }
+
+    .logo-row {
+      margin-top: auto;
+      padding-top: 20px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.5);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    /* Phone mockup */
+    .right {
+      width: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .phone {
+      width: 240px;
+      height: 480px;
+      background: #fff;
+      border-radius: 32px;
+      border: 3px solid rgba(168,153,230,0.4);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.3), 0 0 0 1px rgba(255,255,255,0.1);
+      overflow: hidden;
+      padding: 0 12px 8px;
+      display: flex;
+      flex-direction: column;
+      transform: rotate(2deg);
+    }
+
+    .phone-notch {
+      width: 80px; height: 18px;
+      background: #e8e0f5;
+      border-radius: 0 0 12px 12px;
+      margin: 0 auto;
+    }
+
+    .phone-header {
+      font-weight: 800;
+      font-size: 13px;
+      color: #6b4fa0;
+      text-align: center;
+      padding: 10px 0 8px;
+      border-bottom: 1px solid rgba(107,79,160,0.12);
+    }
+
+    .phone-greeting {
+      font-size: 13px;
+      font-weight: 700;
+      color: #2c1a47;
+      line-height: 1.3;
+      margin-top: 12px;
+    }
+
+    .phone-moods {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-top: 10px;
+    }
+
+    .mood {
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 10.5px;
+      font-weight: 500;
+      color: #5a4478;
+      background: #f5f2fc;
+      border: 1.5px solid transparent;
+    }
+
+    .mood.active {
+      background: #e8e0f5;
+      border-color: #6b4fa0;
+      color: #6b4fa0;
+      font-weight: 700;
+    }
+
+    .phone-card {
+      background: linear-gradient(135deg, #6b4fa0, #a899e6);
+      border-radius: 14px;
+      padding: 14px;
+      color: #fff;
+      margin-top: auto;
+      margin-bottom: 8px;
+    }
+
+    .phone-card-title { font-weight: 700; font-size: 12px; }
+    .phone-card-desc { font-size: 9px; opacity: 0.8; margin: 3px 0 8px; }
+
+    .phone-card-btn {
+      display: inline-block;
+      background: #fff;
+      color: #6b4fa0;
+      padding: 5px 16px;
+      border-radius: 50px;
+      font-size: 10px;
+      font-weight: 800;
+    }
+
+    .phone-home {
+      width: 80px; height: 4px;
+      background: #e8e0f5;
+      border-radius: 4px;
+      margin: 6px auto 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="left">
+    <div class="badge">Launching May 9, 2026</div>
+    <h1>From overwhelmed to<br><span>relief in 60 seconds.</span></h1>
+    <p class="subtitle">The app built for ADHD moms.<br>No judgment. Just support.</p>
+    <div class="proof">
+      <span class="proof-dot"></span>
+      127+ moms on the waitlist
+    </div>
+    <div class="logo-row">thrivemom.app</div>
+  </div>
+
+  <div class="right">
+    <div class="phone">
+      <div class="phone-notch"></div>
+      <div class="phone-header">&#128156; ThriveMom</div>
+      <div class="phone-greeting">Hi mama, how are<br>you feeling?</div>
+      <div class="phone-moods">
+        <div class="mood">&#128560; Overwhelmed</div>
+        <div class="mood active">&#128174; Need a Reset</div>
+        <div class="mood">&#128154; Doing OK</div>
+      </div>
+      <div class="phone-card">
+        <div class="phone-card-title">&#10024; Your Reset Plan</div>
+        <div class="phone-card-desc">Breathe, ground, refocus. 60 seconds.</div>
+        <div class="phone-card-btn">I'm Ready</div>
+      </div>
+      <div class="phone-home"></div>
+    </div>
+  </div>
+</body>
+</html>

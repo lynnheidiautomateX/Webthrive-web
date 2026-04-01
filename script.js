@@ -108,11 +108,17 @@ function toggleFaq(btn) {
   }
 }
 
-// ===== CLOSE MOBILE NAV ON LINK CLICK =====
+// ===== CLOSE MOBILE NAV ON LINK CLICK OR ESCAPE =====
 document.querySelectorAll('.nav-links a').forEach(function(link) {
   link.addEventListener('click', function() {
     document.getElementById('navLinks').classList.remove('open');
   });
+});
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') {
+    document.getElementById('navLinks').classList.remove('open');
+  }
 });
 
 // ===== SCROLL ANIMATIONS =====
