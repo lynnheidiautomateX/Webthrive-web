@@ -75,7 +75,7 @@ function handleWaitlist(e, formId) {
 // ===== SHARE =====
 function shareOn(platform) {
   var url = 'https://thrivemom.app';
-  var text = 'I just joined the ThriveMom waitlist. An app built for ADHD moms, by an ADHD mom. Relief in 60 seconds. Check it out:';
+  var text = 'I just joined the ThriveMom™ waitlist. An app built for ADHD moms, by an ADHD mom. Relief in 60 seconds. Check it out:';
 
   if (platform === 'twitter') {
     window.open('https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(url), '_blank');
@@ -178,7 +178,7 @@ var translations = [
   { s: '.problem-card:nth-child(2) p', en: 'Everyone needs something from you. <strong>Right now.</strong>', es: 'Todos necesitan algo de ti. <strong>Ahora mismo.</strong>', html: true },
   { s: '.problem-card:nth-child(3) p', en: 'You\'re <strong>exhausted</strong> but your mind won\'t stop racing at 2am.', es: 'Estás <strong>agotada</strong> pero tu mente no para a las 2am.', html: true },
   { s: '.problem-card:nth-child(4) p', en: 'You forgot why you walked into the room. <strong>Again.</strong>', es: 'Olvidaste por qué entraste al cuarto. <strong>Otra vez.</strong>', html: true },
-  { s: '.problem-cta', en: 'You\'re not failing. Your brain just works differently.<br><strong>ThriveMom was built for brains like yours.</strong>', es: 'No estás fallando. Tu cerebro simplemente funciona diferente.<br><strong>ThriveMom fue hecho para cerebros como el tuyo.</strong>', html: true },
+  { s: '.problem-cta', en: 'You\'re not failing. Your brain just works differently.<br><strong>ThriveMom™ was built for brains like yours.</strong>', es: 'No estás fallando. Tu cerebro simplemente funciona diferente.<br><strong>ThriveMom™ fue hecho para cerebros como el tuyo.</strong>', html: true },
   // Features
   { s: '.features .section-title', en: 'Tools that actually <span class="highlight">help.</span>', es: 'Herramientas que realmente <span class="highlight">ayudan.</span>', html: true },
   { s: '.features .section-desc', en: 'Every feature built for how your brain actually works. Not how apps think it should.', es: 'Cada función diseñada para cómo tu cerebro realmente funciona. No como las apps creen que debería.' },
@@ -222,12 +222,12 @@ var translations = [
   { s: '.step:nth-child(5) p', en: '"I cleared 47 lbs of mental clutter today." Share your Mental Weight Loss on socials.', es: '"Liberé 47 lbs de desorden mental hoy." Comparte tu Pérdida de Peso Mental en redes.' },
   // Social proof
   { s: '.social-proof .section-title', en: 'Built by a mom <span class="highlight">who gets it</span>', es: 'Hecha por una mamá <span class="highlight">que entiende</span>', html: true },
-  { s: '.proof-quote', en: '"I built ThriveMom because I needed it myself. As an ADHD mom of 3, I was tired of apps that felt like another chore. ThriveMom meets you where you are, even if that\'s hiding in the bathroom for 60 seconds of peace."', es: '"Construí ThriveMom porque yo misma lo necesitaba. Como mamá con TDAH de 3 hijos, estaba cansada de apps que se sentían como otra tarea. ThriveMom te encuentra donde estás, aunque sea escondida en el baño por 60 segundos de paz."' },
+  { s: '.proof-quote', en: '"I built ThriveMom™ because I needed it myself. As an ADHD mom of 3, I was tired of apps that felt like another chore. ThriveMom™ meets you where you are, even if that\'s hiding in the bathroom for 60 seconds of peace."', es: '"Construí ThriveMom™ porque yo misma lo necesitaba. Como mamá con TDAH de 3 hijos, estaba cansada de apps que se sentían como otra tarea. ThriveMom™ te encuentra donde estás, aunque sea escondida en el baño por 60 segundos de paz."' },
   { s: '.stat:nth-child(1) .stat-label', en: 'Average time to feel relief', es: 'Tiempo promedio para sentir alivio' },
   { s: '.stat:nth-child(2) .stat-label', en: 'Core tools, zero overwhelm', es: 'Herramientas, cero agobio' },
   { s: '.stat:nth-child(3) .stat-label', en: 'Built for ADHD brains', es: 'Hecho para cerebros con TDAH' },
   // Waitlist CTA
-  { s: '.waitlist-box h2', en: 'Be the first to try ThriveMom', es: 'Sé la primera en probar ThriveMom' },
+  { s: '.waitlist-box h2', en: 'Be the first to try ThriveMom™', es: 'Sé la primera en probar ThriveMom™' },
   { s: '.waitlist-box > p', en: 'First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.', es: 'Las primeras 500 mamás obtienen <strong>precio de acceso temprano de por vida</strong>. Sin spam, solo actualizaciones.', html: true },
   { s: '#waitlistBtn', en: 'Save My Spot', es: 'Guardar Mi Lugar' },
   // FAQ title
@@ -254,7 +254,11 @@ var translations = [
   { s: '.chaos-word:nth-child(6)', en: 'prep dinner', es: 'preparar cena' },
   // Footer
   { s: '.footer-brand p', en: 'For ADHD moms, by an ADHD mom.<br>Built with love by a mama who gets it.', es: 'Para mamás con TDAH, por una mamá con TDAH.<br>Hecha con amor por una mamá que entiende.', html: true },
-  { s: '.footer-bottom p:first-child', en: '\u00a9 2026 ThriveMom. All rights reserved.', es: '\u00a9 2026 ThriveMom. Todos los derechos reservados.' },
+  { s: '.footer-links a[href="mailto:support@thrivemom.app"]', en: 'Contact', es: 'Contacto' },
+  { s: '.footer-links a[href="/privacy.html"]', en: 'Privacy Policy', es: 'Política de Privacidad' },
+  { s: '.footer-links a[href="/terms.html"]', en: 'Terms & Conditions', es: 'Términos y Condiciones' },
+  { s: '.footer-bottom p:first-child', en: '\u00a9 2026 ThriveMom™. All rights reserved.', es: '\u00a9 2026 ThriveMom™. Todos los derechos reservados.' },
+  { s: '.footer-bottom p:last-child', en: 'Made with caffeine, chaos, and a whole lot of love.', es: 'Hecho con cafeína, caos, y mucho amor.' },
 ];
 
 function applyLang(lang) {
@@ -306,13 +310,13 @@ function applyLang(lang) {
   // FAQ questions and answers (direct DOM access)
   var faqItems = document.querySelectorAll('.faq-item');
   var faqData = [
-    { en_q: 'When does ThriveMom launch?', es_q: '¿Cuándo se lanza ThriveMom?', en_a: 'May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.', es_a: '9 de mayo, 2026. Únete a la lista de espera para recibir notificación en cuanto esté disponible. Los primeros en la lista obtienen acceso prioritario y precio especial.' },
-    { en_q: 'Is this only for moms with an ADHD diagnosis?', es_q: '¿Es solo para mamás con diagnóstico de TDAH?', en_a: 'Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom is designed for you. If the "47 tabs open" feeling resonated, you\'re in the right place.', es_a: 'Para nada. Ya sea que tengas un diagnóstico formal, sospeches que podrías tener TDAH, o simplemente te sientas crónicamente abrumada como mamá, ThriveMom es para ti. Si lo de las "47 pestañas abiertas" te resonó, estás en el lugar correcto.' },
-    { en_q: 'Is it free?', es_q: '¿Es gratis?', en_a: 'ThriveMom will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version. We believe every mom deserves support, regardless of budget.', es_a: 'ThriveMom tendrá un plan gratuito con funciones principales. Los primeros en la lista (primeros 500) obtienen precio de acceso temprano de por vida en la versión completa. Creemos que toda mamá merece apoyo, sin importar el presupuesto.' },
-    { en_q: 'What makes ThriveMom different?', es_q: '¿Qué hace diferente a ThriveMom?', en_a: 'Most apps are built for neurotypical brains. ThriveMom is specifically designed for ADHD: low friction, instant gratification, no guilt trips, no 30-day programs you\'ll abandon on day 3. Everything takes under 60 seconds to start.', es_a: 'La mayoría de las apps están hechas para cerebros neurotípicos. ThriveMom está diseñada específicamente para TDAH: poca fricción, gratificación instantánea, sin culpas, sin programas de 30 días que abandonarás el día 3. Todo toma menos de 60 segundos para empezar.' },
+    { en_q: 'When does ThriveMom™ launch?', es_q: '¿Cuándo se lanza ThriveMom™?', en_a: 'May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.', es_a: '9 de mayo, 2026. Únete a la lista de espera para recibir notificación en cuanto esté disponible. Los primeros en la lista obtienen acceso prioritario y precio especial.' },
+    { en_q: 'Is this only for moms with an ADHD diagnosis?', es_q: '¿Es solo para mamás con diagnóstico de TDAH?', en_a: 'Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom™ is designed for you. If the "47 tabs open" feeling resonated, you\'re in the right place.', es_a: 'Para nada. Ya sea que tengas un diagnóstico formal, sospeches que podrías tener TDAH, o simplemente te sientas crónicamente abrumada como mamá, ThriveMom™ es para ti. Si lo de las "47 pestañas abiertas" te resonó, estás en el lugar correcto.' },
+    { en_q: 'Is it free?', es_q: '¿Es gratis?', en_a: 'ThriveMom™ will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version. We believe every mom deserves support, regardless of budget.', es_a: 'ThriveMom™ tendrá un plan gratuito con funciones principales. Los primeros en la lista (primeros 500) obtienen precio de acceso temprano de por vida en la versión completa. Creemos que toda mamá merece apoyo, sin importar el presupuesto.' },
+    { en_q: 'What makes ThriveMom™ different?', es_q: '¿Qué hace diferente a ThriveMom™?', en_a: 'Most apps are built for neurotypical brains. ThriveMom™ is specifically designed for ADHD: low friction, instant gratification, no guilt trips, no 30-day programs you\'ll abandon on day 3. Everything takes under 60 seconds to start.', es_a: 'La mayoría de las apps están hechas para cerebros neurotípicos. ThriveMom™ está diseñada específicamente para TDAH: poca fricción, gratificación instantánea, sin culpas, sin programas de 30 días que abandonarás el día 3. Todo toma menos de 60 segundos para empezar.' },
     { en_q: 'What\'s the Chaos Catcher?', es_q: '¿Qué es el Atrapa Caos?', en_a: 'It\'s a brain dump tool. Talk or type everything that\'s swirling in your head: groceries, guilt, school forms, exhaustion. Hit "Sort My Chaos" and it instantly organizes everything into action categories. It also tracks your "Mental Weight" so you can see how many pounds of mental clutter you\'ve cleared and share it.', es_a: 'Es una herramienta de descarga mental. Habla o escribe todo lo que da vueltas en tu cabeza: compras, culpa, formularios del colegio, agotamiento. Presiona "Ordena Mi Caos" y organiza todo instantáneamente en categorías de acción. También rastrea tu "Peso Mental" para que veas cuántas libras de desorden mental has liberado y lo compartas.' },
     { en_q: 'What are Sparkle Sessions?', es_q: '¿Qué son las Sesiones Sparkle?', en_a: 'Tiny, step-by-step task batches designed for ADHD brains. Instead of "clean the house" (impossible), you get "The Towel Load: grab all towels, put in washer, press start." Each one takes just a few minutes, and you get confetti when you finish.', es_a: 'Pequeñas tandas de tareas paso a paso diseñadas para cerebros con TDAH. En vez de "limpiar la casa" (imposible), recibes "La Carga de Toallas: agarra todas las toallas, ponlas en la lavadora, presiona inicio." Cada una toma solo unos minutos, y recibes confeti cuando terminas.' },
-    { en_q: 'Is ThriveMom available in Spanish?', es_q: '¿ThriveMom está disponible en español?', en_a: 'Yes! ThriveMom has full bilingual support (English and Spanish). Switch anytime with one tap. Built specifically for Latina ADHD moms who deserve support in their language. Voice input in the Chaos Catcher also works in Spanish.', es_a: '¡Sí! ThriveMom tiene soporte bilingüe completo (inglés y español). Cambia en cualquier momento con un toque. Hecho específicamente para mamás latinas con TDAH que merecen apoyo en su idioma. La entrada de voz en el Atrapa Caos también funciona en español.' }
+    { en_q: 'Is ThriveMom™ available in Spanish?', es_q: '¿ThriveMom™ está disponible en español?', en_a: 'Yes! ThriveMom™ has full bilingual support (English and Spanish). Switch anytime with one tap. Built specifically for Latina ADHD moms who deserve support in their language. Voice input in the Chaos Catcher also works in Spanish.', es_a: '¡Sí! ThriveMom™ tiene soporte bilingüe completo (inglés y español). Cambia en cualquier momento con un toque. Hecho específicamente para mamás latinas con TDAH que merecen apoyo en su idioma. La entrada de voz en el Atrapa Caos también funciona en español.' }
   ];
   faqItems.forEach(function(item, i) {
     if (!faqData[i]) return;
