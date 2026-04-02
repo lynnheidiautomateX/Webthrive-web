@@ -497,6 +497,70 @@ nav {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+/* Chaos Catcher mockup */
+.chaos-screen {
+  background: linear-gradient(180deg, #2c1a47 0%, #3d2a5c 50%, #4A3370 100%) !important;
+  gap: 0.4rem !important;
+}
+.chaos-header {
+  color: rgba(255,255,255,0.6) !important;
+  border-bottom-color: rgba(255,255,255,0.1) !important;
+}
+.chaos-title {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: white;
+  text-align: center;
+}
+.chaos-subtitle {
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.5);
+  text-align: center;
+  margin-bottom: 0.2rem;
+}
+.chaos-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.9);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem 0.3rem;
+  padding: 0.6rem;
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
+}
+.chaos-word {
+  color: #2c1a47;
+  font-family: inherit;
+  white-space: nowrap;
+  line-height: 1.2;
+}
+.chaos-mic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+.chaos-mic-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6b4fa0, #8b5cf6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(107,79,160,0.4);
+}
+.chaos-mic-label {
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
+}
+
 /* Home bar */
 .phone-home-bar {
   width: 100px;
