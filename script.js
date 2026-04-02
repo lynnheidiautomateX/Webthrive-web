@@ -260,6 +260,39 @@ function applyLang(lang) {
   document.body.classList.toggle('es', lang === 'es');
   document.documentElement.lang = lang;
 
+  // Update SEO meta tags for Spanish
+  document.title = lang === 'es'
+    ? 'ThriveMom\u2122 | La App Para Mam\u00e1s con TDAH | Alivio en 60 Segundos'
+    : 'ThriveMom\u2122 | The App for ADHD Moms | Relief in 60 Seconds';
+
+  var descMeta = document.querySelector('meta[name="description"]');
+  if (descMeta) descMeta.content = lang === 'es'
+    ? 'ThriveMom\u2122: la primera app para mam\u00e1s con TDAH. Siente calma, claridad y control en 60 segundos. Descargas mentales, lotes de tareas, resets guiados, chat, seguimiento de \u00e1nimo.'
+    : 'ThriveMom\u2122: the first app for ADHD moms. Feel calm, clear, and in control in 60 seconds. Brain dumps, task batching, guided resets, chat, mood tracking.';
+
+  var ogTitle = document.querySelector('meta[property="og:title"]');
+  if (ogTitle) ogTitle.content = lang === 'es'
+    ? 'ThriveMom\u2122 | La App Para Mam\u00e1s con TDAH'
+    : 'ThriveMom\u2122 | The App for ADHD Moms';
+
+  var ogDesc = document.querySelector('meta[property="og:description"]');
+  if (ogDesc) ogDesc.content = lang === 'es'
+    ? 'La primera app para mam\u00e1s con TDAH. Siente calma, claridad y control en 60 segundos. Descarga mental, lotes de tareas, resets guiados, chat 24/7, bilingüe EN/ES.'
+    : 'The first app for ADHD moms. Feel calm, clear, and in control again in under 60 seconds. Brain dump sorting, task batching, guided resets, 24/7 chat, mood tracking, bilingual EN/ES. Join the waitlist.';
+
+  var ogLocale = document.querySelector('meta[property="og:locale"]');
+  if (ogLocale) ogLocale.content = lang === 'es' ? 'es_ES' : 'en_US';
+
+  var twTitle = document.querySelector('meta[name="twitter:title"]');
+  if (twTitle) twTitle.content = lang === 'es'
+    ? 'ThriveMom\u2122 | La App Para Mam\u00e1s con TDAH'
+    : 'ThriveMom\u2122 | The App for ADHD Moms';
+
+  var twDesc = document.querySelector('meta[name="twitter:description"]');
+  if (twDesc) twDesc.content = lang === 'es'
+    ? 'La primera app para mam\u00e1s con TDAH. Siente calma, claridad y control en 60 segundos.'
+    : 'The first app for ADHD moms. Feel calm, clear, and in control again in 60 seconds. Join the waitlist.';
+
   translations.forEach(function(t) {
     var el = document.querySelector(t.s);
     if (!el) return;

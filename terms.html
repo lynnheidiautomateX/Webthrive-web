@@ -7,6 +7,9 @@
   <meta name="description" content="ThriveMom™ terms and conditions. Rules for using our website and app.">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://thrivemom.app/terms.html">
+  <link rel="alternate" hreflang="en" href="https://thrivemom.app/terms.html">
+  <link rel="alternate" hreflang="es" href="https://thrivemom.app/terms.html?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://thrivemom.app/terms.html">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
   <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=3">
@@ -185,6 +188,9 @@
     var navLinks = document.querySelectorAll('.nav-links a');
 
     if (lang === 'es') {
+      document.title = 'T\u00e9rminos y Condiciones | ThriveMom\u2122';
+      var descMeta = document.querySelector('meta[name="description"]');
+      if (descMeta) descMeta.content = 'T\u00e9rminos y condiciones de ThriveMom\u2122. Reglas para usar nuestro sitio web y aplicaci\u00f3n.';
       c.querySelector('h1').textContent = termsES.title;
       c.querySelector('.policy-date').textContent = termsES.date;
       var h2s = c.querySelectorAll('h2');

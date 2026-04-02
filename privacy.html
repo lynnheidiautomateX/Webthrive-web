@@ -7,6 +7,9 @@
   <meta name="description" content="ThriveMom™ privacy policy. How we collect, use, and protect your information.">
   <meta name="robots" content="noindex">
   <link rel="canonical" href="https://thrivemom.app/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://thrivemom.app/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://thrivemom.app/privacy.html?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://thrivemom.app/privacy.html">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
   <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=3">
@@ -178,6 +181,9 @@
     var navLinks = document.querySelectorAll('.nav-links a');
 
     if (lang === 'es') {
+      document.title = 'Pol\u00edtica de Privacidad | ThriveMom\u2122';
+      var descMeta = document.querySelector('meta[name="description"]');
+      if (descMeta) descMeta.content = 'Pol\u00edtica de privacidad de ThriveMom\u2122. C\u00f3mo recopilamos, usamos y protegemos tu informaci\u00f3n.';
       c.querySelector('h1').textContent = privacyES.title;
       c.querySelector('.policy-date').textContent = privacyES.date;
       var ps = c.querySelectorAll(':scope > p');
