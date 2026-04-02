@@ -37,7 +37,7 @@ function handleWaitlist(e, formId) {
   var btn = document.getElementById(formId === 'hero' ? 'heroBtn' : 'waitlistBtn');
   var email = emailInput.value.trim();
 
-  btn.textContent = 'Joining...';
+  btn.textContent = currentLang === 'es' ? 'Uniendo...' : 'Joining...';
   btn.disabled = true;
 
   // Send to Google Sheets webhook
@@ -172,8 +172,7 @@ var translations = [
   { s: '.hero-sub', en: 'So You Can Finally Feel Calm, Clear, and in Control Again.', es: 'Para que por fin te sientas tranquila, clara, y en control otra vez.' },
   { s: '#heroBtn', en: 'Get Early Access', es: 'Obtén Acceso Anticipado' },
   { s: '.hero-proof', en: '💜 <span id="waitlistCount">127</span> moms already on the waitlist', es: '💜 <span id="waitlistCount">127</span> mamás ya en la lista', html: true },
-  // Countdown
-  { s: '.countdown-label:nth-of-type(1)', en: 'Days', es: 'Días' },
+  // (countdown labels handled directly in applyLang)
   // Problem
   { s: '.problem .section-title', en: 'Sound <span class="highlight">familiar?</span>', es: '¿Te suena <span class="highlight">familiar?</span>', html: true },
   { s: '.problem-card:nth-child(1) p', en: 'Your brain has <strong>47 tabs open</strong> and none of them are loading.', es: 'Tu cerebro tiene <strong>47 pestañas abiertas</strong> y ninguna está cargando.', html: true },
@@ -292,6 +291,26 @@ function applyLang(lang) {
   if (twDesc) twDesc.content = lang === 'es'
     ? 'La primera app para mam\u00e1s con TDAH. Siente calma, claridad y control en 60 segundos.'
     : 'The first app for ADHD moms. Feel calm, clear, and in control again in 60 seconds. Join the waitlist.';
+
+  // Update keywords meta tag
+  var kwMeta = document.querySelector('meta[name="keywords"]');
+  if (kwMeta) kwMeta.content = lang === 'es'
+    ? 'app para mam\u00e1s con TDAH, maternidad TDAH, ayuda mam\u00e1 abrumada, app apoyo TDAH, herramientas TDAH mam\u00e1s, agotamiento mam\u00e1, descarga mental, p\u00e9rdida peso mental, atrapa caos, lotes de tareas TDAH, app biling\u00fce TDAH, mam\u00e1 latina TDAH'
+    : 'ADHD mom app, ADHD motherhood, overwhelmed mom help, ADHD support app, ADHD tools for moms, mom burnout, ADHD mom support, brain dump app, mental weight loss, chaos catcher, ADHD task batching, bilingual ADHD app, Latina ADHD mom';
+
+  // Countdown labels
+  var cdLabels = document.querySelectorAll('.countdown-label');
+  var cdEN = ['Days', 'Hours', 'Min', 'Sec'];
+  var cdES = ['D\u00edas', 'Horas', 'Min', 'Seg'];
+  cdLabels.forEach(function(el, i) {
+    el.textContent = lang === 'es' ? (cdES[i] || '') : (cdEN[i] || '');
+  });
+
+  // Success messages
+  var heroSuccessP = document.querySelector('#heroSuccess p');
+  if (heroSuccessP) heroSuccessP.textContent = lang === 'es' ? '\u00a1Est\u00e1s en la lista! Revisa tu bandeja.' : "You're on the list! Check your inbox.";
+  var waitlistSuccessP = document.querySelector('#waitlistSuccess p');
+  if (waitlistSuccessP) waitlistSuccessP.textContent = lang === 'es' ? '\u00a1Est\u00e1s dentro! Te escribiremos antes que a nadie.' : "You're in! We'll email you before anyone else.";
 
   translations.forEach(function(t) {
     var el = document.querySelector(t.s);
