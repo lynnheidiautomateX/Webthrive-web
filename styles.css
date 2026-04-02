@@ -103,6 +103,25 @@ nav {
 }
 .nav-cta:hover { opacity: 0.9; transform: translateY(-1px); }
 
+.lang-toggle {
+  background: rgba(107,79,160,0.1);
+  border: none;
+  color: var(--purple-mid);
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+.lang-toggle:hover { background: rgba(107,79,160,0.18); }
+.lang-en { opacity: 1; }
+.lang-es { opacity: 0.4; }
+body.es .lang-en { opacity: 0.4; }
+body.es .lang-es { opacity: 1; }
+
 .mobile-toggle {
   display: none;
   background: none;
