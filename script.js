@@ -152,7 +152,7 @@ var translations = [
   // Hero
   { s: '.hero-badge', en: 'Pre-Launch: May 9, 2026', es: 'Pre-Lanzamiento: 9 de Mayo, 2026' },
   { s: '.hero h1', en: 'Your brain is full.<br><span class="gradient-text">Dump it. We\'ll sort it.</span>', es: 'Tu cerebro está lleno.<br><span class="gradient-text">Sácalo. Nosotros lo ordenamos.</span>', html: true },
-  { s: '.hero-sub', en: 'The Chaos Catcher: speak or type everything in your head.<br>AI sorts it into action. Relief in 60 seconds. Built by an ADHD mom.', es: 'El Atrapa Caos: habla o escribe todo lo que tienes en la cabeza.<br>Lo ordenamos en acción. Alivio en 60 segundos. Hecho por una mamá con TDAH.', html: true },
+  { s: '.hero-sub', en: 'The Chaos Catcher: speak or type everything in your head.<br>We sort it into action. Relief in 60 seconds. Built by an ADHD mom.', es: 'El Atrapa Caos: habla o escribe todo lo que tienes en la cabeza.<br>Lo ordenamos en acción. Alivio en 60 segundos. Hecho por una mamá con TDAH.', html: true },
   { s: '#heroBtn', en: 'Join the Waitlist', es: 'Únete a la Lista' },
   { s: '.hero-proof', en: '💜 <span id="waitlistCount">127</span> moms already on the waitlist', es: '💜 <span id="waitlistCount">127</span> mamás ya en la lista', html: true },
   // Countdown
@@ -168,7 +168,7 @@ var translations = [
   { s: '.features .section-title', en: '9 tools. Zero <span class="highlight">overwhelm.</span>', es: '9 herramientas. Cero <span class="highlight">agobio.</span>', html: true },
   { s: '.features .section-desc', en: 'Every feature built for how your brain actually works. Not how apps think it should.', es: 'Cada función diseñada para cómo tu cerebro realmente funciona. No como las apps creen que debería.' },
   { s: '.feature-card:nth-child(1) h3', en: 'The Chaos Catcher', es: 'El Atrapa Caos' },
-  { s: '.feature-card:nth-child(1) p', en: 'Brain full? Dump it all out by voice or text. Our AI sorts your chaos into action categories: groceries, kids, admin, self-care. One button: "Sort My Chaos."', es: 'Cerebro lleno? Saca todo por voz o texto. Organizamos tu caos en categorías: compras, niños, admin, autocuidado. Un botón: "Ordena Mi Caos."' },
+  { s: '.feature-card:nth-child(1) p', en: 'Brain full? Dump it all out by voice or text. We sort your chaos into action categories: groceries, kids, admin, self-care. One button: "Sort My Chaos."', es: '¿Cerebro lleno? Saca todo por voz o texto. Organizamos tu caos en categorías: compras, niños, admin, autocuidado. Un botón: "Ordena Mi Caos."' },
   { s: '.feature-card:nth-child(2) h3', en: 'Sparkle Sessions', es: 'Sesiones Sparkle' },
   { s: '.feature-card:nth-child(2) p', en: 'Tiny task batches that feel doable. Towel load. Clear the island. 5 minutes, step by step, with confetti when you\'re done. 60+ sessions across 18 categories.', es: 'Pequeñas tandas de tareas que se sienten posibles. Carga de toallas. Limpiar la isla. 5 minutos, paso a paso, con confeti cuando termines. 60+ sesiones en 18 categorías.' },
   { s: '.feature-card:nth-child(3) h3', en: 'Your 2am Friend', es: 'Tu Amiga de las 2am' },
@@ -192,7 +192,7 @@ var translations = [
   { s: '.how-it-works .section-desc', en: 'No tutorials. No setup wizard. No 47-step onboarding. Just relief.', es: 'Sin tutoriales. Sin asistente de configuración. Sin 47 pasos. Solo alivio.' },
   { s: '.step:nth-child(1) h3', en: 'Dump your chaos', es: 'Saca tu caos' },
   { s: '.step:nth-child(1) p', en: 'Talk or type everything on your mind. Groceries, kids, guilt, laundry. All of it.', es: 'Habla o escribe todo lo que tienes en mente. Compras, niños, culpa, ropa. Todo.' },
-  { s: '.step:nth-child(3) h3', en: 'AI sorts it', es: 'Lo ordenamos' },
+  { s: '.step:nth-child(3) h3', en: 'We sort it', es: 'Lo ordenamos' },
   { s: '.step:nth-child(3) p', en: 'One tap: "Sort My Chaos." It organizes everything into categories with next steps.', es: 'Un toque: "Ordena Mi Caos." Organiza todo en categorías con próximos pasos.' },
   { s: '.step:nth-child(5) h3', en: 'Share your wins', es: 'Comparte tus logros' },
   { s: '.step:nth-child(5) p', en: '"I cleared 47 lbs of mental clutter today." Share your Mental Weight Loss on socials.', es: '"Liberé 47 lbs de desorden mental hoy." Comparte tu Pérdida de Peso Mental en redes.' },
