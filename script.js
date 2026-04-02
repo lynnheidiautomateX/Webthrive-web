@@ -108,6 +108,19 @@ function toggleFaq(btn) {
   }
 }
 
+// ===== MORE FEATURES TOGGLE =====
+function toggleMoreFeatures() {
+  var extra = document.getElementById('featuresExtra');
+  var btn = document.getElementById('featuresToggle');
+  if (extra.style.display === 'none') {
+    extra.style.display = '';
+    btn.textContent = 'Show less';
+  } else {
+    extra.style.display = 'none';
+    btn.textContent = '+ 3 more tools';
+  }
+}
+
 // ===== CLOSE MOBILE NAV ON LINK CLICK OR ESCAPE =====
 document.querySelectorAll('.nav-links a').forEach(function(link) {
   link.addEventListener('click', function() {
@@ -165,14 +178,14 @@ var translations = [
   { s: '.problem-card:nth-child(4) p', en: 'You forgot why you walked into the room. <strong>Again.</strong>', es: 'Olvidaste por qué entraste al cuarto. <strong>Otra vez.</strong>', html: true },
   { s: '.problem-cta', en: 'You\'re not failing. Your brain just works differently.<br><strong>ThriveMom was built for brains like yours.</strong>', es: 'No estás fallando. Tu cerebro simplemente funciona diferente.<br><strong>ThriveMom fue hecho para cerebros como el tuyo.</strong>', html: true },
   // Features
-  { s: '.features .section-title', en: '9 tools. Zero <span class="highlight">overwhelm.</span>', es: '9 herramientas. Cero <span class="highlight">agobio.</span>', html: true },
+  { s: '.features .section-title', en: 'Tools that actually <span class="highlight">help.</span>', es: 'Herramientas que realmente <span class="highlight">ayudan.</span>', html: true },
   { s: '.features .section-desc', en: 'Every feature built for how your brain actually works. Not how apps think it should.', es: 'Cada función diseñada para cómo tu cerebro realmente funciona. No como las apps creen que debería.' },
-  { s: '.feature-card:nth-child(1) h3', en: 'Sparkle Sessions', es: 'Sesiones Sparkle' },
-  { s: '.feature-card:nth-child(1) p', en: 'Tiny task batches that feel doable. Towel load. Clear the island. 5 minutes, step by step, with confetti when you\'re done.', es: 'Pequeñas tandas de tareas que se sienten posibles. Carga de toallas. Limpiar la isla. 5 minutos, paso a paso, con confeti cuando termines.' },
-  { s: '.feature-card:nth-child(2) h3', en: 'Mental Weight Tracker', es: 'Medidor de Peso Mental' },
-  { s: '.feature-card:nth-child(2) p', en: '"I cleared 47 lbs of mental clutter today." Track how much you\'ve unloaded, see your clarity score, and share your Mental Weight Loss on Instagram, TikTok, or Facebook.', es: '"Liberé 47 lbs de desorden mental hoy." Mide cuánto liberaste, ve tu puntaje de claridad, y comparte tu Pérdida de Peso Mental en Instagram, TikTok o Facebook.' },
-  { s: '.feature-card:nth-child(3) h3', en: 'The Chaos Catcher', es: 'El Atrapa Caos' },
-  { s: '.feature-card:nth-child(3) p', en: 'Brain full? Dump it all out by voice or text. We sort your chaos into action categories: groceries, kids, admin, self-care. One button: "Sort My Chaos."', es: '¿Cerebro lleno? Saca todo por voz o texto. Organizamos tu caos en categorías: compras, niños, admin, autocuidado. Un botón: "Ordena Mi Caos."' },
+  { s: '.feature-card:nth-child(1) h3', en: 'The Chaos Catcher', es: 'El Atrapa Caos' },
+  { s: '.feature-card:nth-child(1) p', en: 'Brain full? Dump it all out by voice or text. We sort your chaos into action categories: groceries, kids, admin, self-care. One button: "Sort My Chaos."', es: '¿Cerebro lleno? Saca todo por voz o texto. Organizamos tu caos en categorías: compras, niños, admin, autocuidado. Un botón: "Ordena Mi Caos."' },
+  { s: '.feature-card:nth-child(2) h3', en: 'Sparkle Sessions', es: 'Sesiones Sparkle' },
+  { s: '.feature-card:nth-child(2) p', en: 'Tiny task batches that feel doable. Towel load. Clear the island. 5 minutes, step by step, with confetti when you\'re done.', es: 'Pequeñas tandas de tareas que se sienten posibles. Carga de toallas. Limpiar la isla. 5 minutos, paso a paso, con confeti cuando termines.' },
+  { s: '.feature-card:nth-child(3) h3', en: 'Mental Weight Tracker', es: 'Medidor de Peso Mental' },
+  { s: '.feature-card:nth-child(3) p', en: '"I cleared 47 lbs of mental clutter today." Track how much you\'ve unloaded, see your clarity score, and share it on socials.', es: '"Liberé 47 lbs de desorden mental hoy." Mide cuánto liberaste, ve tu puntaje de claridad, y compártelo en redes.' },
   { s: '.feature-card:nth-child(4) h3', en: 'Your 2am Friend', es: 'Tu Amiga de las 2am' },
   { s: '.feature-card:nth-child(4) p', en: '24/7 judgment-free chat that understands your ADHD mom brain. Real strategies, real talk, whenever you need it. Available in English and Spanish.', es: 'Chat 24/7 sin juicios que entiende tu cerebro de mamá con TDAH. Estrategias reales, conversación real. Disponible en inglés y español.' },
   { s: '.feature-card:nth-child(5) h3', en: 'Quick Reset', es: 'Reset Rápido' },
