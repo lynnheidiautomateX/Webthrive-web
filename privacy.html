@@ -67,7 +67,10 @@
       <a href="/#features">Features</a>
       <a href="/#proof">About</a>
       <a href="/#faq">FAQ</a>
-      <a href="/#waitlist" class="nav-cta">Join Waitlist</a>
+      <a href="/#waitlist" class="nav-cta">Get Early Access</a>
+      <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+        <span class="lang-en">EN</span> | <span class="lang-es">ES</span>
+      </button>
     </div>
     <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -125,5 +128,102 @@
       <p>&copy; 2026 ThriveMom™. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+  var LANG_KEY = 'thrivemom_web_lang';
+  var urlLang = new URLSearchParams(window.location.search).get('lang');
+  var currentLang = urlLang === 'es' ? 'es' : (localStorage.getItem(LANG_KEY) || 'en');
+
+  var privacyES = {
+    title: 'Política de Privacidad',
+    date: 'Última actualización: 31 de marzo, 2026',
+    intro: 'ThriveMom™ ("nosotros") opera el sitio web thrivemom.app. Esta página explica cómo recopilamos, usamos y protegemos tu información personal.',
+    h2_1: '1. Información que Recopilamos',
+    p_1: 'Recopilamos información que proporcionas voluntariamente cuando:',
+    li_1: 'Te unes a nuestra lista de espera de pre-lanzamiento (dirección de correo)',
+    h2_2: '2. Cómo Usamos tu Información',
+    li_2a: 'Enviarte actualizaciones de lanzamiento e invitaciones de acceso anticipado',
+    li_2b: 'Responder a tus consultas',
+    li_2c: 'Mejorar nuestro sitio web y aplicación',
+    h2_3: '3. Comunicaciones por Correo',
+    p_3: 'Al unirte a la lista de espera, consientes recibir correos relacionados con el lanzamiento. Cada correo incluye un enlace para cancelar suscripción. Nunca venderemos ni compartiremos tu correo con terceros para fines de marketing.',
+    h2_4: '4. Almacenamiento de Datos',
+    p_4: 'Tu información se almacena de forma segura a través de Google Sheets (vía Google Apps Script) con medidas de seguridad estándar de la industria.',
+    h2_5: '5. Cookies',
+    p_5: 'Nuestro sitio web no usa cookies para rastreo.',
+    h2_6: '6. Tus Derechos',
+    p_6: 'Tienes derecho a:',
+    li_6a: 'Acceder a los datos personales que tenemos sobre ti',
+    li_6b: 'Solicitar corrección o eliminación de tus datos',
+    li_6c: 'Cancelar tu suscripción a nuestros correos en cualquier momento',
+    p_6b: 'Contáctanos en <a href="mailto:support@thrivemom.app">support@thrivemom.app</a> para ejercer estos derechos.',
+    h2_7: '7. Cambios a Esta Política',
+    p_7: 'Podemos actualizar esta política de privacidad de vez en cuando. Los cambios se publicarán en esta página con una fecha actualizada.',
+    h2_8: '8. Contáctanos',
+    back: '&larr; Volver a ThriveMom™',
+    navFeatures: 'Funciones',
+    navAbout: 'Nosotras',
+    navFaq: 'Preguntas',
+    navCta: 'Acceso Anticipado',
+    copyright: '&copy; 2026 ThriveMom™. Todos los derechos reservados.'
+  };
+
+  function applyLang(lang) {
+    currentLang = lang;
+    try { localStorage.setItem(LANG_KEY, lang); } catch(e) {}
+    document.documentElement.lang = lang;
+    document.body.classList.toggle('es', lang === 'es');
+
+    var c = document.querySelector('.policy-container');
+    var navLinks = document.querySelectorAll('.nav-links a');
+
+    if (lang === 'es') {
+      c.querySelector('h1').textContent = privacyES.title;
+      c.querySelector('.policy-date').textContent = privacyES.date;
+      var ps = c.querySelectorAll(':scope > p');
+      ps[0].textContent = privacyES.intro;
+      var h2s = c.querySelectorAll('h2');
+      h2s[0].textContent = privacyES.h2_1;
+      h2s[1].textContent = privacyES.h2_2;
+      h2s[2].textContent = privacyES.h2_3;
+      h2s[3].textContent = privacyES.h2_4;
+      h2s[4].textContent = privacyES.h2_5;
+      h2s[5].textContent = privacyES.h2_6;
+      h2s[6].textContent = privacyES.h2_7;
+      h2s[7].textContent = privacyES.h2_8;
+      var allP = c.querySelectorAll('p:not(.policy-date)');
+      allP[0].textContent = privacyES.intro;
+      allP[1].textContent = privacyES.p_1;
+      allP[2].textContent = privacyES.p_3;
+      allP[3].textContent = privacyES.p_4;
+      allP[4].textContent = privacyES.p_5;
+      allP[5].textContent = privacyES.p_6;
+      allP[6].innerHTML = privacyES.p_6b;
+      allP[7].textContent = privacyES.p_7;
+      var lis = c.querySelectorAll('li');
+      lis[0].textContent = privacyES.li_1;
+      lis[1].textContent = privacyES.li_2a;
+      lis[2].textContent = privacyES.li_2b;
+      lis[3].textContent = privacyES.li_2c;
+      lis[4].textContent = privacyES.li_6a;
+      lis[5].textContent = privacyES.li_6b;
+      lis[6].textContent = privacyES.li_6c;
+      c.querySelector('.back-link').innerHTML = privacyES.back;
+      navLinks[0].textContent = privacyES.navFeatures;
+      navLinks[1].textContent = privacyES.navAbout;
+      navLinks[2].textContent = privacyES.navFaq;
+      navLinks[3].textContent = privacyES.navCta;
+      document.querySelector('.footer-bottom p').innerHTML = privacyES.copyright;
+    } else {
+      location.reload();
+    }
+  }
+
+  function toggleLang() {
+    applyLang(currentLang === 'es' ? 'en' : 'es');
+  }
+
+  if (currentLang === 'es') applyLang('es');
+  </script>
 </body>
 </html>

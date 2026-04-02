@@ -67,7 +67,10 @@
       <a href="/#features">Features</a>
       <a href="/#proof">About</a>
       <a href="/#faq">FAQ</a>
-      <a href="/#waitlist" class="nav-cta">Join Waitlist</a>
+      <a href="/#waitlist" class="nav-cta">Get Early Access</a>
+      <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+        <span class="lang-en">EN</span> | <span class="lang-es">ES</span>
+      </button>
     </div>
     <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
       <span></span><span></span><span></span>
@@ -132,5 +135,100 @@
       <p>&copy; 2026 ThriveMom™. All rights reserved.</p>
     </div>
   </footer>
+
+  <script>
+  var LANG_KEY = 'thrivemom_web_lang';
+  var urlLang = new URLSearchParams(window.location.search).get('lang');
+  var currentLang = urlLang === 'es' ? 'es' : (localStorage.getItem(LANG_KEY) || 'en');
+
+  var termsES = {
+    title: 'Términos y Condiciones',
+    date: 'Última actualización: 31 de marzo, 2026',
+    intro: 'Bienvenida a ThriveMom™. Al acceder o usar nuestro sitio web en thrivemom.app ("Sitio"), aceptas estos Términos y Condiciones. Si no estás de acuerdo, por favor no uses el Sitio.',
+    sections: [
+      { h: '1. Acerca de ThriveMom™', p: 'ThriveMom™ es una aplicación de apoyo diseñada para madres, con enfoque en el apoyo al TDAH. El Sitio actualmente sirve como página de pre-lanzamiento para recopilar registros de lista de espera y proporcionar información sobre la próxima aplicación.' },
+      { h: '2. No es Consejo Médico', p: 'ThriveMom™ es una herramienta de apoyo y autocuidado. <strong>No</strong> es un sustituto del consejo médico profesional, diagnóstico o tratamiento. El contenido, funciones y herramientas proporcionadas a través de ThriveMom™ (incluyendo el chat con IA) son solo para fines informativos y de autoayuda.', list: [
+        'Siempre busca el consejo de un profesional de salud calificado con cualquier pregunta sobre una condición médica o de salud mental.',
+        'Nunca ignores el consejo médico profesional ni retrases buscarlo por algo que leíste o experimentaste a través de ThriveMom™.',
+        'Si estás en crisis o experimentando una emergencia médica, llama al 911 o contacta la Línea de Crisis 988 inmediatamente.'
+      ]},
+      { h: '3. Lista de Espera y Pre-Lanzamiento', p: 'Al unirte a la lista de espera, proporcionas tu dirección de correo voluntariamente. La usamos únicamente para enviarte actualizaciones de lanzamiento e información de acceso anticipado. Unirte a la lista de espera no garantiza acceso a funciones específicas, precios o disponibilidad al lanzamiento.' },
+      { h: '4. Elegibilidad', p: 'Debes tener al menos 18 años para usar este Sitio y unirte a la lista de espera. Al usar el Sitio, declaras que cumples con este requisito.' },
+      { h: '5. Propiedad Intelectual', p: 'Todo el contenido de este Sitio, incluyendo texto, gráficos, logos, diseño y código, es propiedad de ThriveMom™ y está protegido por las leyes aplicables de derechos de autor y marcas registradas. No puedes reproducir, distribuir ni crear obras derivadas de ningún contenido de este Sitio sin nuestro permiso por escrito.' },
+      { h: '6. Conducta del Usuario', p: 'Al usar nuestro Sitio, aceptas no:', list: [
+        'Proporcionar información falsa o engañosa',
+        'Intentar interferir con la funcionalidad o seguridad del Sitio',
+        'Usar el Sitio para cualquier propósito ilegal',
+        'Extraer, recopilar o recolectar datos del Sitio sin permiso'
+      ]},
+      { h: '7. Servicios de Terceros', p: 'Nuestro Sitio puede usar servicios de terceros incluyendo Google Apps Script (para procesamiento de formularios) y proveedores de fuentes externos. No somos responsables de las prácticas o contenido de estos servicios de terceros. Su uso se rige por sus propios términos y políticas de privacidad.' },
+      { h: '8. Limitación de Responsabilidad', p: 'ThriveMom™ y su propietaria, empleados y afiliados no serán responsables de ningún daño indirecto, incidental, especial o consecuente derivado de tu uso del Sitio. El Sitio se proporciona "tal cual" sin garantías de ningún tipo, ya sean expresas o implícitas.' },
+      { h: '9. Cambios a Estos Términos', p: 'Nos reservamos el derecho de actualizar estos Términos y Condiciones en cualquier momento. Los cambios se publicarán en esta página con una fecha actualizada. Tu uso continuado del Sitio después de que se publiquen los cambios constituye tu aceptación de los términos revisados.' },
+      { h: '10. Ley Aplicable', p: 'Estos Términos se rigen y se interpretan de acuerdo con las leyes de los Estados Unidos. Cualquier disputa derivada de estos Términos se resolverá en los tribunales correspondientes.' },
+      { h: '11. Contáctanos', p: 'Si tienes preguntas sobre estos Términos, contáctanos en <a href="mailto:support@thrivemom.app">support@thrivemom.app</a>.' }
+    ],
+    back: '&larr; Volver a ThriveMom™',
+    navFeatures: 'Funciones',
+    navAbout: 'Nosotras',
+    navFaq: 'Preguntas',
+    navCta: 'Acceso Anticipado',
+    copyright: '&copy; 2026 ThriveMom™. Todos los derechos reservados.'
+  };
+
+  function applyLang(lang) {
+    currentLang = lang;
+    try { localStorage.setItem(LANG_KEY, lang); } catch(e) {}
+    document.documentElement.lang = lang;
+    document.body.classList.toggle('es', lang === 'es');
+
+    var c = document.querySelector('.policy-container');
+    var navLinks = document.querySelectorAll('.nav-links a');
+
+    if (lang === 'es') {
+      c.querySelector('h1').textContent = termsES.title;
+      c.querySelector('.policy-date').textContent = termsES.date;
+      var h2s = c.querySelectorAll('h2');
+      var allP = c.querySelectorAll(':scope > p:not(.policy-date)');
+      allP[0].textContent = termsES.intro;
+
+      termsES.sections.forEach(function(sec, i) {
+        if (h2s[i]) h2s[i].textContent = sec.h;
+      });
+
+      // Rebuild content after intro
+      var frag = '';
+      termsES.sections.forEach(function(sec) {
+        frag += '<h2>' + sec.h + '</h2>';
+        frag += '<p>' + sec.p + '</p>';
+        if (sec.list) {
+          frag += '<ul>';
+          sec.list.forEach(function(li) { frag += '<li>' + li + '</li>'; });
+          frag += '</ul>';
+        }
+      });
+      frag += '<a href="/" class="back-link">' + termsES.back + '</a>';
+
+      // Replace content
+      var title = '<h1>' + termsES.title + '</h1>';
+      var date = '<p class="policy-date">' + termsES.date + '</p>';
+      var intro = '<p>' + termsES.intro + '</p>';
+      c.innerHTML = title + date + intro + frag;
+
+      navLinks[0].textContent = termsES.navFeatures;
+      navLinks[1].textContent = termsES.navAbout;
+      navLinks[2].textContent = termsES.navFaq;
+      navLinks[3].textContent = termsES.navCta;
+      document.querySelector('.footer-bottom p').innerHTML = termsES.copyright;
+    } else {
+      location.reload();
+    }
+  }
+
+  function toggleLang() {
+    applyLang(currentLang === 'es' ? 'en' : 'es');
+  }
+
+  if (currentLang === 'es') applyLang('es');
+  </script>
 </body>
 </html>
