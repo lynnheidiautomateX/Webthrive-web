@@ -257,8 +257,7 @@ var translations = [
   { s: '.footer-links a[href="mailto:support@thrivemom.app"]', en: 'Contact', es: 'Contacto' },
   { s: '.footer-links a[href="/privacy.html"]', en: 'Privacy Policy', es: 'Política de Privacidad' },
   { s: '.footer-links a[href="/terms.html"]', en: 'Terms & Conditions', es: 'Términos y Condiciones' },
-  { s: '.footer-bottom p:first-child', en: '\u00a9 2026 ThriveMom™. All rights reserved.', es: '\u00a9 2026 ThriveMom™. Todos los derechos reservados.' },
-  { s: '.footer-bottom p:last-child', en: 'Made with caffeine, chaos, and a whole lot of love.', es: 'Hecho con cafeína, caos, y mucho amor.' },
+  // (footer-bottom handled directly in applyLang)
 ];
 
 function applyLang(lang) {
@@ -333,6 +332,11 @@ function applyLang(lang) {
     }
     if (answer) answer.textContent = lang === 'es' ? faqData[i].es_a : faqData[i].en_a;
   });
+
+  // Footer bottom lines (direct DOM)
+  var footerPs = document.querySelectorAll('.footer-bottom p');
+  if (footerPs[0]) footerPs[0].innerHTML = lang === 'es' ? '&copy; 2026 ThriveMom™. Todos los derechos reservados.' : '&copy; 2026 ThriveMom™. All rights reserved.';
+  if (footerPs[1]) footerPs[1].textContent = lang === 'es' ? 'Hecho con cafeína, caos, y mucho amor.' : 'Made with caffeine, chaos, and a whole lot of love.';
 }
 
 function toggleLang() {
