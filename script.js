@@ -167,7 +167,7 @@ var translations = [
   // Hero
   { s: '.hero-badge', en: 'Pre-Launch: May 9, 2026', es: 'Pre-Lanzamiento: 9 de Mayo, 2026' },
   { s: '.hero h1', en: 'The First App Built for ADHD Moms<br>Who Can\'t Keep Up<span class="gradient-text">... and Are Done<br>Feeling Like Failures.</span>', es: 'La Primera App Para Mamás con TDAH<br>Que No Pueden Más<span class="gradient-text">... y Están Cansadas<br>de Sentirse un Fracaso.</span>', html: true },
-  { s: '.hero-sub', en: 'Dump everything in your head. We sort it into action.<br>Relief in 60 seconds. Built by an ADHD mom who gets it.', es: 'Saca todo lo que tienes en la cabeza. Lo ordenamos en acción.<br>Alivio en 60 segundos. Hecho por una mamá con TDAH que entiende.', html: true },
+  { s: '.hero-sub', en: 'So You Can Finally Feel Calm, Clear, and in Control Again.', es: 'Para que por fin te sientas tranquila, clara, y en control otra vez.' },
   { s: '#heroBtn', en: 'Join the Waitlist', es: 'Únete a la Lista' },
   { s: '.hero-proof', en: '💜 <span id="waitlistCount">127</span> moms already on the waitlist', es: '💜 <span id="waitlistCount">127</span> mamás ya en la lista', html: true },
   // Countdown
