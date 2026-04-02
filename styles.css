@@ -518,7 +518,7 @@ body.es .lang-es { opacity: 1; }
 
 /* Chaos Catcher mockup */
 .chaos-screen {
-  background: linear-gradient(180deg, #2c1a47 0%, #3d2a5c 50%, #4A3370 100%) !important;
+  background: linear-gradient(170deg, #1a0e2e 0%, #2c1a47 35%, #4A3370 70%, #5B3F8F 100%) !important;
   gap: 0.4rem !important;
 }
 .chaos-header {
