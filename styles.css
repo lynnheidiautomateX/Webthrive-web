@@ -518,174 +518,66 @@ body.es .lang-es { opacity: 1; }
 
 /* Chaos Catcher mockup */
 .chaos-screen {
-  background: linear-gradient(170deg, #1a0e2e 0%, #2c1a47 30%, #3d2a5c 60%, #4A3370 100%) !important;
-  gap: 0.3rem !important;
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(180deg, #2c1a47 0%, #3d2a5c 50%, #4A3370 100%) !important;
+  gap: 0.4rem !important;
 }
-
-/* Floating sparkle particles */
-.chaos-particle {
-  position: absolute;
-  width: 3px;
-  height: 3px;
-  background: rgba(255,255,255,0.6);
-  border-radius: 50%;
-  animation: chaosFloat 4s ease-in-out infinite;
-  z-index: 0;
+.chaos-header {
+  color: rgba(255,255,255,0.6) !important;
+  border-bottom-color: rgba(255,255,255,0.1) !important;
 }
-.chaos-particle.sm { width: 2px; height: 2px; opacity: 0.4; }
-@keyframes chaosFloat {
-  0%, 100% { transform: translateY(0) scale(1); opacity: 0.6; }
-  50% { transform: translateY(-8px) scale(1.5); opacity: 1; }
-}
-
-/* Brand header */
-.chaos-brand {
-  font-size: 0.7rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.45);
-  text-align: center;
-  padding-bottom: 0.4rem;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  position: relative;
-  z-index: 1;
-}
-.chaos-brand sup { font-size: 0.35rem; vertical-align: super; }
-
 .chaos-title {
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   font-weight: 800;
   color: white;
   text-align: center;
-  letter-spacing: -0.02em;
-  position: relative;
-  z-index: 1;
 }
 .chaos-subtitle {
-  font-size: 0.58rem;
-  color: rgba(255,255,255,0.45);
+  font-size: 0.6rem;
+  color: rgba(255,255,255,0.5);
   text-align: center;
-  position: relative;
-  z-index: 1;
-}
-
-/* Glowing circle with word cloud */
-.chaos-circle-wrap {
-  position: relative;
-  width: 130px;
-  height: 130px;
-  margin: 0.25rem auto 0;
-  z-index: 1;
-}
-.chaos-circle-glow {
-  position: absolute;
-  inset: -8px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.12) 0%, transparent 70%);
-  animation: chaosGlow 3s ease-in-out infinite;
-}
-@keyframes chaosGlow {
-  0%, 100% { opacity: 0.6; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.06); }
+  margin-bottom: 0.2rem;
 }
 .chaos-circle {
-  width: 100%;
-  height: 100%;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  background: linear-gradient(145deg, rgba(255,255,255,0.95), rgba(243,238,255,0.9));
+  background: rgba(255,255,255,0.9);
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 0.1rem 0.25rem;
-  padding: 0.7rem;
-  box-shadow:
-    0 0 40px rgba(168,153,230,0.2),
-    0 0 80px rgba(107,79,160,0.1),
-    inset 0 1px 0 rgba(255,255,255,0.8);
-  position: relative;
+  gap: 0.15rem 0.3rem;
+  padding: 0.6rem;
+  box-shadow: 0 0 30px rgba(255,255,255,0.15);
 }
 .chaos-word {
+  color: #2c1a47;
   font-family: inherit;
   white-space: nowrap;
-  line-height: 1.1;
+  line-height: 1.2;
 }
-.cw1 { font-size: 0.62rem; font-weight: 700; color: #4A3370; transform: rotate(-4deg); }
-.cw2 { font-size: 0.82rem; font-weight: 800; color: #2c1a47; transform: rotate(2deg); }
-.cw3 { font-size: 0.52rem; font-weight: 600; color: #8b5cf6; transform: rotate(-6deg); opacity: 0.75; }
-.cw4 { font-size: 0.68rem; font-weight: 700; color: #6b4fa0; transform: rotate(5deg); }
-.cw5 { font-size: 0.75rem; font-weight: 800; color: #2c1a47; transform: rotate(-2deg); }
-.cw6 { font-size: 0.48rem; font-weight: 600; color: #a899e6; transform: rotate(3deg); }
-.cw7 { font-size: 0.44rem; font-weight: 600; color: #c4b8e0; transform: rotate(-1deg); font-style: italic; }
-
-/* Mic button with waveform */
 .chaos-mic {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
-  position: relative;
-  z-index: 1;
-}
-.chaos-wave-bars {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-}
-.chaos-wave-bars span {
-  display: block;
-  width: 2px;
-  background: rgba(255,255,255,0.35);
-  border-radius: 2px;
-  animation: chaosWave 0.8s ease-in-out infinite alternate;
-}
-@keyframes chaosWave {
-  0% { transform: scaleY(0.5); }
-  100% { transform: scaleY(1.5); }
+  gap: 0.2rem;
 }
 .chaos-mic-btn {
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: linear-gradient(135deg, #6b4fa0, #8b5cf6);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow:
-    0 4px 16px rgba(139,92,246,0.4),
-    0 0 0 3px rgba(139,92,246,0.15);
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(107,79,160,0.4);
 }
 .chaos-mic-label {
-  font-size: 0.5rem;
-  font-weight: 700;
-  color: rgba(255,255,255,0.4);
-  text-align: center;
-  letter-spacing: 0.5px;
-  position: relative;
-  z-index: 1;
-}
-
-/* CTA button */
-.chaos-cta {
-  margin-top: auto;
-  padding: 0.6rem 0;
-  position: relative;
-  z-index: 1;
-}
-.chaos-cta-text {
-  display: block;
-  text-align: center;
-  background: linear-gradient(135deg, #5B3F8F, #6b4fa0);
-  color: white;
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  padding: 0.65rem 1.5rem;
-  border-radius: 50px;
-  box-shadow:
-    0 4px 16px rgba(107,79,160,0.35),
-    inset 0 1px 0 rgba(255,255,255,0.1);
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.5);
 }
 
 /* Home bar */
