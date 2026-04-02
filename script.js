@@ -261,8 +261,8 @@ function applyLang(lang) {
 
   // Update SEO meta tags for Spanish
   document.title = lang === 'es'
-    ? 'ThriveMom\u2122 | La App Para Mam\u00e1s con TDAH | Alivio en 60 Segundos'
-    : 'ThriveMom\u2122 | The App for ADHD Moms | Relief in 60 Seconds';
+    ? 'ThriveMom\u2122 | Mam\u00e1s con TDAH: Calma, Claridad y Control Otra Vez'
+    : 'ThriveMom\u2122 | ADHD Moms: Calm, Clear, and in Control Again';
 
   var descMeta = document.querySelector('meta[name="description"]');
   if (descMeta) descMeta.content = lang === 'es'
