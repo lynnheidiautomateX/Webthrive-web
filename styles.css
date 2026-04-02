@@ -843,7 +843,7 @@ body.es .lang-es { opacity: 1; }
   line-height: 1.5;
 }
 
-/* Featured card (Ask for Help) */
+/* Featured cards (top 3 viral features) */
 .feature-card.featured {
   background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
   color: white;
@@ -853,15 +853,25 @@ body.es .lang-es { opacity: 1; }
 
 .feature-card.featured h3 {
   color: white;
+  font-size: 1.15rem;
 }
 
 .feature-card.featured p {
-  color: rgba(255,255,255,0.85);
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
 }
 
 .feature-card.featured:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(107, 79, 160, 0.35);
+}
+
+/* Alternate gradient for 2nd and 3rd featured cards */
+.feature-card.featured:nth-child(2) {
+  background: linear-gradient(135deg, #4A3370, #7c5fb8);
+}
+.feature-card.featured:nth-child(3) {
+  background: linear-gradient(135deg, #2c1a47, #6b4fa0);
 }
 
 .featured-example {
