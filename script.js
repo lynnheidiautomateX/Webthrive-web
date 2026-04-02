@@ -147,7 +147,7 @@ document.addEventListener('keydown', function(e) {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.problem-card, .feature-card, .step, .proof-card, .stat, .faq-item').forEach(function(el) {
+  document.querySelectorAll('.problem-card, .feature-card, .proof-card, .stat, .faq-item').forEach(function(el) {
     el.classList.add('animate-on-scroll');
     observer.observe(el);
   });
@@ -163,7 +163,7 @@ var currentLang = urlLang === 'es' ? 'es' : (localStorage.getItem(LANG_KEY) || '
 var translations = [
   // Nav
   { s: '.nav-links a[href="#features"]', en: 'Features', es: 'Funciones' },
-  { s: '.nav-links a[href="#how-it-works"]', en: 'How It Works', es: 'Cómo Funciona' },
+  { s: '.nav-links a[href="#proof"]', en: 'About', es: 'Nosotras' },
   { s: '.nav-links a[href="#faq"]', en: 'FAQ', es: 'Preguntas' },
   { s: '.nav-cta', en: 'Get Early Access', es: 'Acceso Anticipado' },
   // Hero
@@ -182,8 +182,8 @@ var translations = [
   { s: '.problem-card:nth-child(4) p', en: 'You forgot why you walked into the room. <strong>Again.</strong>', es: 'Olvidaste por qué entraste al cuarto. <strong>Otra vez.</strong>', html: true },
   { s: '.problem-cta', en: 'You\'re not failing. Your brain just works differently.<br><strong>ThriveMom™ was built for brains like yours.</strong>', es: 'No estás fallando. Tu cerebro simplemente funciona diferente.<br><strong>ThriveMom™ fue hecho para cerebros como el tuyo.</strong>', html: true },
   // Features
-  { s: '.features .section-title', en: 'Tools that actually <span class="highlight">help.</span>', es: 'Herramientas que realmente <span class="highlight">ayudan.</span>', html: true },
-  { s: '.features .section-desc', en: 'Every feature built for how your brain actually works. Not how apps think it should.', es: 'Cada función diseñada para cómo tu cerebro realmente funciona. No como las apps creen que debería.' },
+  { s: '.features .section-title', en: 'Stupid <span class="highlight">simple.</span> Tools that actually help.', es: 'Súper <span class="highlight">simple.</span> Herramientas que realmente ayudan.', html: true },
+  { s: '.features .section-desc', en: 'No tutorials. No setup wizard. No 47-step onboarding. Just relief. Every feature built for how your brain actually works.', es: 'Sin tutoriales. Sin asistente de configuración. Sin 47 pasos. Solo alivio. Cada función diseñada para cómo tu cerebro realmente funciona.' },
   { s: '.feature-card:nth-child(1) h3', en: 'Mental Weight Tracker', es: 'Medidor de Peso Mental' },
   { s: '.feature-card:nth-child(1) p', en: '"I cleared 47 lbs of mental clutter today." Track how much you\'ve unloaded, see your clarity score, and share it on socials.', es: '"Liberé 47 lbs de desorden mental hoy." Mide cuánto liberaste, ve tu puntaje de claridad, y compártelo en redes.' },
   { s: '.feature-card:nth-child(2) h3', en: 'Sparkle Sessions', es: 'Sesiones Sparkle' },
@@ -213,15 +213,7 @@ var translations = [
   { s: '.mw-card-clarity', en: 'Brain clarity: <strong>85%</strong>', es: 'Claridad mental: <strong>85%</strong>', html: true },
   { s: '.mw-card-quote', en: '"Today I chose myself for 60 seconds."', es: '"Hoy me elegí a mí misma por 60 segundos."' },
   { s: '.mw-card-tags', en: '#MentalWeightLoss \u00a0 #ADHDMom \u00a0 #ThriveMom', es: '#PérdidaDePesoMental \u00a0 #MamáTDAH \u00a0 #ThriveMom' },
-  // How it works
-  { s: '.how-it-works .section-title', en: 'Stupid <span class="highlight">simple</span>', es: 'Súper <span class="highlight">simple</span>', html: true },
-  { s: '.how-it-works .section-desc', en: 'No tutorials. No setup wizard. No 47-step onboarding. Just relief.', es: 'Sin tutoriales. Sin asistente de configuración. Sin 47 pasos. Solo alivio.' },
-  { s: '.step:nth-child(1) h3', en: 'Dump your chaos', es: 'Saca tu caos' },
-  { s: '.step:nth-child(1) p', en: 'Talk or type everything on your mind. Groceries, kids, guilt, laundry. All of it.', es: 'Habla o escribe todo lo que tienes en mente. Compras, niños, culpa, ropa. Todo.' },
-  { s: '.step:nth-child(3) h3', en: 'We sort it', es: 'Lo ordenamos' },
-  { s: '.step:nth-child(3) p', en: 'One tap: "Sort My Chaos." It organizes everything into categories with next steps.', es: 'Un toque: "Ordena Mi Caos." Organiza todo en categorías con próximos pasos.' },
-  { s: '.step:nth-child(5) h3', en: 'Share your wins', es: 'Comparte tus logros' },
-  { s: '.step:nth-child(5) p', en: '"I cleared 47 lbs of mental clutter today." Share your Mental Weight Loss on socials.', es: '"Liberé 47 lbs de desorden mental hoy." Comparte tu Pérdida de Peso Mental en redes.' },
+  // (How it works section removed, content merged into features header)
   // Social proof
   { s: '.social-proof .section-title', en: 'Built by a mom <span class="highlight">who gets it</span>', es: 'Hecha por una mamá <span class="highlight">que entiende</span>', html: true },
   { s: '.proof-quote', en: '"I built ThriveMom™ because I needed it myself. As an ADHD mom of 3, I was tired of apps that felt like another chore. ThriveMom™ meets you where you are, even if that\'s hiding in the bathroom for 60 seconds of peace."', es: '"Construí ThriveMom™ porque yo misma lo necesitaba. Como mamá con TDAH de 3 hijos, estaba cansada de apps que se sentían como otra tarea. ThriveMom™ te encuentra donde estás, aunque sea escondida en el baño por 60 segundos de paz."' },
