@@ -155,7 +155,9 @@ document.addEventListener('keydown', function(e) {
 
 // ===== LANGUAGE TOGGLE =====
 var LANG_KEY = 'thrivemom_web_lang';
-var currentLang = localStorage.getItem(LANG_KEY) || 'en';
+// Check URL param first (?lang=es), then localStorage, then default to 'en'
+var urlLang = new URLSearchParams(window.location.search).get('lang');
+var currentLang = urlLang === 'es' ? 'es' : (localStorage.getItem(LANG_KEY) || 'en');
 
 // Translation map: CSS selector -> { en, es }
 var translations = [
