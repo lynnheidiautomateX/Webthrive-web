@@ -1079,6 +1079,8 @@ body.es .lang-es { opacity: 1; }
   border-radius: 16px;
   padding: 1.75rem 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .feature-card:hover {
@@ -1087,26 +1089,23 @@ body.es .lang-es { opacity: 1; }
 }
 
 .feature-icon {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
 }
 
-.feature-card h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
-}
-
-.feature-card p {
-  font-size: 0.85rem;
+.feature-benefit {
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.feature-name {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--purple-mid);
+  letter-spacing: 0.01em;
 }
 
 /* Featured cards (top 3 viral features) */
@@ -1117,14 +1116,13 @@ body.es .lang-es { opacity: 1; }
   box-shadow: 0 8px 32px rgba(168, 153, 230, 0.3);
 }
 
-.feature-card.featured h3 {
-  color: white;
-  font-size: 1.15rem;
+.feature-card.featured .feature-benefit {
+  color: rgba(255,255,255,0.9);
+  font-size: 0.92rem;
 }
 
-.feature-card.featured p {
-  color: rgba(255,255,255,0.88);
-  font-size: 0.9rem;
+.feature-card.featured .feature-name {
+  color: rgba(255,255,255,0.7);
 }
 
 .feature-card.featured:hover {

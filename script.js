@@ -178,20 +178,20 @@ var translations = [
   { s: '.problem-card:nth-child(4) p', en: 'Forgot why you walked into the room. <strong>Again.</strong>', es: 'Olvidaste por qué entraste al cuarto. <strong>Otra vez.</strong>', html: true },
   { s: '.problem-cta', en: 'You\'re not failing. Your brain just works differently.<br><strong>ThriveMom™ was built for brains like yours.</strong>', es: 'No estás fallando. Tu cerebro simplemente funciona diferente.<br><strong>ThriveMom™ fue hecho para cerebros como el tuyo.</strong>', html: true },
   // Features
-  { s: '.features .section-title', en: 'ADHD Mom Tools: Stupid <span class="highlight">simple.</span> Actually helpful.', es: 'Herramientas para mamás TDAH: Súper <span class="highlight">simple.</span> Realmente útiles.', html: true },
-  { s: '.features .section-desc', en: 'No tutorials. No setup wizard. No 47-step onboarding. Just relief. Every feature built for how your brain actually works.', es: 'Sin tutoriales. Sin asistente de configuración. Sin 47 pasos. Solo alivio. Cada función diseñada para cómo tu cerebro realmente funciona.' },
-  { s: '.feature-card:nth-child(1) h3', en: 'Mental Weight Tracker', es: 'Medidor de Peso Mental' },
-  { s: '.feature-card:nth-child(1) p', en: '"I cleared 47 lbs of mental clutter today." Track how much you\'ve unloaded, see your clarity score, and share it on socials.', es: '"Liberé 47 lbs de desorden mental hoy." Mide cuánto liberaste, ve tu puntaje de claridad, y compártelo en redes.' },
-  { s: '.feature-card:nth-child(2) h3', en: 'Sparkle Sessions', es: 'Sesiones Sparkle' },
-  { s: '.feature-card:nth-child(2) p', en: 'Tiny task batches that feel doable. Towel load. Clear the island. 5 minutes, step by step, with confetti when you\'re done.', es: 'Pequeñas tandas de tareas que se sienten posibles. Carga de toallas. Limpiar la isla. 5 minutos, paso a paso, con confeti cuando termines.' },
-  { s: '.feature-card:nth-child(3) h3', en: 'The Chaos Catcher', es: 'El Atrapa Caos' },
-  { s: '.feature-card:nth-child(3) p', en: 'Brain full? Dump it all out by voice or text. We sort your chaos into action categories: groceries, kids, admin, self-care. One button: "Sort My Chaos."', es: '¿Cerebro lleno? Saca todo por voz o texto. Organizamos tu caos en categorías: compras, niños, admin, autocuidado. Un botón: "Ordena Mi Caos."' },
-  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(4) h3', en: 'Your 2am Friend', es: 'Tu Amiga de las 2am' },
-  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(4) p', en: '24/7 judgment-free chat that understands your ADHD mom brain. Real strategies, real talk, whenever you need it. Available in English and Spanish.', es: 'Chat 24/7 sin juicios que entiende tu cerebro de mamá con TDAH. Estrategias reales, conversación real. Disponible en inglés y español.' },
-  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(5) h3', en: 'Bilingual: EN + ES', es: 'Bilingüe: EN + ES' },
-  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(5) p', en: 'Full Spanish support for Latina ADHD moms. Switch between English and Spanish anytime. Because every mama deserves support in her language.', es: 'Soporte completo en español para mamás latinas con TDAH. Cambia entre inglés y español cuando quieras. Porque toda mamá merece apoyo en su idioma.' },
-  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(6) h3', en: 'Ask for Help', es: 'Pide Ayuda' },
-  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(6) p', en: 'Can\'t find the words? We wrote them. Pre-written messages to your partner or mom friend. Customize or send as-is. One tap to text.', es: '¿No encuentras las palabras? Ya las escribimos. Mensajes pre-escritos para tu pareja o amiga. Personaliza o envía tal cual. Un toque.' },
+  { s: '.features .section-title', en: 'Mom Tools: Stupid <span class="highlight">simple.</span> Actually helpful.', es: 'Herramientas de mamá: Súper <span class="highlight">simple.</span> Realmente útiles.', html: true },
+  { s: '.features .section-desc', en: 'Just relief. Every feature built for how your brain actually works.', es: 'Solo alivio. Cada función diseñada para cómo tu cerebro realmente funciona.' },
+  { s: '.feature-card:nth-child(1) .feature-benefit', en: 'Tiny task batches that feel doable.', es: 'Pequeñas tandas de tareas que se sienten posibles.' },
+  { s: '.feature-card:nth-child(1) .feature-name', en: '\u2014 Sparkle Sessions', es: '\u2014 Sesiones Sparkle' },
+  { s: '.feature-card:nth-child(2) .feature-benefit', en: '"I cleared 47 lbs of mental clutter today."', es: '"Liberé 47 lbs de desorden mental hoy."' },
+  { s: '.feature-card:nth-child(2) .feature-name', en: '\u2014 Mental Weight Tracker', es: '\u2014 Medidor de Peso Mental' },
+  { s: '.feature-card:nth-child(3) .feature-benefit', en: 'Brain full? Dump it all out by voice or text.', es: '¿Cerebro lleno? Saca todo por voz o texto.' },
+  { s: '.feature-card:nth-child(3) .feature-name', en: '\u2014 The Chaos Catcher', es: '\u2014 El Atrapa Caos' },
+  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(4) .feature-benefit', en: '24/7 judgment-free chat.', es: 'Chat 24/7 sin juicios.' },
+  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(4) .feature-name', en: '\u2014 Your 2am Friend', es: '\u2014 Tu Amiga de las 2am' },
+  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(5) .feature-benefit', en: 'Full Spanish support for Latina ADHD moms.', es: 'Soporte completo en español para mamás latinas con TDAH.' },
+  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(5) .feature-name', en: '\u2014 Bilingual: EN + ES', es: '\u2014 Bilingüe: EN + ES' },
+  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(6) .feature-benefit', en: 'Customize or send as-is. Pre-written messages to your partner or family friend.', es: 'Personaliza o envía tal cual. Mensajes pre-escritos para tu pareja o amiga.' },
+  { s: '.features-grid:not(.features-extra) .feature-card:nth-child(6) .feature-name', en: '\u2014 Ask for Help', es: '\u2014 Pide Ayuda' },
   // (extra feature cards + FAQ handled directly in applyLang)
   // Mental Weight
   { s: '#mental-weight .section-title', en: 'Your new flex: <span class="highlight">Mental Weight Loss</span>', es: 'Tu nuevo logro: <span class="highlight">Pérdida de Peso Mental</span>', html: true },
@@ -361,16 +361,16 @@ function applyLang(lang) {
   // Extra feature cards (direct DOM access since selector approach fails on hidden container)
   var extraCards = document.querySelectorAll('.features-extra .feature-card');
   var extraData = [
-    { en_h: 'Mood Tracking', es_h: 'Seguimiento de Ánimo', en_p: 'Daily check-ins, weekly mood maps, wins jar, and streaks. Zero effort logging with ADHD micro-lessons.', es_p: 'Check-ins diarios, mapas de ánimo semanales, frasco de victorias y rachas. Registro sin esfuerzo con micro-lecciones de TDAH.' },
-    { en_h: 'Quick Reset', es_h: 'Reset Rápido', en_p: 'Mood-specific breathing exercises. Personalized to what you actually need right now.', es_p: 'Ejercicios de respiración según tu ánimo. Personalizado a lo que realmente necesitas ahora.' },
-    { en_h: 'Focus Timer', es_h: 'Temporizador de Enfoque', en_p: 'Breaks tasks into tiny, doable chunks. With celebration when you finish.', es_p: 'Divide tareas en pedacitos posibles. Con celebración cuando terminas.' }
+    { en_benefit: 'Daily check-ins, weekly mood maps, wins jar, and streaks.', es_benefit: 'Check-ins diarios, mapas de ánimo semanales, frasco de victorias y rachas.', en_name: '\u2014 Mood Tracking', es_name: '\u2014 Seguimiento de Ánimo' },
+    { en_benefit: 'Mood-specific breathing exercises.', es_benefit: 'Ejercicios de respiración según tu ánimo.', en_name: '\u2014 Quick Reset', es_name: '\u2014 Reset Rápido' },
+    { en_benefit: 'Breaks tasks into tiny, doable chunks.', es_benefit: 'Divide tareas en pedacitos posibles.', en_name: '\u2014 Focus Timer', es_name: '\u2014 Temporizador de Enfoque' }
   ];
   extraCards.forEach(function(card, i) {
     if (!extraData[i]) return;
-    var h3 = card.querySelector('h3');
-    var p = card.querySelector('p');
-    if (h3) h3.textContent = lang === 'es' ? extraData[i].es_h : extraData[i].en_h;
-    if (p) p.textContent = lang === 'es' ? extraData[i].es_p : extraData[i].en_p;
+    var benefit = card.querySelector('.feature-benefit');
+    var name = card.querySelector('.feature-name');
+    if (benefit) benefit.textContent = lang === 'es' ? extraData[i].es_benefit : extraData[i].en_benefit;
+    if (name) name.textContent = lang === 'es' ? extraData[i].es_name : extraData[i].en_name;
   });
 
   // (FAQ content moved to /faq.html — no in-page FAQ to translate here)
