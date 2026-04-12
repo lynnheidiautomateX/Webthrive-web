@@ -1400,6 +1400,8 @@ body.es .lang-es { opacity: 1; }
 .review-avatar.a1 { background: linear-gradient(135deg, #ec4899, #a855f7); }
 .review-avatar.a2 { background: linear-gradient(135deg, #f59e0b, #ec4899); }
 .review-avatar.a3 { background: linear-gradient(135deg, #10b981, #6b4fa0); }
+.review-avatar.a4 { background: linear-gradient(135deg, #6366f1, #ec4899); }
+.review-avatar.a5 { background: linear-gradient(135deg, #f97316, #eab308); }
 .review-meta strong {
   display: block;
   color: var(--purple-deep);

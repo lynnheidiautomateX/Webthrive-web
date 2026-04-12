@@ -118,7 +118,7 @@ function toggleMoreReviews() {
     if (currentLang === 'es') applyLang('es');
   } else {
     extra.style.display = 'none';
-    btn.innerHTML = currentLang === 'es' ? '\uD83D\uDC9C Ver 2 reseñas más' : '\uD83D\uDC9C See 2 more reviews';
+    btn.innerHTML = currentLang === 'es' ? '\uD83D\uDC9C Ver 4 reseñas más' : '\uD83D\uDC9C See 4 more reviews';
   }
 }
 
@@ -216,17 +216,25 @@ var translations = [
   { s: '.social-proof .section-title', en: 'Real ADHD moms. <span class="highlight">Real relief.</span>', es: 'Mamás reales con TDAH. <span class="highlight">Alivio real.</span>', html: true },
   { s: '.social-proof .section-desc', en: 'From beta testers already using ThriveMom™.', es: 'De beta testers que ya usan ThriveMom™.' },
   // Review card 1 — Sarah (always visible)
-  { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-context', en: '🌙 At 2am meltdown', es: '🌙 En crisis a las 2am' },
-  { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-quote', en: '"I cried the first time I used it. My brain finally slowed down. <strong>I tried 4 other apps. None worked like this.</strong>"', es: '"Lloré la primera vez que la usé. Mi cerebro por fin se calmó. <strong>Probé 4 apps. Ninguna funcionó así.</strong>"', html: true },
+  { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-context', en: '🧠 20 tabs open', es: '🧠 20 pestañas abiertas' },
+  { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-quote', en: '"My brain used to feel like 20 tabs open at once. I didn\'t even know where to start. Now I just open the app, dump everything out, and it tells me one thing to do. <strong>That alone changed my mornings.</strong>"', es: '"Mi cerebro se sentía como 20 pestañas abiertas a la vez. Ni sabía por dónde empezar. Ahora abro la app, suelto todo, y me dice una cosa que hacer. <strong>Solo eso cambió mis mañanas.</strong>"', html: true },
   { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-meta span', en: 'Austin, TX &middot; Mom of 2<br>Day 3 with ThriveMom', es: 'Austin, TX &middot; Mamá de 2<br>Día 3 con ThriveMom', html: true },
-  // Review card 2 — Jessica (hidden until expanded)
-  { s: '.reviews-extra .review-card:nth-child(1) .review-context', en: '⚡ During school morning chaos', es: '⚡ En el caos mañanero de la escuela' },
-  { s: '.reviews-extra .review-card:nth-child(1) .review-quote', en: '"I stopped feeling like a bad mom every day. <strong>Not because I\'m doing more. Because I finally feel like I can.</strong>"', es: '"Dejé de sentirme como una mala mamá todos los días. <strong>No porque haga más. Porque por fin siento que puedo.</strong>"', html: true },
+  // Review card 2 — Jessica (hidden)
+  { s: '.reviews-extra .review-card:nth-child(1) .review-context', en: '😶 Overwhelm shutdown', es: '😶 Parálisis por agobio' },
+  { s: '.reviews-extra .review-card:nth-child(1) .review-quote', en: '"I thought something was wrong with me. I\'d get overwhelmed and shut down constantly. <strong>This is the first thing that actually calms me down without making me feel worse.</strong>"', es: '"Pensaba que algo estaba mal conmigo. Me agobiaba y me bloqueaba todo el tiempo. <strong>Esto es lo primero que me calma sin hacerme sentir peor.</strong>"', html: true },
   { s: '.reviews-extra .review-card:nth-child(1) .review-meta span', en: 'Portland, OR &middot; Mom of 3<br>2 weeks in, used daily', es: 'Portland, OR &middot; Mamá de 3<br>2 semanas, uso diario', html: true },
-  // Review card 3 — Maria (hidden until expanded)
-  { s: '.reviews-extra .review-card:nth-child(2) .review-context', en: '💫 After trying 6 apps', es: '💫 Después de probar 6 apps' },
-  { s: '.reviews-extra .review-card:nth-child(2) .review-quote', en: '"This is the only app I\'ve ever actually used consistently. <strong>After 6 productivity apps in 2 years, that\'s a miracle.</strong>"', es: '"Es la única app que realmente he usado con constancia. <strong>Después de 6 apps de productividad en 2 años, eso es un milagro.</strong>"', html: true },
+  // Review card 3 — Maria (hidden)
+  { s: '.reviews-extra .review-card:nth-child(2) .review-context', en: '🌀 Mid-spiral rescue', es: '🌀 Rescate en plena espiral' },
+  { s: '.reviews-extra .review-card:nth-child(2) .review-quote', en: '"I didn\'t think anything could help in the moment. But I tried it once when I was spiraling... <strong>and within a minute I felt more in control.</strong>"', es: '"No creía que nada pudiera ayudar en el momento. Pero lo probé una vez en plena espiral... <strong>y en un minuto me sentí más en control.</strong>"', html: true },
   { s: '.reviews-extra .review-card:nth-child(2) .review-meta span', en: 'Miami, FL &middot; Mom of 1<br>21 days, daily user', es: 'Miami, FL &middot; Mamá de 1<br>21 días, uso diario', html: true },
+  // Review card 4 — Diana (hidden)
+  { s: '.reviews-extra .review-card:nth-child(3) .review-context', en: '⚡ Morning chaos', es: '⚡ Caos mañanero' },
+  { s: '.reviews-extra .review-card:nth-child(3) .review-quote', en: '"Getting my kids ready used to feel chaotic every single day. Now I use this before things spiral, and everything feels... lighter. <strong>Not perfect. Just manageable.</strong>"', es: '"Preparar a mis hijos era caótico todos los días. Ahora uso esto antes de que todo se descontrole, y todo se siente... más ligero. <strong>No perfecto. Solo manejable.</strong>"', html: true },
+  { s: '.reviews-extra .review-card:nth-child(3) .review-meta span', en: 'Denver, CO &middot; Mom of 2<br>1 week in', es: 'Denver, CO &middot; Mamá de 2<br>1 semana', html: true },
+  // Review card 5 — Rachel (hidden)
+  { s: '.reviews-extra .review-card:nth-child(4) .review-context', en: '💜 Showing up calmer', es: '💜 Llegar más tranquila' },
+  { s: '.reviews-extra .review-card:nth-child(4) .review-quote', en: '"I always felt like I was failing at motherhood. This doesn\'t fix everything... <strong>but it helps me show up calmer. And that changes everything.</strong>"', es: '"Siempre sentí que fallaba como mamá. Esto no arregla todo... <strong>pero me ayuda a llegar más tranquila. Y eso lo cambia todo.</strong>"', html: true },
+  { s: '.reviews-extra .review-card:nth-child(4) .review-meta span', en: 'Chicago, IL &middot; Mom of 3<br>10 days, used daily', es: 'Chicago, IL &middot; Mamá de 3<br>10 días, uso diario', html: true },
   // Review stats strip
   { s: '.review-stats .stat:nth-child(1) .stat-label', en: 'Average time to feel relief', es: 'Tiempo promedio para sentir alivio' },
   { s: '.review-stats .stat:nth-child(2) .stat-label', en: 'Core tools, zero overwhelm', es: 'Herramientas, cero agobio' },
@@ -356,7 +364,7 @@ function applyLang(lang) {
     if (revOpen) {
       revToggle.innerHTML = lang === 'es' ? '\uD83D\uDC9C Ver menos' : '\uD83D\uDC9C Show less';
     } else {
-      revToggle.innerHTML = lang === 'es' ? '\uD83D\uDC9C Ver 2 reseñas más' : '\uD83D\uDC9C See 2 more reviews';
+      revToggle.innerHTML = lang === 'es' ? '\uD83D\uDC9C Ver 4 reseñas más' : '\uD83D\uDC9C See 4 more reviews';
     }
   }
 
