@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | ThriveMom™</title>
+  <meta name="description" content="Frequently asked questions about ThriveMom™, the app built for ADHD moms. Launch date, pricing, features, and how it works.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thrivemom.app/faq.html">
+  <link rel="alternate" hreflang="en" href="https://thrivemom.app/faq.html">
+  <link rel="alternate" hreflang="es" href="https://thrivemom.app/faq.html?lang=es">
+  <link rel="alternate" hreflang="x-default" href="https://thrivemom.app/faq.html">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+  <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- JSON-LD: FAQ rich snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"When does ThriveMom™ launch?","acceptedAnswer":{"@type":"Answer","text":"May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing."}},
+      {"@type":"Question","name":"Is this only for moms with an ADHD diagnosis?","acceptedAnswer":{"@type":"Answer","text":"Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom™ is designed for you."}},
+      {"@type":"Question","name":"Is it free?","acceptedAnswer":{"@type":"Answer","text":"ThriveMom™ will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version."}},
+      {"@type":"Question","name":"What makes ThriveMom™ different?","acceptedAnswer":{"@type":"Answer","text":"Most apps are built for neurotypical brains. ThriveMom™ is specifically designed for ADHD: low friction, instant gratification, no guilt trips. Everything takes under 60 seconds to start."}},
+      {"@type":"Question","name":"What is the Chaos Catcher?","acceptedAnswer":{"@type":"Answer","text":"A brain dump tool. Talk or type everything on your mind, hit Sort My Chaos, and it instantly organizes everything into action categories. It also tracks your Mental Weight."}},
+      {"@type":"Question","name":"What are Sparkle Sessions?","acceptedAnswer":{"@type":"Answer","text":"Tiny, step-by-step task batches designed for ADHD brains. Each one takes just a few minutes, and you get confetti when you finish."}},
+      {"@type":"Question","name":"Is ThriveMom™ available in Spanish?","acceptedAnswer":{"@type":"Answer","text":"Yes. ThriveMom™ has full bilingual support in English and Spanish, built specifically for Latina ADHD moms. Switch anytime with one tap."}}
+    ]
+  }
+  </script>
+
+  <style>
+    .faq-page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 7rem 2rem 4rem;
+    }
+    .faq-page h1 {
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: var(--purple-deep);
+      margin-bottom: 0.5rem;
+      line-height: 1.15;
+    }
+    .faq-page .faq-intro {
+      color: var(--text-secondary);
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+    }
+    .faq-block {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem 1.75rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow);
+    }
+    .faq-block h2 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--purple-deep);
+      margin-bottom: 0.75rem;
+      line-height: 1.35;
+    }
+    .faq-block p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .ask-section {
+      margin-top: 3rem;
+      padding: 2rem 1.75rem;
+      background: linear-gradient(135deg, var(--purple-wash), var(--purple-pale));
+      border: 1px solid var(--purple-light);
+      border-radius: 20px;
+    }
+    .ask-section h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--purple-deep);
+      margin-bottom: 0.4rem;
+    }
+    .ask-section > p {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      margin-bottom: 1.25rem;
+    }
+    .ask-form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .ask-form input,
+    .ask-form textarea {
+      padding: 0.85rem 1rem;
+      border: 1.5px solid var(--border);
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background: var(--white);
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .ask-form input:focus,
+    .ask-form textarea:focus { border-color: var(--purple-mid); }
+    .ask-form textarea {
+      min-height: 110px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .ask-form button {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      padding: 0.9rem 1.5rem;
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      align-self: flex-start;
+    }
+    .ask-form button:hover { opacity: 0.92; transform: translateY(-1px); }
+    .ask-form button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+    .ask-success {
+      display: none;
+      background: rgba(16, 185, 129, 0.1);
+      color: var(--accent-green);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
+    .ask-success.active { display: block; }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 2.5rem;
+      color: var(--purple-mid);
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 720px) {
+      .faq-page { padding: 6rem 1.25rem 3rem; }
+      .faq-block { padding: 1.25rem 1.25rem; }
+      .ask-section { padding: 1.5rem 1.25rem; }
+      .ask-form button { width: 100%; align-self: stretch; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#top" class="skip-link">Skip to content</a>
+
+  <nav aria-label="Main navigation">
+    <a href="/" class="nav-logo">ThriveMom™</a>
+    <div class="nav-links" id="navLinks">
+      <a href="/#features">Features</a>
+      <a href="/#proof">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/#waitlist" class="nav-cta">I need this</a>
+      <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+        <span class="lang-en">EN</span> | <span class="lang-es">ES</span>
+      </button>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="top" class="faq-page">
+    <h1 data-i18n="title">Frequently asked questions</h1>
+    <p class="faq-intro" data-i18n="intro">Everything you need to know before ThriveMom™ launches. Still stuck? Ask us at the bottom.</p>
+
+    <div class="faq-block">
+      <h2 data-i18n="q1">When does ThriveMom™ launch?</h2>
+      <p data-i18n="a1">May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.</p>
+    </div>
+
+    <div class="faq-block">
+      <h2 data-i18n="q2">Is this only for moms with an ADHD diagnosis?</h2>
+      <p data-i18n="a2">Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom™ is designed for you. If the "47 tabs open" feeling resonated, you're in the right place.</p>
+    </div>
+
+    <div class="faq-block">
+      <h2 data-i18n="q3">Is it free?</h2>
+      <p data-i18n="a3">ThriveMom™ will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version. We believe every mom deserves support, regardless of budget.</p>
+    </div>
+
+    <div class="faq-block">
+      <h2 data-i18n="q4">What makes ThriveMom™ different?</h2>
+      <p data-i18n="a4">Most apps are built for neurotypical brains. ThriveMom™ is specifically designed for ADHD: low friction, instant gratification, no guilt trips, no 30-day programs you'll abandon on day 3. Everything takes under 60 seconds to start.</p>
+    </div>
+
+    <div class="faq-block">
+      <h2 data-i18n="q5">What's the Chaos Catcher?</h2>
+      <p data-i18n="a5">It's a brain dump tool. Talk or type everything that's swirling in your head: groceries, guilt, school forms, exhaustion. Hit "Sort My Chaos" and it instantly organizes everything into action categories. It also tracks your "Mental Weight" so you can see how many pounds of mental clutter you've cleared and share it.</p>
+    </div>
+
+    <div class="faq-block">
+      <h2 data-i18n="q6">What are Sparkle Sessions?</h2>
+      <p data-i18n="a6">Tiny, step-by-step task batches designed for ADHD brains. Instead of "clean the house" (impossible), you get "The Towel Load: grab all towels, put in washer, press start." Each one takes just a few minutes, and you get confetti when you finish.</p>
+    </div>
+
+    <div class="faq-block">
+      <h2 data-i18n="q7">Is ThriveMom™ available in Spanish?</h2>
+      <p data-i18n="a7">Yes! ThriveMom™ has full bilingual support (English and Spanish). Switch anytime with one tap. Built specifically for Latina ADHD moms who deserve support in their language. Voice input in the Chaos Catcher also works in Spanish.</p>
+    </div>
+
+    <!-- Submit a question -->
+    <section class="ask-section">
+      <h2 data-i18n="askTitle">Still have a question?</h2>
+      <p data-i18n="askSub">Ask us anything. We'll reply personally, usually within 24 hours.</p>
+      <form class="ask-form" id="askForm" onsubmit="return submitQuestion(event)">
+        <input type="email" id="askEmail" placeholder="Your email" autocomplete="email" required aria-label="Your email">
+        <textarea id="askQuestion" placeholder="What's your question?" required aria-label="Your question"></textarea>
+        <button type="submit" id="askBtn" data-i18n="askBtn">Send question</button>
+      </form>
+      <div class="ask-success" id="askSuccess" data-i18n="askSuccess">💜 Thanks! We'll get back to you within 24 hours.</div>
+    </section>
+
+    <a href="/" class="back-link" data-i18n="back">&larr; Back to ThriveMom™</a>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <p data-i18n="copyright">&copy; 2026 ThriveMom™. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    var LANG_KEY = 'thrivemom_web_lang';
+    var urlLang = new URLSearchParams(window.location.search).get('lang');
+    var currentLang = urlLang === 'es' ? 'es' : (localStorage.getItem(LANG_KEY) || 'en');
+
+    var translations = {
+      en: {
+        title: 'Frequently asked questions',
+        intro: 'Everything you need to know before ThriveMom\u2122 launches. Still stuck? Ask us at the bottom.',
+        q1: 'When does ThriveMom\u2122 launch?',
+        a1: 'May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.',
+        q2: 'Is this only for moms with an ADHD diagnosis?',
+        a2: 'Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom\u2122 is designed for you. If the "47 tabs open" feeling resonated, you\'re in the right place.',
+        q3: 'Is it free?',
+        a3: 'ThriveMom\u2122 will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version. We believe every mom deserves support, regardless of budget.',
+        q4: 'What makes ThriveMom\u2122 different?',
+        a4: 'Most apps are built for neurotypical brains. ThriveMom\u2122 is specifically designed for ADHD: low friction, instant gratification, no guilt trips, no 30-day programs you\'ll abandon on day 3. Everything takes under 60 seconds to start.',
+        q5: 'What\'s the Chaos Catcher?',
+        a5: 'It\'s a brain dump tool. Talk or type everything that\'s swirling in your head: groceries, guilt, school forms, exhaustion. Hit "Sort My Chaos" and it instantly organizes everything into action categories. It also tracks your "Mental Weight" so you can see how many pounds of mental clutter you\'ve cleared and share it.',
+        q6: 'What are Sparkle Sessions?',
+        a6: 'Tiny, step-by-step task batches designed for ADHD brains. Instead of "clean the house" (impossible), you get "The Towel Load: grab all towels, put in washer, press start." Each one takes just a few minutes, and you get confetti when you finish.',
+        q7: 'Is ThriveMom\u2122 available in Spanish?',
+        a7: 'Yes! ThriveMom\u2122 has full bilingual support (English and Spanish). Switch anytime with one tap. Built specifically for Latina ADHD moms who deserve support in their language. Voice input in the Chaos Catcher also works in Spanish.',
+        askTitle: 'Still have a question?',
+        askSub: 'Ask us anything. We\'ll reply personally, usually within 24 hours.',
+        askEmail: 'Your email',
+        askQuestion: 'What\'s your question?',
+        askBtn: 'Send question',
+        askBtnSending: 'Sending...',
+        askSuccess: '\uD83D\uDC9C Thanks! We\'ll get back to you within 24 hours.',
+        back: '\u2190 Back to ThriveMom\u2122',
+        copyright: '\u00a9 2026 ThriveMom\u2122. All rights reserved.',
+        navFeatures: 'Features',
+        navAbout: 'About',
+        navFaq: 'FAQ',
+        navCta: 'I need this',
+        pageTitle: 'FAQ | ThriveMom\u2122'
+      },
+      es: {
+        title: 'Preguntas frecuentes',
+        intro: 'Todo lo que necesitas saber antes de que ThriveMom\u2122 se lance. \u00bfTodav\u00eda tienes dudas? Pregunta al final.',
+        q1: '\u00bfCu\u00e1ndo se lanza ThriveMom\u2122?',
+        a1: '9 de mayo, 2026. \u00danete a la lista de espera para recibir notificaci\u00f3n en cuanto est\u00e9 disponible. Los primeros en la lista obtienen acceso prioritario y precio especial.',
+        q2: '\u00bfEs solo para mam\u00e1s con diagn\u00f3stico de TDAH?',
+        a2: 'Para nada. Ya sea que tengas un diagn\u00f3stico formal, sospeches que podr\u00edas tener TDAH, o simplemente te sientas cr\u00f3nicamente abrumada como mam\u00e1, ThriveMom\u2122 es para ti. Si lo de las "47 pesta\u00f1as abiertas" te reson\u00f3, est\u00e1s en el lugar correcto.',
+        q3: '\u00bfEs gratis?',
+        a3: 'ThriveMom\u2122 tendr\u00e1 un plan gratuito con funciones principales. Los primeros en la lista (primeros 500) obtienen precio de acceso temprano de por vida en la versi\u00f3n completa. Creemos que toda mam\u00e1 merece apoyo, sin importar el presupuesto.',
+        q4: '\u00bfQu\u00e9 hace diferente a ThriveMom\u2122?',
+        a4: 'La mayor\u00eda de las apps est\u00e1n hechas para cerebros neurot\u00edpicos. ThriveMom\u2122 est\u00e1 dise\u00f1ada espec\u00edficamente para TDAH: poca fricci\u00f3n, gratificaci\u00f3n instant\u00e1nea, sin culpas, sin programas de 30 d\u00edas que abandonar\u00e1s el d\u00eda 3. Todo toma menos de 60 segundos para empezar.',
+        q5: '\u00bfQu\u00e9 es el Atrapa Caos?',
+        a5: 'Es una herramienta de descarga mental. Habla o escribe todo lo que da vueltas en tu cabeza: compras, culpa, formularios del colegio, agotamiento. Presiona "Ordena Mi Caos" y organiza todo instant\u00e1neamente en categor\u00edas de acci\u00f3n. Tambi\u00e9n rastrea tu "Peso Mental" para que veas cu\u00e1ntas libras de desorden mental has liberado y lo compartas.',
+        q6: '\u00bfQu\u00e9 son las Sesiones Sparkle?',
+        a6: 'Peque\u00f1as tandas de tareas paso a paso dise\u00f1adas para cerebros con TDAH. En vez de "limpiar la casa" (imposible), recibes "La Carga de Toallas: agarra todas las toallas, ponlas en la lavadora, presiona inicio." Cada una toma solo unos minutos, y recibes confeti cuando terminas.',
+        q7: '\u00bfThriveMom\u2122 est\u00e1 disponible en espa\u00f1ol?',
+        a7: '\u00a1S\u00ed! ThriveMom\u2122 tiene soporte biling\u00fce completo (ingl\u00e9s y espa\u00f1ol). Cambia en cualquier momento con un toque. Hecho espec\u00edficamente para mam\u00e1s latinas con TDAH que merecen apoyo en su idioma. La entrada de voz en el Atrapa Caos tambi\u00e9n funciona en espa\u00f1ol.',
+        askTitle: '\u00bfTodav\u00eda tienes una pregunta?',
+        askSub: 'Preg\u00fantanos lo que sea. Te responderemos personalmente, normalmente en 24 horas.',
+        askEmail: 'Tu correo',
+        askQuestion: '\u00bfCu\u00e1l es tu pregunta?',
+        askBtn: 'Enviar pregunta',
+        askBtnSending: 'Enviando...',
+        askSuccess: '\uD83D\uDC9C \u00a1Gracias! Te responderemos en 24 horas.',
+        back: '\u2190 Volver a ThriveMom\u2122',
+        copyright: '\u00a9 2026 ThriveMom\u2122. Todos los derechos reservados.',
+        navFeatures: 'Funciones',
+        navAbout: 'Nosotras',
+        navFaq: 'Preguntas',
+        navCta: 'Lo necesito',
+        pageTitle: 'Preguntas frecuentes | ThriveMom\u2122'
+      }
+    };
+
+    function applyLang(lang) {
+      currentLang = lang;
+      try { localStorage.setItem(LANG_KEY, lang); } catch(e) {}
+      document.documentElement.lang = lang;
+      document.body.classList.toggle('es', lang === 'es');
+
+      var t = translations[lang];
+      document.title = t.pageTitle;
+
+      var descMeta = document.querySelector('meta[name="description"]');
+      if (descMeta) descMeta.content = lang === 'es'
+        ? 'Preguntas frecuentes sobre ThriveMom\u2122, la app para mam\u00e1s con TDAH. Fecha de lanzamiento, precios, funciones y c\u00f3mo funciona.'
+        : 'Frequently asked questions about ThriveMom\u2122, the app built for ADHD moms. Launch date, pricing, features, and how it works.';
+
+      // data-i18n swap
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (t[key] !== undefined) el.textContent = t[key];
+      });
+
+      // Placeholders
+      var askEmail = document.getElementById('askEmail');
+      if (askEmail) askEmail.placeholder = t.askEmail;
+      var askQuestion = document.getElementById('askQuestion');
+      if (askQuestion) askQuestion.placeholder = t.askQuestion;
+
+      // Nav items (hardcoded, not data-i18n to keep markup clean)
+      var navLinks = document.querySelectorAll('.nav-links a');
+      if (navLinks[0]) navLinks[0].textContent = t.navFeatures;
+      if (navLinks[1]) navLinks[1].textContent = t.navAbout;
+      if (navLinks[2]) navLinks[2].textContent = t.navFaq;
+      if (navLinks[3]) navLinks[3].textContent = t.navCta;
+    }
+
+    function toggleLang() {
+      applyLang(currentLang === 'es' ? 'en' : 'es');
+    }
+
+    // Apply saved language on load
+    if (currentLang === 'es') applyLang('es');
+
+    // Submit a new question — reuses the existing Google Sheets webhook with source=faq-question
+    function submitQuestion(e) {
+      e.preventDefault();
+      var emailEl = document.getElementById('askEmail');
+      var qEl = document.getElementById('askQuestion');
+      var btn = document.getElementById('askBtn');
+      var form = document.getElementById('askForm');
+      var success = document.getElementById('askSuccess');
+
+      var email = emailEl.value.trim();
+      var question = qEl.value.trim();
+      if (!email || !question) return false;
+
+      btn.textContent = translations[currentLang].askBtnSending;
+      btn.disabled = true;
+
+      var WEBHOOK = 'https://script.google.com/macros/s/AKfycbxz_Nt9WLtOl8T2LBCiu38CrJhf6K8dpLEhqTAa4xtDUyuF6Uy2KNbNYCFbqXTX9Tv1/exec';
+      var url = WEBHOOK
+        + '?email=' + encodeURIComponent(email)
+        + '&source=' + encodeURIComponent('faq-question')
+        + '&question=' + encodeURIComponent(question)
+        + '&submittedAt=' + encodeURIComponent(new Date().toISOString());
+      fetch(url, { method: 'GET', mode: 'no-cors' }).catch(function() {});
+
+      console.log('FAQ question submitted:', { email: email, question: question });
+
+      form.style.display = 'none';
+      success.classList.add('active');
+      return false;
+    }
+
+    // Close mobile nav on link click
+    document.querySelectorAll('.nav-links a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        document.getElementById('navLinks').classList.remove('open');
+      });
+    });
+  </script>
+</body>
+</html>

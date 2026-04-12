@@ -92,22 +92,6 @@ function shareOn(platform) {
   }
 }
 
-// ===== FAQ =====
-function toggleFaq(btn) {
-  var item = btn.parentElement;
-  var wasOpen = item.classList.contains('open');
-
-  document.querySelectorAll('.faq-item').forEach(function(i) {
-    i.classList.remove('open');
-    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
-  });
-
-  if (!wasOpen) {
-    item.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
-  }
-}
-
 // ===== MORE FEATURES TOGGLE =====
 function toggleMoreFeatures() {
   var extra = document.getElementById('featuresExtra');
@@ -161,7 +145,7 @@ document.addEventListener('keydown', function(e) {
     });
   }, { threshold: 0.1 });
 
-  document.querySelectorAll('.problem-card, .feature-card, .proof-card, .stat, .faq-item').forEach(function(el) {
+  document.querySelectorAll('.problem-card, .feature-card, .review-card, .stat').forEach(function(el) {
     el.classList.add('animate-on-scroll');
     observer.observe(el);
   });
@@ -178,7 +162,7 @@ var translations = [
   // Nav
   { s: '.nav-links a[href="#features"]', en: 'Features', es: 'Funciones' },
   { s: '.nav-links a[href="#proof"]', en: 'About', es: 'Nosotras' },
-  { s: '.nav-links a[href="#faq"]', en: 'FAQ', es: 'Preguntas' },
+  { s: '.nav-links a[href="/faq.html"]', en: 'FAQ', es: 'Preguntas' },
   { s: '.nav-cta', en: 'I need this', es: 'Lo necesito' },
   // Hero
   { s: '.hero-badge', en: '💜 Launching May 9, 2026', es: '💜 Lanzamiento 9 de Mayo, 2026' },
@@ -252,8 +236,6 @@ var translations = [
   { s: '.waitlist-box h2', en: 'Be the first to try ThriveMom™', es: 'Sé la primera en probar ThriveMom™' },
   { s: '.waitlist-box > p', en: 'First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.', es: 'Las primeras 500 mamás obtienen <strong>precio de acceso temprano de por vida</strong>. Sin spam, solo actualizaciones.', html: true },
   { s: '#waitlistBtn', en: 'Save My Spot', es: 'Guardar Mi Lugar' },
-  // FAQ title
-  { s: '.faq .section-title', en: 'Quick <span class="highlight">answers</span>', es: 'Respuestas <span class="highlight">rápidas</span>', html: true },
   // Founder
   // Waitlist progress
   { s: '.waitlist-count', en: '💜 <span id="waitlistCount2">127</span> of 500 early access spots claimed', es: '💜 <span id="waitlistCount2">127</span> de 500 lugares de acceso temprano ocupados', html: true },
@@ -391,32 +373,7 @@ function applyLang(lang) {
     if (p) p.textContent = lang === 'es' ? extraData[i].es_p : extraData[i].en_p;
   });
 
-  // FAQ questions and answers (direct DOM access)
-  var faqItems = document.querySelectorAll('.faq-item');
-  var faqData = [
-    { en_q: 'When does ThriveMom™ launch?', es_q: '¿Cuándo se lanza ThriveMom™?', en_a: 'May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.', es_a: '9 de mayo, 2026. Únete a la lista de espera para recibir notificación en cuanto esté disponible. Los primeros en la lista obtienen acceso prioritario y precio especial.' },
-    { en_q: 'Is this only for moms with an ADHD diagnosis?', es_q: '¿Es solo para mamás con diagnóstico de TDAH?', en_a: 'Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom™ is designed for you. If the "47 tabs open" feeling resonated, you\'re in the right place.', es_a: 'Para nada. Ya sea que tengas un diagnóstico formal, sospeches que podrías tener TDAH, o simplemente te sientas crónicamente abrumada como mamá, ThriveMom™ es para ti. Si lo de las "47 pestañas abiertas" te resonó, estás en el lugar correcto.' },
-    { en_q: 'Is it free?', es_q: '¿Es gratis?', en_a: 'ThriveMom™ will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version. We believe every mom deserves support, regardless of budget.', es_a: 'ThriveMom™ tendrá un plan gratuito con funciones principales. Los primeros en la lista (primeros 500) obtienen precio de acceso temprano de por vida en la versión completa. Creemos que toda mamá merece apoyo, sin importar el presupuesto.' },
-    { en_q: 'What makes ThriveMom™ different?', es_q: '¿Qué hace diferente a ThriveMom™?', en_a: 'Most apps are built for neurotypical brains. ThriveMom™ is specifically designed for ADHD: low friction, instant gratification, no guilt trips, no 30-day programs you\'ll abandon on day 3. Everything takes under 60 seconds to start.', es_a: 'La mayoría de las apps están hechas para cerebros neurotípicos. ThriveMom™ está diseñada específicamente para TDAH: poca fricción, gratificación instantánea, sin culpas, sin programas de 30 días que abandonarás el día 3. Todo toma menos de 60 segundos para empezar.' },
-    { en_q: 'What\'s the Chaos Catcher?', es_q: '¿Qué es el Atrapa Caos?', en_a: 'It\'s a brain dump tool. Talk or type everything that\'s swirling in your head: groceries, guilt, school forms, exhaustion. Hit "Sort My Chaos" and it instantly organizes everything into action categories. It also tracks your "Mental Weight" so you can see how many pounds of mental clutter you\'ve cleared and share it.', es_a: 'Es una herramienta de descarga mental. Habla o escribe todo lo que da vueltas en tu cabeza: compras, culpa, formularios del colegio, agotamiento. Presiona "Ordena Mi Caos" y organiza todo instantáneamente en categorías de acción. También rastrea tu "Peso Mental" para que veas cuántas libras de desorden mental has liberado y lo compartas.' },
-    { en_q: 'What are Sparkle Sessions?', es_q: '¿Qué son las Sesiones Sparkle?', en_a: 'Tiny, step-by-step task batches designed for ADHD brains. Instead of "clean the house" (impossible), you get "The Towel Load: grab all towels, put in washer, press start." Each one takes just a few minutes, and you get confetti when you finish.', es_a: 'Pequeñas tandas de tareas paso a paso diseñadas para cerebros con TDAH. En vez de "limpiar la casa" (imposible), recibes "La Carga de Toallas: agarra todas las toallas, ponlas en la lavadora, presiona inicio." Cada una toma solo unos minutos, y recibes confeti cuando terminas.' },
-    { en_q: 'Is ThriveMom™ available in Spanish?', es_q: '¿ThriveMom™ está disponible en español?', en_a: 'Yes! ThriveMom™ has full bilingual support (English and Spanish). Switch anytime with one tap. Built specifically for Latina ADHD moms who deserve support in their language. Voice input in the Chaos Catcher also works in Spanish.', es_a: '¡Sí! ThriveMom™ tiene soporte bilingüe completo (inglés y español). Cambia en cualquier momento con un toque. Hecho específicamente para mamás latinas con TDAH que merecen apoyo en su idioma. La entrada de voz en el Atrapa Caos también funciona en español.' }
-  ];
-  faqItems.forEach(function(item, i) {
-    if (!faqData[i]) return;
-    var btn = item.querySelector('.faq-question');
-    var answer = item.querySelector('.faq-answer-inner');
-    if (btn) {
-      var icon = btn.querySelector('.faq-icon');
-      var qText = lang === 'es' ? faqData[i].es_q : faqData[i].en_q;
-      // Replace all text nodes, keep the icon span
-      while (btn.firstChild && btn.firstChild !== icon) {
-        btn.removeChild(btn.firstChild);
-      }
-      btn.insertBefore(document.createTextNode(qText + ' '), icon);
-    }
-    if (answer) answer.textContent = lang === 'es' ? faqData[i].es_a : faqData[i].en_a;
-  });
+  // (FAQ content moved to /faq.html — no in-page FAQ to translate here)
 
   // Footer bottom lines (direct DOM)
   var footerPs = document.querySelectorAll('.footer-bottom p');
