@@ -164,8 +164,11 @@
   <!-- Analytics (Plausible) -->
   <script defer data-domain="thrivemom.app" src="https://plausible.io/js/script.js"></script>
 
+  <!-- Block AI scrapers and content copying bots -->
+  <meta name="robots" content="index, follow, noai, noimageai">
+
   <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
@@ -567,5 +570,6 @@
   </footer>
 
   <script defer src="script.js?v=18"></script>
+  <script>document.addEventListener('contextmenu',function(e){e.preventDefault()});document.onkeydown=function(e){if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c'))return false};</script>
 </body>
 </html>

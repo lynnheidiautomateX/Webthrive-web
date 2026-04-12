@@ -4,4 +4,29 @@ Disallow: /mock*.html
 Disallow: /og-template.html
 Disallow: /generate-og.mjs
 
+# Block AI scrapers and content cloning bots
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: cohere-ai
+Disallow: /
+
 Sitemap: https://thrivemom.app/sitemap.xml
