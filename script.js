@@ -256,6 +256,7 @@ var translations = [
   { s: '.chaos-word:nth-child(6)', en: 'prep dinner', es: 'preparar cena' },
   // Footer
   { s: '.footer-brand p', en: 'For ADHD moms, by an ADHD mom.<br>Built with love by a mama who gets it.', es: 'Para mamás con TDAH, por una mamá con TDAH.<br>Hecha con amor por una mamá que entiende.', html: true },
+  { s: '.footer-links a[href="/faq.html"]', en: 'FAQ', es: 'Preguntas' },
   { s: '.footer-links a[href="mailto:support@thrivemom.app"]', en: 'Contact', es: 'Contacto' },
   { s: '.footer-links a[href="/privacy.html"]', en: 'Privacy Policy', es: 'Política de Privacidad' },
   { s: '.footer-links a[href="/terms.html"]', en: 'Terms & Conditions', es: 'Términos y Condiciones' },
