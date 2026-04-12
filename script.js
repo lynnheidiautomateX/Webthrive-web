@@ -95,6 +95,7 @@ function shareOn(platform) {
 function toggleMoreFeatures() {
   var extra = document.getElementById('featuresExtra');
   var btn = document.getElementById('featuresToggle');
+  if (!extra || !btn) return;
   if (extra.style.display === 'none') {
     extra.style.display = '';
     btn.textContent = currentLang === 'es' ? 'Ver menos' : 'Show less';
@@ -110,6 +111,7 @@ function toggleMoreFeatures() {
 function toggleMoreReviews() {
   var extra = document.getElementById('reviewsExtra');
   var btn = document.getElementById('reviewsToggle');
+  if (!extra || !btn) return;
   if (extra.style.display === 'none') {
     extra.style.display = '';
     btn.innerHTML = currentLang === 'es' ? '\uD83D\uDC9C Ver menos' : '\uD83D\uDC9C Show less';

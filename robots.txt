@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
+Disallow: /mock*.html
+Disallow: /og-template.html
+Disallow: /generate-og.mjs
 
 Sitemap: https://thrivemom.app/sitemap.xml
