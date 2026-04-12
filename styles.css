@@ -1297,6 +1297,179 @@ body.es .lang-es { opacity: 1; }
   font-weight: 500;
 }
 
+/* ===== REVIEWS (progressive disclosure) ===== */
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
+}
+.reviews-grid:not(.reviews-extra) {
+  grid-template-columns: minmax(0, 520px);
+  justify-content: center;
+}
+.reviews-extra {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 900px;
+}
+
+.review-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+.review-card::before {
+  content: '\201C';
+  position: absolute;
+  top: -8px;
+  left: 18px;
+  font-size: 4rem;
+  color: var(--purple-light);
+  font-family: Georgia, serif;
+  line-height: 1;
+  opacity: 0.5;
+}
+.review-context {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: rgba(236, 72, 153, 0.1);
+  color: var(--accent-pink);
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0.5rem 0 0.85rem;
+  width: fit-content;
+}
+.review-quote {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.55;
+  margin-bottom: 1.25rem;
+}
+.review-quote strong {
+  background: linear-gradient(180deg, transparent 60%, rgba(168, 153, 230, 0.35) 60%);
+  color: var(--purple-deep);
+  font-weight: 700;
+}
+.review-attrib {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+.review-avatar {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 3px var(--white), 0 0 0 4px rgba(107, 79, 160, 0.25);
+}
+.review-avatar.a1 { background: linear-gradient(135deg, #ec4899, #a855f7); }
+.review-avatar.a2 { background: linear-gradient(135deg, #f59e0b, #ec4899); }
+.review-avatar.a3 { background: linear-gradient(135deg, #10b981, #6b4fa0); }
+.review-meta strong {
+  display: block;
+  color: var(--purple-deep);
+  font-size: 0.95rem;
+}
+.review-meta span {
+  font-size: 0.73rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.reviews-toggle {
+  display: block;
+  margin: 1.5rem auto 0;
+  background: none;
+  border: 2px solid var(--purple-pale);
+  color: var(--purple-mid);
+  padding: 0.65rem 2rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.reviews-toggle:hover {
+  background: var(--purple-wash);
+  border-color: var(--purple-mid);
+}
+
+.review-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 800px;
+  margin: 2.5rem auto 0;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+}
+.review-stats .stat {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Founder one-liner */
+.founder-line {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+}
+.founder-line .founder-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+.founder-line p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin: 0;
+}
+.founder-line strong {
+  color: var(--purple-deep);
+  font-weight: 700;
+}
+
 /* ===== WAITLIST CTA ===== */
 .waitlist-cta { padding: 5rem 0; }
 
@@ -1577,6 +1750,10 @@ footer {
   .step-arrow { display: none; }
 
   .proof-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; max-width: 100%; }
+  .reviews-grid:not(.reviews-extra) { grid-template-columns: 1fr; }
+  .review-stats { grid-template-columns: 1fr; gap: 0.75rem; text-align: center; }
+  .founder-line { padding: 1.5rem 1rem 0; }
 
   .waitlist-box { padding: 2rem 1.5rem; }
   .waitlist-form { flex-direction: column; }

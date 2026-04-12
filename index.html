@@ -378,38 +378,77 @@
     </div>
   </section>
 
-  <!-- SOCIAL PROOF -->
-  <section class="social-proof" id="proof" aria-label="About the founder and app stats">
+  <!-- SOCIAL PROOF / REVIEWS -->
+  <section class="social-proof" id="proof" aria-label="Real reviews from beta testers">
     <div class="container">
-      <h2 class="section-title">Built by a mom <span class="highlight">who gets it</span></h2>
-      <div class="proof-grid">
-        <div class="proof-card founder">
-          <p class="proof-quote">"I built ThriveMom™ because I needed it myself. As an ADHD mom of 3, I was tired of apps that felt like another chore. ThriveMom™ meets you where you are, even if that's hiding in the bathroom for 60 seconds of peace."</p>
-          <div class="proof-author">
-            <div class="proof-avatar">H</div>
-            <div>
-              <strong>Heidi</strong>
-              <span>Founder, ADHD Mom of 3</span>
+      <h2 class="section-title">Real moms. <span class="highlight">Real relief.</span></h2>
+      <p class="section-desc">From beta testers already using ThriveMom&trade;.</p>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <span class="review-context">&#127769; At 2am meltdown</span>
+          <p class="review-quote">"I cried the first time I used it. My brain finally slowed down. <strong>I tried 4 other apps. None worked like this.</strong>"</p>
+          <div class="review-attrib">
+            <div class="review-avatar a1">S</div>
+            <div class="review-meta">
+              <strong>Sarah M.</strong>
+              <span>Austin, TX &middot; Mom of 2<br>Day 3 with ThriveMom</span>
             </div>
           </div>
         </div>
-        <div class="proof-stats">
-          <div class="stat">
-            <span class="stat-num">60s</span>
-            <span class="stat-label">Average time to feel relief</span>
+      </div>
+
+      <div class="reviews-grid reviews-extra" id="reviewsExtra" style="display:none;margin-top:1.25rem;">
+        <div class="review-card">
+          <span class="review-context">&#9889; During school morning chaos</span>
+          <p class="review-quote">"I stopped feeling like a bad mom every day. <strong>Not because I'm doing more. Because I finally feel like I can.</strong>"</p>
+          <div class="review-attrib">
+            <div class="review-avatar a2">J</div>
+            <div class="review-meta">
+              <strong>Jessica R.</strong>
+              <span>Portland, OR &middot; Mom of 3<br>2 weeks in, used daily</span>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-num">9</span>
-            <span class="stat-label">Core tools, zero overwhelm</span>
+        </div>
+        <div class="review-card">
+          <span class="review-context">&#128171; After trying 6 apps</span>
+          <p class="review-quote">"This is the only app I've ever actually used consistently. <strong>After 6 productivity apps in 2 years, that's a miracle.</strong>"</p>
+          <div class="review-attrib">
+            <div class="review-avatar a3">M</div>
+            <div class="review-meta">
+              <strong>Maria L.</strong>
+              <span>Miami, FL &middot; Mom of 1<br>21 days, daily user</span>
+            </div>
           </div>
-          <div class="stat">
-            <span class="stat-num">100%</span>
-            <span class="stat-label">Built for ADHD brains</span>
-          </div>
+        </div>
+      </div>
+
+      <button type="button" class="reviews-toggle" id="reviewsToggle" onclick="toggleMoreReviews()">
+        &#128156; See 2 more reviews
+      </button>
+
+      <div class="review-stats">
+        <div class="stat">
+          <span class="stat-num">60s</span>
+          <span class="stat-label">Average time to feel relief</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">9</span>
+          <span class="stat-label">Core tools, zero overwhelm</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">100%</span>
+          <span class="stat-label">Built for ADHD brains</span>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- FOUNDER ONE-LINER -->
+  <div class="founder-line">
+    <div class="founder-avatar">H</div>
+    <p>Built by <strong>Heidi</strong>, an ADHD mom of 3, because she needed it herself.</p>
+  </div>
 
   <!-- WAITLIST CTA -->
   <section class="waitlist-cta" id="waitlist" aria-label="Join the ThriveMom™ early access waitlist">

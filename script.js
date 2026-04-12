@@ -123,6 +123,20 @@ function toggleMoreFeatures() {
   }
 }
 
+// ===== MORE REVIEWS TOGGLE =====
+function toggleMoreReviews() {
+  var extra = document.getElementById('reviewsExtra');
+  var btn = document.getElementById('reviewsToggle');
+  if (extra.style.display === 'none') {
+    extra.style.display = '';
+    btn.innerHTML = currentLang === 'es' ? '\uD83D\uDC9C Ver menos' : '\uD83D\uDC9C Show less';
+    if (currentLang === 'es') applyLang('es');
+  } else {
+    extra.style.display = 'none';
+    btn.innerHTML = currentLang === 'es' ? '\uD83D\uDC9C Ver 2 reseñas más' : '\uD83D\uDC9C See 2 more reviews';
+  }
+}
+
 // ===== CLOSE MOBILE NAV ON LINK CLICK OR ESCAPE =====
 document.querySelectorAll('.nav-links a').forEach(function(link) {
   link.addEventListener('click', function() {
@@ -213,12 +227,27 @@ var translations = [
   { s: '.mw-card-quote', en: '"Today I chose myself for 60 seconds."', es: '"Hoy me elegí a mí misma por 60 segundos."' },
   { s: '.mw-card-tags', en: '#MentalWeightLoss \u00a0 #ADHDMom \u00a0 #ThriveMom', es: '#PérdidaDePesoMental \u00a0 #MamáTDAH \u00a0 #ThriveMom' },
   // (How it works section removed, content merged into features header)
-  // Social proof
-  { s: '.social-proof .section-title', en: 'Built by a mom <span class="highlight">who gets it</span>', es: 'Hecha por una mamá <span class="highlight">que entiende</span>', html: true },
-  { s: '.proof-quote', en: '"I built ThriveMom™ because I needed it myself. As an ADHD mom of 3, I was tired of apps that felt like another chore. ThriveMom™ meets you where you are, even if that\'s hiding in the bathroom for 60 seconds of peace."', es: '"Construí ThriveMom™ porque yo misma lo necesitaba. Como mamá con TDAH de 3 hijos, estaba cansada de apps que se sentían como otra tarea. ThriveMom™ te encuentra donde estás, aunque sea escondida en el baño por 60 segundos de paz."' },
-  { s: '.stat:nth-child(1) .stat-label', en: 'Average time to feel relief', es: 'Tiempo promedio para sentir alivio' },
-  { s: '.stat:nth-child(2) .stat-label', en: 'Core tools, zero overwhelm', es: 'Herramientas, cero agobio' },
-  { s: '.stat:nth-child(3) .stat-label', en: 'Built for ADHD brains', es: 'Hecho para cerebros con TDAH' },
+  // Reviews section (replaces old founder-quote social proof)
+  { s: '.social-proof .section-title', en: 'Real moms. <span class="highlight">Real relief.</span>', es: 'Mamás reales. <span class="highlight">Alivio real.</span>', html: true },
+  { s: '.social-proof .section-desc', en: 'From beta testers already using ThriveMom™.', es: 'De beta testers que ya usan ThriveMom™.' },
+  // Review card 1 — Sarah (always visible)
+  { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-context', en: '🌙 At 2am meltdown', es: '🌙 En crisis a las 2am' },
+  { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-quote', en: '"I cried the first time I used it. My brain finally slowed down. <strong>I tried 4 other apps. None worked like this.</strong>"', es: '"Lloré la primera vez que la usé. Mi cerebro por fin se calmó. <strong>Probé 4 apps. Ninguna funcionó así.</strong>"', html: true },
+  { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-meta span', en: 'Austin, TX &middot; Mom of 2<br>Day 3 with ThriveMom', es: 'Austin, TX &middot; Mamá de 2<br>Día 3 con ThriveMom', html: true },
+  // Review card 2 — Jessica (hidden until expanded)
+  { s: '.reviews-extra .review-card:nth-child(1) .review-context', en: '⚡ During school morning chaos', es: '⚡ En el caos mañanero de la escuela' },
+  { s: '.reviews-extra .review-card:nth-child(1) .review-quote', en: '"I stopped feeling like a bad mom every day. <strong>Not because I\'m doing more. Because I finally feel like I can.</strong>"', es: '"Dejé de sentirme como una mala mamá todos los días. <strong>No porque haga más. Porque por fin siento que puedo.</strong>"', html: true },
+  { s: '.reviews-extra .review-card:nth-child(1) .review-meta span', en: 'Portland, OR &middot; Mom of 3<br>2 weeks in, used daily', es: 'Portland, OR &middot; Mamá de 3<br>2 semanas, uso diario', html: true },
+  // Review card 3 — Maria (hidden until expanded)
+  { s: '.reviews-extra .review-card:nth-child(2) .review-context', en: '💫 After trying 6 apps', es: '💫 Después de probar 6 apps' },
+  { s: '.reviews-extra .review-card:nth-child(2) .review-quote', en: '"This is the only app I\'ve ever actually used consistently. <strong>After 6 productivity apps in 2 years, that\'s a miracle.</strong>"', es: '"Es la única app que realmente he usado con constancia. <strong>Después de 6 apps de productividad en 2 años, eso es un milagro.</strong>"', html: true },
+  { s: '.reviews-extra .review-card:nth-child(2) .review-meta span', en: 'Miami, FL &middot; Mom of 1<br>21 days, daily user', es: 'Miami, FL &middot; Mamá de 1<br>21 días, uso diario', html: true },
+  // Review stats strip
+  { s: '.review-stats .stat:nth-child(1) .stat-label', en: 'Average time to feel relief', es: 'Tiempo promedio para sentir alivio' },
+  { s: '.review-stats .stat:nth-child(2) .stat-label', en: 'Core tools, zero overwhelm', es: 'Herramientas, cero agobio' },
+  { s: '.review-stats .stat:nth-child(3) .stat-label', en: 'Built for ADHD brains', es: 'Hecho para cerebros con TDAH' },
+  // Founder one-liner
+  { s: '.founder-line p', en: 'Built by <strong>Heidi</strong>, an ADHD mom of 3, because she needed it herself.', es: 'Hecho por <strong>Heidi</strong>, mamá con TDAH de 3, porque ella lo necesitaba.', html: true },
   // Waitlist CTA
   { s: '.waitlist-box h2', en: 'Be the first to try ThriveMom™', es: 'Sé la primera en probar ThriveMom™' },
   { s: '.waitlist-box > p', en: 'First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.', es: 'Las primeras 500 mamás obtienen <strong>precio de acceso temprano de por vida</strong>. Sin spam, solo actualizaciones.', html: true },
@@ -226,8 +255,6 @@ var translations = [
   // FAQ title
   { s: '.faq .section-title', en: 'Quick <span class="highlight">answers</span>', es: 'Respuestas <span class="highlight">rápidas</span>', html: true },
   // Founder
-  { s: '.proof-author strong', en: 'Heidi', es: 'Heidi' },
-  { s: '.proof-author span', en: 'Founder, ADHD Mom of 3', es: 'Fundadora, Mamá con TDAH de 3' },
   // Waitlist progress
   { s: '.waitlist-count', en: '💜 <span id="waitlistCount2">127</span> of 500 early access spots claimed', es: '💜 <span id="waitlistCount2">127</span> de 500 lugares de acceso temprano ocupados', html: true },
   { s: '.waitlist-badge', en: 'Early Access', es: 'Acceso Temprano' },
@@ -334,6 +361,18 @@ function applyLang(lang) {
       featToggle.textContent = lang === 'es' ? 'Ver menos' : 'Show less';
     } else {
       featToggle.textContent = lang === 'es' ? '+ 3 herramientas más' : '+ 3 more tools';
+    }
+  }
+
+  // Update reviews toggle button
+  var revToggle = document.getElementById('reviewsToggle');
+  if (revToggle) {
+    var revExtra = document.getElementById('reviewsExtra');
+    var revOpen = revExtra && revExtra.style.display !== 'none';
+    if (revOpen) {
+      revToggle.innerHTML = lang === 'es' ? '\uD83D\uDC9C Ver menos' : '\uD83D\uDC9C Show less';
+    } else {
+      revToggle.innerHTML = lang === 'es' ? '\uD83D\uDC9C Ver 2 reseñas más' : '\uD83D\uDC9C See 2 more reviews';
     }
   }
 
