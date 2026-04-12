@@ -165,20 +165,20 @@ var translations = [
   { s: '.nav-links a[href="#features"]', en: 'Features', es: 'Funciones' },
   { s: '.nav-links a[href="#proof"]', en: 'About', es: 'Nosotras' },
   { s: '.nav-links a[href="#faq"]', en: 'FAQ', es: 'Preguntas' },
-  { s: '.nav-cta', en: 'Get Early Access', es: 'Acceso Anticipado' },
+  { s: '.nav-cta', en: 'I need this', es: 'Lo necesito' },
   // Hero
-  { s: '.hero-badge', en: 'Pre-Launch: May 9, 2026', es: 'Pre-Lanzamiento: 9 de Mayo, 2026' },
-  { s: '.hero h1', en: 'The First App Built for ADHD Moms<br>Who Can\'t Keep Up<span class="gradient-text">... and Are Done<br>Feeling Like Failures.</span>', es: 'La Primera App Para Mamás con TDAH<br>Que No Pueden Más<span class="gradient-text">... y Están Cansadas<br>de Sentirse un Fracaso.</span>', html: true },
-  { s: '.hero-sub', en: 'So You Can Finally Feel Calm, Clear, and in Control Again.', es: 'Para que por fin te sientas tranquila, clara, y en control otra vez.' },
-  { s: '#heroBtn', en: 'Get Early Access', es: 'Obtén Acceso Anticipado' },
-  { s: '.hero-proof', en: '💜 <span id="waitlistCount">127</span> moms already on the waitlist', es: '💜 <span id="waitlistCount">127</span> mamás ya en la lista', html: true },
+  { s: '.hero-badge', en: '💜 Launching May 9, 2026', es: '💜 Lanzamiento 9 de Mayo, 2026' },
+  { s: '.hero h1', en: 'For ADHD Moms Who Feel Like They\'re <span class="gradient-text">Drowning</span>', es: 'Para Mamás con TDAH Que Sienten Que Se Están <span class="gradient-text">Ahogando</span>', html: true },
+  { s: '.hero-sub', en: 'Feel calm, clear, and back in control in 60 seconds.<br><span class="hero-sub-light">No systems. No pressure. Just relief that actually works.</span>', es: 'Siéntete tranquila, clara y en control otra vez en 60 segundos.<br><span class="hero-sub-light">Sin sistemas. Sin presión. Solo alivio que de verdad funciona.</span>', html: true },
+  { s: '#heroBtn', en: '👉 I need this', es: '👉 Lo necesito' },
+  { s: '.hero-proof', en: '💜 <strong><span id="waitlistCount">127</span> moms</strong> already said &ldquo;I need this&rdquo;', es: '💜 <strong><span id="waitlistCount">127</span> mamás</strong> ya dijeron &ldquo;lo necesito&rdquo;', html: true },
   // (countdown labels handled directly in applyLang)
   // Problem
   { s: '.problem .section-title', en: 'Sound <span class="highlight">familiar?</span>', es: '¿Te suena <span class="highlight">familiar?</span>', html: true },
-  { s: '.problem-card:nth-child(1) p', en: 'Your brain has <strong>47 tabs open</strong> and none of them are loading.', es: 'Tu cerebro tiene <strong>47 pestañas abiertas</strong> y ninguna está cargando.', html: true },
-  { s: '.problem-card:nth-child(2) p', en: 'Everyone needs something from you. <strong>Right now.</strong>', es: 'Todos necesitan algo de ti. <strong>Ahora mismo.</strong>', html: true },
-  { s: '.problem-card:nth-child(3) p', en: 'You\'re <strong>exhausted</strong> but your mind won\'t stop racing at 2am.', es: 'Estás <strong>agotada</strong> pero tu mente no para a las 2am.', html: true },
-  { s: '.problem-card:nth-child(4) p', en: 'You forgot why you walked into the room. <strong>Again.</strong>', es: 'Olvidaste por qué entraste al cuarto. <strong>Otra vez.</strong>', html: true },
+  { s: '.problem-card:nth-child(1) p', en: 'Your brain has <strong>47 tabs open</strong> and none are loading.', es: 'Tu cerebro tiene <strong>47 pestañas abiertas</strong> y ninguna carga.', html: true },
+  { s: '.problem-card:nth-child(2) p', en: 'Everyone needs something. <strong>Right now.</strong>', es: 'Todos necesitan algo. <strong>Ahora mismo.</strong>', html: true },
+  { s: '.problem-card:nth-child(3) p', en: 'You\'re <strong>exhausted</strong> but can\'t stop racing at 2am.', es: 'Estás <strong>agotada</strong> pero no paras a las 2am.', html: true },
+  { s: '.problem-card:nth-child(4) p', en: 'Forgot why you walked into the room. <strong>Again.</strong>', es: 'Olvidaste por qué entraste al cuarto. <strong>Otra vez.</strong>', html: true },
   { s: '.problem-cta', en: 'You\'re not failing. Your brain just works differently.<br><strong>ThriveMom™ was built for brains like yours.</strong>', es: 'No estás fallando. Tu cerebro simplemente funciona diferente.<br><strong>ThriveMom™ fue hecho para cerebros como el tuyo.</strong>', html: true },
   // Features
   { s: '.features .section-title', en: 'Stupid <span class="highlight">simple.</span> Tools that actually help.', es: 'Súper <span class="highlight">simple.</span> Herramientas que realmente ayudan.', html: true },
@@ -321,7 +321,7 @@ function applyLang(lang) {
 
   // Update placeholders
   var heroEmail = document.getElementById('heroEmail');
-  if (heroEmail) heroEmail.placeholder = lang === 'es' ? 'mama@abrumada.com' : 'mama@overwhelmed.com';
+  if (heroEmail) heroEmail.placeholder = lang === 'es' ? 'Ingresa tu email' : 'Enter your email';
   var waitlistEmail = document.getElementById('waitlistEmail');
   if (waitlistEmail) waitlistEmail.placeholder = lang === 'es' ? 'Tu mejor email' : 'Your best email';
 

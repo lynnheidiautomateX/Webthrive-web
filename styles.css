@@ -207,12 +207,23 @@ body.es .lang-es { opacity: 1; }
 }
 
 .hero-sub {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
+  font-size: 1.15rem;
+  color: var(--purple-deep);
+  font-weight: 600;
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.55;
   animation: fadeUp 0.5s ease-out 0.4s both;
 }
+
+.hero-sub-light {
+  display: inline-block;
+  margin-top: 0.35rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.hero-proof strong { color: var(--accent-pink); font-weight: 800; }
 
 /* Countdown */
 .countdown {
