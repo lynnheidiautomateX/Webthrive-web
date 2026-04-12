@@ -19,7 +19,7 @@
   <!-- Open Graph -->
   <meta property="og:title" content="ThriveMom™ | The App for ADHD Moms">
   <meta property="og:description" content="The first app for ADHD moms. Feel calm, clear, and in control again in under 60 seconds. Brain dump sorting, task batching, guided resets, 24/7 chat, mood tracking, bilingual EN/ES. Join the waitlist.">
-  <meta property="og:url" content="https://thrivemom.app">
+  <meta property="og:url" content="https://thrivemom.app/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="ThriveMom™">
   <meta property="og:locale" content="en_US">
@@ -35,6 +35,47 @@
   <meta name="twitter:title" content="ThriveMom™ | The App for ADHD Moms">
   <meta name="twitter:description" content="The first app for ADHD moms. Feel calm, clear, and in control again in 60 seconds. Join the waitlist.">
   <meta name="twitter:image" content="https://thrivemom.app/images/og-image.png">
+  <meta name="twitter:site" content="@ThriveMomApp">
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://plausible.io">
+  <link rel="dns-prefetch" href="https://plausible.io">
+  <link rel="dns-prefetch" href="https://script.google.com">
+
+  <!-- JSON-LD: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "ThriveMom\u2122",
+    "url": "https://thrivemom.app/",
+    "description": "The first app built for ADHD moms. Feel calm, clear, and in control again in under 60 seconds.",
+    "inLanguage": ["en", "es"]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ThriveMom\u2122",
+    "url": "https://thrivemom.app/",
+    "logo": "https://thrivemom.app/images/og-image.png",
+    "founder": {
+      "@type": "Person",
+      "name": "Heidi",
+      "description": "ADHD mom of 3 who built ThriveMom because she needed it herself"
+    },
+    "sameAs": [
+      "https://twitter.com/ThriveMomApp"
+    ],
+    "areaServed": {
+      "@type": "Country",
+      "name": "US"
+    }
+  }
+  </script>
 
   <!-- JSON-LD: App -->
   <script type="application/ld+json">
@@ -178,6 +219,7 @@
 
       <!-- Waitlist form -->
       <form id="heroForm" class="hero-form" onsubmit="return handleWaitlist(event, 'hero')" aria-label="Join the ThriveMom™ waitlist">
+        <label for="heroEmail" class="sr-only">Email address</label>
         <input type="email" id="heroEmail" placeholder="Enter your email" autocomplete="email" required aria-label="Email address for waitlist">
         <button type="submit" id="heroBtn">&#128073; I need this</button>
       </form>
@@ -241,7 +283,7 @@
   <!-- PROBLEM: ADHD Mom Struggles -->
   <section class="problem" id="problem" aria-label="Common ADHD mom struggles">
     <div class="container">
-      <h2 class="section-title">Sound <span class="highlight">familiar?</span></h2>
+      <h2 class="section-title">ADHD Mom Life: Sound <span class="highlight">familiar?</span></h2>
       <div class="problem-grid">
         <div class="problem-card">
           <div class="problem-icon">&#129504;</div>
@@ -267,7 +309,7 @@
   <!-- FEATURES: ADHD Support Tools -->
   <section class="features" id="features" aria-label="ThriveMom™ app features for ADHD moms">
     <div class="container">
-      <h2 class="section-title">Stupid <span class="highlight">simple.</span> Tools that actually help.</h2>
+      <h2 class="section-title">ADHD Mom Tools: Stupid <span class="highlight">simple.</span> Actually helpful.</h2>
       <p class="section-desc">No tutorials. No setup wizard. No 47-step onboarding. Just relief. Every feature built for how your brain actually works.</p>
       <div class="features-grid">
         <div class="feature-card featured">
@@ -338,8 +380,11 @@
           <div class="mw-card-inner">
             <div class="mw-card-badge">&#128156; ThriveMom™</div>
             <div class="mw-card-emoji">&#129504;</div>
-            <div class="mw-card-number">47</div>
-            <div class="mw-card-unit">lbs of mental clutter <strong>cleared</strong></div>
+            <div class="mw-card-number-wrap">
+              <div class="mw-card-number">47</div>
+              <div class="mw-card-lbs">lbs</div>
+            </div>
+            <div class="mw-card-unit">of mental clutter <strong>cleared</strong></div>
             <div class="mw-card-bar-wrap">
               <div class="mw-card-bar"><div class="mw-card-bar-fill"></div></div>
               <div class="mw-card-clarity">Brain clarity: <strong>85%</strong></div>
@@ -381,7 +426,7 @@
   <!-- SOCIAL PROOF / REVIEWS -->
   <section class="social-proof" id="proof" aria-label="Real reviews from beta testers">
     <div class="container">
-      <h2 class="section-title">Real moms. <span class="highlight">Real relief.</span></h2>
+      <h2 class="section-title">Real ADHD moms. <span class="highlight">Real relief.</span></h2>
       <p class="section-desc">From beta testers already using ThriveMom&trade;.</p>
 
       <div class="reviews-grid">
@@ -458,16 +503,17 @@
         <h2>Be the first to try ThriveMom™</h2>
         <p>First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.</p>
         <form id="waitlistForm" class="waitlist-form" onsubmit="return handleWaitlist(event, 'waitlist')" aria-label="Save your spot on the ThriveMom™ waitlist">
+          <label for="waitlistEmail" class="sr-only">Email address</label>
           <input type="email" id="waitlistEmail" placeholder="Your best email" autocomplete="email" required aria-label="Email address for early access">
-          <button type="submit" id="waitlistBtn">Save My Spot</button>
+          <button type="submit" id="waitlistBtn">I Need This</button>
         </form>
         <div id="waitlistSuccess" class="form-success" style="display:none;">
           <span class="success-icon">&#10003;</span>
           <p>You're in! We'll email you before anyone else.</p>
         </div>
         <div class="waitlist-progress">
-          <div class="progress-bar" role="progressbar" aria-valuenow="127" aria-valuemin="0" aria-valuemax="500" aria-label="127 of 500 early access spots claimed"><div class="progress-fill" style="width: 25.4%"></div></div>
-          <p class="waitlist-count">&#128156; <span id="waitlistCount2">127</span> of 500 early access spots claimed</p>
+          <div class="progress-bar" role="progressbar" aria-valuenow="127" aria-valuemin="0" aria-valuemax="500" aria-label="373 spots left"><div class="progress-fill" style="width: 25.4%"></div></div>
+          <p class="waitlist-count">&#128156; 373 spots left</p>
         </div>
       </div>
     </div>

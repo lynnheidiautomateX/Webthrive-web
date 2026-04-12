@@ -67,7 +67,6 @@ function handleWaitlist(e, formId) {
   // Bump counter
   var count = parseInt(document.getElementById('waitlistCount').textContent) + 1;
   document.getElementById('waitlistCount').textContent = count;
-  document.getElementById('waitlistCount2').textContent = count;
 
   return false;
 }
@@ -172,14 +171,14 @@ var translations = [
   { s: '.hero-proof', en: '💜 <strong><span id="waitlistCount">127</span> moms</strong> already said &ldquo;I need this&rdquo;', es: '💜 <strong><span id="waitlistCount">127</span> mamás</strong> ya dijeron &ldquo;lo necesito&rdquo;', html: true },
   // (countdown labels handled directly in applyLang)
   // Problem
-  { s: '.problem .section-title', en: 'Sound <span class="highlight">familiar?</span>', es: '¿Te suena <span class="highlight">familiar?</span>', html: true },
+  { s: '.problem .section-title', en: 'ADHD Mom Life: Sound <span class="highlight">familiar?</span>', es: 'Vida de mamá con TDAH: ¿Te suena <span class="highlight">familiar?</span>', html: true },
   { s: '.problem-card:nth-child(1) p', en: 'Your brain has <strong>47 tabs open</strong> and none are loading.', es: 'Tu cerebro tiene <strong>47 pestañas abiertas</strong> y ninguna carga.', html: true },
   { s: '.problem-card:nth-child(2) p', en: 'Everyone needs something. <strong>Right now.</strong>', es: 'Todos necesitan algo. <strong>Ahora mismo.</strong>', html: true },
   { s: '.problem-card:nth-child(3) p', en: 'You\'re <strong>exhausted</strong> but can\'t stop racing at 2am.', es: 'Estás <strong>agotada</strong> pero no paras a las 2am.', html: true },
   { s: '.problem-card:nth-child(4) p', en: 'Forgot why you walked into the room. <strong>Again.</strong>', es: 'Olvidaste por qué entraste al cuarto. <strong>Otra vez.</strong>', html: true },
   { s: '.problem-cta', en: 'You\'re not failing. Your brain just works differently.<br><strong>ThriveMom™ was built for brains like yours.</strong>', es: 'No estás fallando. Tu cerebro simplemente funciona diferente.<br><strong>ThriveMom™ fue hecho para cerebros como el tuyo.</strong>', html: true },
   // Features
-  { s: '.features .section-title', en: 'Stupid <span class="highlight">simple.</span> Tools that actually help.', es: 'Súper <span class="highlight">simple.</span> Herramientas que realmente ayudan.', html: true },
+  { s: '.features .section-title', en: 'ADHD Mom Tools: Stupid <span class="highlight">simple.</span> Actually helpful.', es: 'Herramientas para mamás TDAH: Súper <span class="highlight">simple.</span> Realmente útiles.', html: true },
   { s: '.features .section-desc', en: 'No tutorials. No setup wizard. No 47-step onboarding. Just relief. Every feature built for how your brain actually works.', es: 'Sin tutoriales. Sin asistente de configuración. Sin 47 pasos. Solo alivio. Cada función diseñada para cómo tu cerebro realmente funciona.' },
   { s: '.feature-card:nth-child(1) h3', en: 'Mental Weight Tracker', es: 'Medidor de Peso Mental' },
   { s: '.feature-card:nth-child(1) p', en: '"I cleared 47 lbs of mental clutter today." Track how much you\'ve unloaded, see your clarity score, and share it on socials.', es: '"Liberé 47 lbs de desorden mental hoy." Mide cuánto liberaste, ve tu puntaje de claridad, y compártelo en redes.' },
@@ -212,7 +211,7 @@ var translations = [
   { s: '.mw-card-tags', en: '#MentalWeightLoss \u00a0 #ADHDMom \u00a0 #ThriveMom', es: '#PérdidaDePesoMental \u00a0 #MamáTDAH \u00a0 #ThriveMom' },
   // (How it works section removed, content merged into features header)
   // Reviews section (replaces old founder-quote social proof)
-  { s: '.social-proof .section-title', en: 'Real moms. <span class="highlight">Real relief.</span>', es: 'Mamás reales. <span class="highlight">Alivio real.</span>', html: true },
+  { s: '.social-proof .section-title', en: 'Real ADHD moms. <span class="highlight">Real relief.</span>', es: 'Mamás reales con TDAH. <span class="highlight">Alivio real.</span>', html: true },
   { s: '.social-proof .section-desc', en: 'From beta testers already using ThriveMom™.', es: 'De beta testers que ya usan ThriveMom™.' },
   // Review card 1 — Sarah (always visible)
   { s: '.reviews-grid:not(.reviews-extra) .review-card:nth-child(1) .review-context', en: '🌙 At 2am meltdown', es: '🌙 En crisis a las 2am' },
@@ -235,10 +234,10 @@ var translations = [
   // Waitlist CTA
   { s: '.waitlist-box h2', en: 'Be the first to try ThriveMom™', es: 'Sé la primera en probar ThriveMom™' },
   { s: '.waitlist-box > p', en: 'First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.', es: 'Las primeras 500 mamás obtienen <strong>precio de acceso temprano de por vida</strong>. Sin spam, solo actualizaciones.', html: true },
-  { s: '#waitlistBtn', en: 'Save My Spot', es: 'Guardar Mi Lugar' },
+  { s: '#waitlistBtn', en: 'I Need This', es: 'Lo necesito' },
   // Founder
   // Waitlist progress
-  { s: '.waitlist-count', en: '💜 <span id="waitlistCount2">127</span> of 500 early access spots claimed', es: '💜 <span id="waitlistCount2">127</span> de 500 lugares de acceso temprano ocupados', html: true },
+  { s: '.waitlist-count', en: '💜 373 spots left', es: '💜 373 lugares restantes', html: true },
   { s: '.waitlist-badge', en: 'Early Access', es: 'Acceso Temprano' },
   // Chaos Catcher phone mockup
   { s: '.chaos-screen .chaos-title', en: 'The Chaos Catcher', es: 'El Atrapa Caos' },

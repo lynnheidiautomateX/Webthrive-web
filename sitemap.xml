@@ -11,6 +11,15 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://thrivemom.app/faq.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://thrivemom.app/faq.html"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://thrivemom.app/faq.html?lang=es"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://thrivemom.app/faq.html"/>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://thrivemom.app/privacy.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://thrivemom.app/privacy.html"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://thrivemom.app/privacy.html?lang=es"/>

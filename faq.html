@@ -3,16 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQ | ThriveMom™</title>
-  <meta name="description" content="Frequently asked questions about ThriveMom™, the app built for ADHD moms. Launch date, pricing, features, and how it works.">
+  <title>ADHD Mom App FAQ | ThriveMom™ - Features, Pricing & Launch</title>
+  <meta name="description" content="Frequently asked questions about ThriveMom™, the ADHD mom app. Learn about launch date, free pricing, brain dump features, Sparkle Sessions, bilingual support, and how it works.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://thrivemom.app/faq.html">
   <link rel="alternate" hreflang="en" href="https://thrivemom.app/faq.html">
   <link rel="alternate" hreflang="es" href="https://thrivemom.app/faq.html?lang=es">
   <link rel="alternate" hreflang="x-default" href="https://thrivemom.app/faq.html">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ADHD Mom App FAQ | ThriveMom™">
+  <meta property="og:description" content="Frequently asked questions about ThriveMom™, the ADHD mom app. Learn about launch date, free pricing, brain dump features, Sparkle Sessions, bilingual support, and how it works.">
+  <meta property="og:url" content="https://thrivemom.app/faq.html">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://thrivemom.app/images/og-image.png">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FAQ | ThriveMom™">
+  <meta name="twitter:description" content="Frequently asked questions about ThriveMom™, the app built for ADHD moms.">
+  <meta name="twitter:image" content="https://thrivemom.app/images/og-image.png">
+
   <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css?v=3">
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://thrivemom.app/"},
+      {"@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://thrivemom.app/faq.html"}
+    ]
+  }
+  </script>
 
   <!-- JSON-LD: FAQ rich snippets -->
   <script type="application/ld+json">
@@ -223,7 +249,9 @@
       <h2 data-i18n="askTitle">Still have a question?</h2>
       <p data-i18n="askSub">Ask us anything. We'll reply personally, usually within 24 hours.</p>
       <form class="ask-form" id="askForm" onsubmit="return submitQuestion(event)">
+        <label for="askEmail" class="sr-only">Email address</label>
         <input type="email" id="askEmail" placeholder="Your email" autocomplete="email" required aria-label="Your email">
+        <label for="askQuestion" class="sr-only">Your question</label>
         <textarea id="askQuestion" placeholder="What's your question?" required aria-label="Your question"></textarea>
         <button type="submit" id="askBtn" data-i18n="askBtn">Send question</button>
       </form>
