@@ -1,3 +1,7 @@
 
 # Apps Script local clone (clasp)
 apps-script/
+
+# Dev/mock files
+mock*.html
+generate-og.mjs

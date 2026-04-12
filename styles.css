@@ -106,6 +106,7 @@ nav {
 .lang-toggle {
   background: rgba(107,79,160,0.1);
   border: none;
+  text-decoration: none;
   color: var(--purple-mid);
   padding: 0.35rem 0.75rem;
   border-radius: 50px;
