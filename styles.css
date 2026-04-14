@@ -314,6 +314,15 @@ body.es .lang-es { opacity: 1; }
   animation: fadeUp 0.5s ease-out 0.55s both;
 }
 
+.hero-beta {
+  font-size: 0.88rem;
+  color: var(--purple-deep);
+  margin-top: 0.6rem;
+  font-weight: 500;
+  animation: fadeUp 0.5s ease-out 0.5s both;
+}
+.hero-beta strong { color: var(--purple-mid); font-weight: 800; }
+
 /* Form success */
 .form-success {
   animation: fadeUp 0.4s ease-out;

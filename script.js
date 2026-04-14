@@ -171,6 +171,7 @@ var translations = [
   { s: '.hero-sub', en: 'Feel calm, clear, and back in control in 60 seconds.<br><span class="hero-sub-light">No systems. No pressure. Just relief that actually works.</span>', es: 'Siéntete tranquila, clara y en control otra vez en 60 segundos.<br><span class="hero-sub-light">Sin sistemas. Sin presión. Solo alivio que de verdad funciona.</span>', html: true },
   { s: '#heroBtn', en: '👉 I need this', es: '👉 Lo necesito' },
   { s: '.hero-proof', en: '💜 <strong><span id="waitlistCount">127</span> moms</strong> already said &ldquo;I need this&rdquo;', es: '💜 <strong><span id="waitlistCount">127</span> mamás</strong> ya dijeron &ldquo;lo necesito&rdquo;', html: true },
+  { s: '.hero-beta', en: '✨ Be part of the <strong>Beta group</strong> to try it for <strong>Free</strong>', es: '✨ Sé parte del <strong>grupo Beta</strong> y pruébalo <strong>gratis</strong>', html: true },
   // (countdown labels handled directly in applyLang)
   // Problem
   { s: '.problem .section-title', en: 'ADHD Mom Life: Sound <span class="highlight">familiar?</span>', es: 'Vida de mamá con TDAH: ¿Te suena <span class="highlight">familiar?</span>', html: true },
