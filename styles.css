@@ -1090,23 +1090,28 @@ body.es .lang-es { opacity: 1; }
 }
 
 .feature-icon {
-  font-size: 1.6rem;
-  margin-bottom: 0.75rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: rgba(168,153,230,0.15);
 }
 
-.feature-benefit {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  flex: 1;
-}
-
-.feature-name {
-  margin-top: 1rem;
-  font-size: 0.8rem;
+.feature-card h3 {
+  font-size: 1.05rem;
   font-weight: 700;
-  color: var(--purple-mid);
-  letter-spacing: 0.01em;
+  margin-bottom: 0.4rem;
+  color: var(--purple-deep);
+}
+
+.feature-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 /* Featured cards (top 3 viral features) */
@@ -1117,13 +1122,19 @@ body.es .lang-es { opacity: 1; }
   box-shadow: 0 8px 32px rgba(168, 153, 230, 0.3);
 }
 
-.feature-card.featured .feature-benefit {
-  color: rgba(255,255,255,0.9);
-  font-size: 0.92rem;
+.feature-card.featured .feature-icon {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
 }
 
-.feature-card.featured .feature-name {
-  color: rgba(255,255,255,0.7);
+.feature-card.featured h3 {
+  color: white;
+  font-size: 1.15rem;
+}
+
+.feature-card.featured p {
+  color: rgba(255,255,255,0.88);
+  font-size: 0.9rem;
 }
 
 .feature-card.featured:hover {
