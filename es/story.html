@@ -125,6 +125,39 @@
       padding-left: 1rem;
       border-left: 3px solid var(--purple-light);
     }
+    .story-portrait {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+    .story-portrait-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
+      box-shadow: 0 12px 32px rgba(107, 79, 160, 0.25);
+    }
+    .story-portrait-caption {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+    .story-portrait-caption strong {
+      display: block;
+      color: var(--purple-deep);
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-bottom: 0.15rem;
+    }
+    @media (max-width: 720px) {
+      .story-portrait-img { width: 160px; height: 160px; }
+    }
     .story-cta {
       margin-top: 3rem;
       padding: 2rem;
@@ -189,6 +222,14 @@
 
   <main id="main" class="story-container">
     <h1>Creé ThriveMom porque estaba cansada de sentir que estaba fallando en cosas que "deberían ser fáciles."</h1>
+
+    <figure class="story-portrait">
+      <img src="/images/heidi.jpg" alt="Heidi, fundadora de ThriveMom, sonriendo con calidez" class="story-portrait-img" width="200" height="200">
+      <figcaption class="story-portrait-caption">
+        <strong>Heidi</strong>
+        Fundadora · Mamá con TDAH de 3
+      </figcaption>
+    </figure>
 
     <p>No soy alguien que luchó porque no lo intentó.</p>
 
