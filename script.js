@@ -418,20 +418,20 @@ function applyLang(lang) {
   var ldFaq = document.getElementById('ld-faq');
   if (ldFaq) {
     var faqEN = [
-      { q: 'When does ThriveMom\u2122 launch?', a: 'May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.' },
       { q: 'Is ThriveMom\u2122 only for moms with an ADHD diagnosis?', a: 'Not at all. Whether you have a formal diagnosis, suspect you might have ADHD, or just feel chronically overwhelmed as a mom, ThriveMom\u2122 is designed for you.' },
-      { q: 'Is ThriveMom\u2122 free?', a: 'ThriveMom\u2122 will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version.' },
       { q: 'What makes ThriveMom\u2122 different?', a: 'Most apps are built for neurotypical brains. ThriveMom\u2122 is specifically designed for ADHD: low friction, instant gratification, no guilt trips. Everything takes under 60 seconds to start.' },
+      { q: 'Is ThriveMom\u2122 free?', a: 'ThriveMom\u2122 will have a free tier with core features. Early waitlist members (first 500) get lifetime early access pricing on the full version.' },
       { q: 'What is the Chaos Catcher?', a: 'A brain dump tool. Talk or type everything on your mind, hit Sort My Chaos, and it instantly organizes everything into action categories. It tracks your Mental Weight so you can see how many pounds of mental clutter you cleared and share it on social media.' },
-      { q: 'Is ThriveMom\u2122 available in Spanish?', a: 'Yes. ThriveMom\u2122 has full bilingual support in English and Spanish, built specifically for Latina ADHD moms. Switch anytime with one tap.' }
+      { q: 'Is ThriveMom\u2122 available in Spanish?', a: 'Yes. ThriveMom\u2122 has full bilingual support in English and Spanish, built specifically for Latina ADHD moms. Switch anytime with one tap.' },
+      { q: 'When does ThriveMom\u2122 launch?', a: 'May 9, 2026. Join the waitlist to get notified the moment it goes live. Early waitlist members get priority access and special pricing.' }
     ];
     var faqES = [
-      { q: '\u00bfCu\u00e1ndo se lanza ThriveMom\u2122?', a: '9 de mayo de 2026. \u00danete a la lista de espera para que te avisemos en cuanto est\u00e9 disponible. Los primeros miembros obtienen acceso prioritario y precios especiales.' },
       { q: '\u00bfThriveMom\u2122 es solo para mam\u00e1s con diagn\u00f3stico de TDAH?', a: 'Para nada. Ya sea que tengas un diagn\u00f3stico formal, sospeches que podr\u00edas tener TDAH, o simplemente te sientas cr\u00f3nicamente abrumada como mam\u00e1, ThriveMom\u2122 est\u00e1 dise\u00f1ado para ti.' },
-      { q: '\u00bfThriveMom\u2122 es gratis?', a: 'ThriveMom\u2122 tendr\u00e1 un nivel gratuito con funciones esenciales. Las primeras 500 mam\u00e1s en la lista obtienen precio de acceso temprano de por vida en la versi\u00f3n completa.' },
       { q: '\u00bfQu\u00e9 hace diferente a ThriveMom\u2122?', a: 'La mayor\u00eda de las apps est\u00e1n hechas para cerebros neurot\u00edpicos. ThriveMom\u2122 est\u00e1 dise\u00f1ado espec\u00edficamente para TDAH: baja fricci\u00f3n, gratificaci\u00f3n instant\u00e1nea, sin culpas. Todo toma menos de 60 segundos para empezar.' },
+      { q: '\u00bfThriveMom\u2122 es gratis?', a: 'ThriveMom\u2122 tendr\u00e1 un nivel gratuito con funciones esenciales. Las primeras 500 mam\u00e1s en la lista obtienen precio de acceso temprano de por vida en la versi\u00f3n completa.' },
       { q: '\u00bfQu\u00e9 es el Atrapa Caos?', a: 'Una herramienta de descarga mental. Habla o escribe todo lo que tienes en mente, presiona Ordena Mi Caos, y organiza todo instant\u00e1neamente en categor\u00edas de acci\u00f3n. Registra tu Peso Mental para que veas cu\u00e1ntas libras de desorden mental liberaste y lo compartas en redes sociales.' },
-      { q: '\u00bfThriveMom\u2122 est\u00e1 disponible en espa\u00f1ol?', a: 'S\u00ed. ThriveMom\u2122 tiene soporte biling\u00fce completo en ingl\u00e9s y espa\u00f1ol, dise\u00f1ado especialmente para mam\u00e1s latinas con TDAH. Cambia en cualquier momento con un toque.' }
+      { q: '\u00bfThriveMom\u2122 est\u00e1 disponible en espa\u00f1ol?', a: 'S\u00ed. ThriveMom\u2122 tiene soporte biling\u00fce completo en ingl\u00e9s y espa\u00f1ol, dise\u00f1ado especialmente para mam\u00e1s latinas con TDAH. Cambia en cualquier momento con un toque.' },
+      { q: '\u00bfCu\u00e1ndo se lanza ThriveMom\u2122?', a: '9 de mayo de 2026. \u00danete a la lista de espera para que te avisemos en cuanto est\u00e9 disponible. Los primeros miembros obtienen acceso prioritario y precios especiales.' }
     ];
     var faqData = lang === 'es' ? faqES : faqEN;
     var faqSchema = {
