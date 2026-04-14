@@ -84,103 +84,167 @@
   <link rel="preload" href="../fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="../styles.css?v=10">
   <style>
-    .story-container {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 7rem 1.5rem 4rem;
+    /* Hero section with soft purple wash */
+    .story-hero {
+      background:
+        radial-gradient(ellipse 60% 50% at 80% 20%, rgba(168,153,230,0.25), transparent 70%),
+        radial-gradient(ellipse 50% 60% at 10% 80%, rgba(236,72,153,0.10), transparent 70%),
+        linear-gradient(180deg, #f5f2fc 0%, #faf8ff 100%);
+      padding: 6.5rem 1.5rem 4rem;
     }
-    .story-container h1 {
-      font-size: clamp(1.75rem, 4vw, 2.5rem);
+    .story-hero-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .story-hero-eyebrow {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--purple-mid);
+      margin-bottom: 1.25rem;
+      padding: 0.4rem 0.85rem;
+      background: rgba(107,79,160,0.1);
+      border-radius: 50px;
+    }
+    .story-hero h1 {
+      font-size: clamp(1.85rem, 3.6vw, 2.85rem);
       font-weight: 800;
       color: var(--purple-deep);
-      line-height: 1.2;
-      margin-bottom: 2rem;
+      line-height: 1.18;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
     }
-    .story-container h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--purple-deep);
-      margin: 2rem 0 0.75rem;
+    .story-hero h1 .highlight {
+      background: linear-gradient(180deg, transparent 65%, rgba(218,165,32,0.35) 65%, rgba(218,165,32,0.35) 92%, transparent 92%);
+      padding: 0 2px;
     }
-    .story-container p {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      line-height: 1.75;
-      margin-bottom: 1.1rem;
-    }
-    .story-container p.tight {
-      margin-bottom: 0.4rem;
-    }
-    .story-container ul {
-      padding-left: 1.5rem;
-      margin: 0.5rem 0 1.25rem;
-    }
-    .story-container li {
-      color: var(--text-secondary);
-      font-size: 1.05rem;
-      line-height: 1.75;
-      margin-bottom: 0.4rem;
-    }
-    .story-container .quote {
-      color: var(--purple-mid);
-      font-style: italic;
-      font-weight: 600;
-      margin: 0.4rem 0;
-      padding-left: 1rem;
-      border-left: 3px solid var(--purple-light);
-    }
-    .story-portrait {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 auto 2.5rem;
-      text-align: center;
-    }
-    .story-portrait-img {
-      width: 320px;
-      height: 320px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 20%;
-      padding: 5px;
-      background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
-      box-shadow: 0 16px 40px rgba(107, 79, 160, 0.28);
-    }
-    .story-portrait-caption {
-      margin-top: 1.25rem;
+    .story-hero-byline {
       font-size: 1rem;
       color: var(--text-secondary);
-      line-height: 1.4;
+      line-height: 1.5;
     }
-    .story-portrait-caption strong {
-      display: block;
+    .story-hero-byline strong {
       color: var(--purple-deep);
       font-weight: 800;
-      font-size: 1.15rem;
-      margin-bottom: 0.2rem;
     }
-    @media (max-width: 720px) {
-      .story-portrait-img { width: 240px; height: 240px; }
+    .story-hero-byline .dot {
+      color: var(--purple-light);
+      margin: 0 0.4rem;
+    }
+    .story-portrait {
+      position: relative;
+      margin: 0;
+      max-width: 380px;
+      justify-self: center;
+    }
+    .story-portrait::before {
+      content: "";
+      position: absolute;
+      inset: 12px -12px -12px 12px;
+      background: linear-gradient(135deg, #daa520, #f0c75e);
+      border-radius: 24px;
+      z-index: 0;
+      opacity: 0.85;
+    }
+    .story-portrait::after {
+      content: "";
+      position: absolute;
+      inset: -10px 14px 14px -10px;
+      background: linear-gradient(135deg, var(--purple-light), var(--purple-mid));
+      border-radius: 24px;
+      z-index: 0;
+      opacity: 0.6;
+    }
+    .story-portrait-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 18%;
+      border-radius: 24px;
+      box-shadow: 0 24px 60px rgba(44, 26, 71, 0.22);
+      display: block;
+    }
+
+    /* Body */
+    .story-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 4rem;
+    }
+    .story-body > p:first-of-type::first-letter {
+      font-size: 3.5rem;
+      font-weight: 800;
+      float: left;
+      line-height: 0.95;
+      margin: 0.25rem 0.65rem 0 0;
+      color: var(--purple-mid);
+      font-family: inherit;
+    }
+    .story-body h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--purple-deep);
+      margin: 2.5rem 0 0.85rem;
+      letter-spacing: -0.005em;
+    }
+    .story-body p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.15rem;
+    }
+    .story-body p.tight {
+      margin-bottom: 0.4rem;
+    }
+    .story-body ul {
+      padding-left: 1.5rem;
+      margin: 0.75rem 0 1.5rem;
+    }
+    .story-body li {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 0.5rem;
+    }
+    .story-body .quote {
+      color: var(--purple-deep);
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin: 0.5rem 0;
+      padding: 0.5rem 0 0.5rem 1.25rem;
+      border-left: 4px solid var(--purple-light);
+      background: linear-gradient(90deg, rgba(168,153,230,0.08), transparent);
     }
     .story-cta {
       margin-top: 3rem;
-      padding: 2rem;
+      padding: 2.5rem 2rem;
       background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
-      border-radius: 20px;
+      border-radius: 24px;
       text-align: center;
       color: white;
+      box-shadow: 0 12px 32px rgba(107,79,160,0.25);
     }
     .story-cta p {
       color: white;
-      font-size: 1.1rem;
-      margin-bottom: 1.25rem;
+      font-size: 1.15rem;
+      margin-bottom: 1.5rem;
       font-weight: 600;
     }
     .story-cta a {
       display: inline-block;
       background: white;
       color: var(--purple-deep);
-      padding: 0.85rem 2rem;
+      padding: 0.95rem 2.25rem;
       border-radius: 50px;
       font-weight: 800;
       text-decoration: none;
@@ -199,8 +263,29 @@
       font-size: 0.95rem;
     }
     .back-link:hover { text-decoration: underline; }
-    @media (max-width: 720px) {
-      .story-container { padding: 6rem 1.25rem 3rem; }
+
+    @media (max-width: 860px) {
+      .story-hero {
+        padding: 5.5rem 1.25rem 3rem;
+      }
+      .story-hero-inner {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        text-align: center;
+      }
+      .story-hero-eyebrow {
+        margin: 0 auto 1rem;
+      }
+      .story-portrait {
+        order: -1;
+        max-width: 280px;
+      }
+      .story-body {
+        padding: 3rem 1.25rem 3rem;
+      }
+      .story-body > p:first-of-type::first-letter {
+        font-size: 3rem;
+      }
     }
   </style>
 </head>
@@ -224,17 +309,23 @@
     </button>
   </nav>
 
-  <main id="main" class="story-container">
-    <h1>Creé ThriveMom porque estaba cansada de sentir que estaba fallando en cosas que "deberían ser fáciles."</h1>
+  <main id="main">
+    <section class="story-hero">
+      <div class="story-hero-inner">
+        <div class="story-hero-text">
+          <span class="story-hero-eyebrow">Historia de la Fundadora</span>
+          <h1>Creé ThriveMom porque estaba cansada de sentir que estaba fallando en cosas que <span class="highlight">"deberían ser fáciles."</span></h1>
+          <p class="story-hero-byline">
+            Escrito por <strong>Heidi</strong><span class="dot">·</span>Fundadora, mamá con TDAH de 3
+          </p>
+        </div>
+        <figure class="story-portrait">
+          <img src="/images/heidi.jpg" alt="Heidi, fundadora de ThriveMom, sonriendo con calidez — mamá con TDAH de 3 hijos que creó ThriveMom porque ella misma lo necesitaba" class="story-portrait-img" width="380" height="475" loading="eager" fetchpriority="high" decoding="async">
+        </figure>
+      </div>
+    </section>
 
-    <figure class="story-portrait">
-      <img src="/images/heidi.jpg" alt="Heidi, fundadora de ThriveMom, sonriendo con calidez — mamá con TDAH de 3 hijos que creó ThriveMom porque ella misma lo necesitaba" class="story-portrait-img" width="320" height="320" loading="eager" fetchpriority="high" decoding="async">
-      <figcaption class="story-portrait-caption">
-        <strong>Heidi</strong>
-        Fundadora · Mamá con TDAH de 3
-      </figcaption>
-    </figure>
-
+  <div class="story-body">
     <p>No soy alguien que luchó porque no lo intentó.</p>
 
     <p class="tight">Soy contadora.</p>
@@ -319,6 +410,7 @@
     </div>
 
     <a href="/es/" class="back-link">&larr; Volver a ThriveMom™</a>
+  </div>
   </main>
 
   <footer>
