@@ -179,7 +179,7 @@ var currentLang = urlLang === 'es' ? 'es' : (localStorage.getItem(LANG_KEY) || '
 // Translation map: CSS selector -> { en, es }
 var translations = [
   // Nav
-  { s: '.nav-links a[href="#features"]', en: 'Features', es: 'Funciones' },
+  { s: '.nav-links a[href="#features"]', en: 'Benefits', es: 'Beneficios' },
   { s: '.nav-links a[href="/story.html"]', en: 'My Story', es: 'Mi Historia' },
   { s: '.nav-links a[href="/faq.html"]', en: 'FAQ', es: 'Preguntas' },
   { s: '.nav-cta', en: 'I need this', es: 'Lo necesito' },
