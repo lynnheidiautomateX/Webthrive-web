@@ -34,8 +34,26 @@ function handleWaitlist(e, formId) {
   e.preventDefault();
 
   var emailInput = document.getElementById(formId === 'hero' ? 'heroEmail' : 'waitlistEmail');
+  var errorId = (formId === 'hero' ? 'heroEmail' : 'waitlistEmail') + 'Error';
+  var errorEl = document.getElementById(errorId);
   var btn = document.getElementById(formId === 'hero' ? 'heroBtn' : 'waitlistBtn');
   var email = emailInput.value.trim();
+
+  // Validate email
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailRe.test(email)) {
+    emailInput.setAttribute('aria-invalid', 'true');
+    if (errorEl) {
+      errorEl.textContent = currentLang === 'es'
+        ? 'Por favor, introduce un correo electrónico válido.'
+        : 'Please enter a valid email address.';
+      errorEl.setAttribute('data-visible', 'true');
+    }
+    emailInput.focus();
+    return false;
+  }
+  emailInput.removeAttribute('aria-invalid');
+  if (errorEl) errorEl.setAttribute('data-visible', 'false');
 
   btn.textContent = currentLang === 'es' ? 'Uniendo...' : 'Joining...';
   btn.disabled = true;
@@ -268,6 +286,7 @@ var translations = [
   { s: '.footer-brand p', en: 'For ADHD moms, by an ADHD mom.<br>Built with love by a mama who gets it.', es: 'Para mamás con TDAH, por una mamá con TDAH.<br>Hecha con amor por una mamá que entiende.', html: true },
   { s: '.footer-links a[href="/faq.html"]', en: 'FAQ', es: 'Preguntas' },
   { s: '.footer-links a[href="mailto:support@thrivemom.app"]', en: 'Contact', es: 'Contacto' },
+  { s: '.footer-links a[href="/accessibility.html"]', en: 'Accessibility', es: 'Accesibilidad' },
   { s: '.footer-links a[href="/privacy.html"]', en: 'Privacy Policy', es: 'Política de Privacidad' },
   { s: '.footer-links a[href="/terms.html"]', en: 'Terms & Conditions', es: 'Términos y Condiciones' },
   // (footer-bottom handled directly in applyLang)

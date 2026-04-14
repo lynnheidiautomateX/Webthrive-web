@@ -168,7 +168,7 @@
   <meta name="robots" content="index, follow, noai, noimageai">
 
   <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 </head>
 <body>
 
@@ -225,11 +225,12 @@
       <!-- Waitlist form -->
       <form id="heroForm" class="hero-form" onsubmit="return handleWaitlist(event, 'hero')" aria-label="Join the ThriveMom™ waitlist">
         <label for="heroEmail" class="sr-only">Email address</label>
-        <input type="email" id="heroEmail" placeholder="Enter your email" autocomplete="email" required aria-label="Email address for waitlist">
+        <input type="email" id="heroEmail" placeholder="Enter your email" autocomplete="email" required aria-label="Email address for waitlist" aria-describedby="heroEmailError">
         <button type="submit" id="heroBtn">&#128073; I need this</button>
       </form>
+      <p class="form-error" id="heroEmailError" role="alert"></p>
       <p class="hero-beta">&#10024; Be part of the <strong>Beta group</strong> to try it for <strong>Free</strong></p>
-      <div id="heroSuccess" class="form-success" style="display:none;">
+      <div id="heroSuccess" class="form-success" style="display:none;" aria-live="polite">
         <span class="success-icon">&#10003;</span>
         <p>You're on the list! Check your inbox.</p>
       </div>
@@ -532,10 +533,11 @@
         <p>First 500 moms get <strong>lifetime early access pricing</strong>. No spam, just launch updates.</p>
         <form id="waitlistForm" class="waitlist-form" onsubmit="return handleWaitlist(event, 'waitlist')" aria-label="Save your spot on the ThriveMom™ waitlist">
           <label for="waitlistEmail" class="sr-only">Email address</label>
-          <input type="email" id="waitlistEmail" placeholder="Your best email" autocomplete="email" required aria-label="Email address for early access">
+          <input type="email" id="waitlistEmail" placeholder="Your best email" autocomplete="email" required aria-label="Email address for early access" aria-describedby="waitlistEmailError">
           <button type="submit" id="waitlistBtn">I Need This</button>
         </form>
-        <div id="waitlistSuccess" class="form-success" style="display:none;">
+        <p class="form-error" id="waitlistEmailError" role="alert"></p>
+        <div id="waitlistSuccess" class="form-success" style="display:none;" aria-live="polite">
           <span class="success-icon">&#10003;</span>
           <p>You're in! We'll email you before anyone else.</p>
         </div>
@@ -560,6 +562,7 @@
       <div class="footer-links">
         <a href="/faq.html">FAQ</a>
         <a href="mailto:support@thrivemom.app">Contact</a>
+        <a href="/accessibility.html">Accessibility</a>
         <a href="/privacy.html">Privacy Policy</a>
         <a href="/terms.html">Terms &amp; Conditions</a>
       </div>
@@ -570,7 +573,6 @@
     </div>
   </footer>
 
-  <script defer src="script.js?v=18"></script>
-  <script>document.addEventListener('contextmenu',function(e){e.preventDefault()});document.onkeydown=function(e){if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c'))return false};</script>
+  <script defer src="script.js?v=19"></script>
 </body>
 </html>

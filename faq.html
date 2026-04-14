@@ -28,7 +28,7 @@
   <meta name="twitter:image" content="https://thrivemom.app/images/og-image.png">
 
   <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="styles.css?v=9">
+  <link rel="stylesheet" href="styles.css?v=10">
 
   <!-- JSON-LD: BreadcrumbList -->
   <script type="application/ld+json">
@@ -250,14 +250,16 @@
     <section class="ask-section">
       <h2 data-i18n="askTitle">Still have a question?</h2>
       <p data-i18n="askSub">Ask us anything. We'll reply personally, usually within 24 hours.</p>
-      <form class="ask-form" id="askForm" onsubmit="return submitQuestion(event)">
+      <form class="ask-form" id="askForm" onsubmit="return submitQuestion(event)" novalidate>
         <label for="askEmail" class="sr-only">Email address</label>
-        <input type="email" id="askEmail" placeholder="Your email" autocomplete="email" required aria-label="Your email">
+        <input type="email" id="askEmail" placeholder="Your email" autocomplete="email" required aria-label="Your email" aria-describedby="askEmailError">
+        <p class="form-error" id="askEmailError" role="alert"></p>
         <label for="askQuestion" class="sr-only">Your question</label>
-        <textarea id="askQuestion" placeholder="What's your question?" required aria-label="Your question"></textarea>
+        <textarea id="askQuestion" placeholder="What's your question?" required aria-label="Your question" aria-describedby="askQuestionError"></textarea>
+        <p class="form-error" id="askQuestionError" role="alert"></p>
         <button type="submit" id="askBtn" data-i18n="askBtn">Send question</button>
       </form>
-      <div class="ask-success" id="askSuccess" data-i18n="askSuccess">💜 Thanks! We'll get back to you within 24 hours.</div>
+      <div class="ask-success" id="askSuccess" data-i18n="askSuccess" aria-live="polite">💜 Thanks! We'll get back to you within 24 hours.</div>
     </section>
 
     <a href="/" class="back-link" data-i18n="back">&larr; Back to ThriveMom™</a>
@@ -391,9 +393,33 @@
       var form = document.getElementById('askForm');
       var success = document.getElementById('askSuccess');
 
+      var emailErr = document.getElementById('askEmailError');
+      var qErr = document.getElementById('askQuestionError');
       var email = emailEl.value.trim();
       var question = qEl.value.trim();
-      if (!email || !question) return false;
+      var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      var hasError = false;
+      var msgEmail = currentLang === 'es' ? 'Por favor, introduce un correo electrónico válido.' : 'Please enter a valid email address.';
+      var msgQuestion = currentLang === 'es' ? 'Por favor, escribe tu pregunta.' : 'Please enter your question.';
+      if (!emailRe.test(email)) {
+        emailEl.setAttribute('aria-invalid', 'true');
+        if (emailErr) { emailErr.textContent = msgEmail; emailErr.setAttribute('data-visible', 'true'); }
+        if (!hasError) emailEl.focus();
+        hasError = true;
+      } else {
+        emailEl.removeAttribute('aria-invalid');
+        if (emailErr) emailErr.setAttribute('data-visible', 'false');
+      }
+      if (!question) {
+        qEl.setAttribute('aria-invalid', 'true');
+        if (qErr) { qErr.textContent = msgQuestion; qErr.setAttribute('data-visible', 'true'); }
+        if (!hasError) qEl.focus();
+        hasError = true;
+      } else {
+        qEl.removeAttribute('aria-invalid');
+        if (qErr) qErr.setAttribute('data-visible', 'false');
+      }
+      if (hasError) return false;
 
       btn.textContent = translations[currentLang].askBtnSending;
       btn.disabled = true;
@@ -420,6 +446,5 @@
       });
     });
   </script>
-  <script>document.addEventListener('contextmenu',function(e){e.preventDefault()});document.onkeydown=function(e){if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c'))return false};</script>
 </body>
 </html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility Statement | ThriveMom™</title>
+  <meta name="description" content="ThriveMom™ accessibility statement. Our commitment to WCAG 2.2 Level AA and how we support users with disabilities.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://thrivemom.app/accessibility.html">
+  <link rel="alternate" hreflang="en" href="https://thrivemom.app/accessibility.html">
+  <link rel="alternate" hreflang="x-default" href="https://thrivemom.app/accessibility.html">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css?v=10">
+  <style>
+    .policy-container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 7rem 2rem 4rem;
+    }
+    .policy-container h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--purple-deep);
+      margin-bottom: 0.5rem;
+    }
+    .policy-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .policy-container h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--purple-deep);
+      margin: 2rem 0 0.5rem;
+    }
+    .policy-container h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--purple-deep);
+      margin: 1.5rem 0 0.4rem;
+    }
+    .policy-container p,
+    .policy-container li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 0.5rem;
+    }
+    .policy-container ul {
+      padding-left: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .policy-container a {
+      color: var(--purple-mid);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .policy-container a:hover { text-decoration: underline; }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--purple-mid);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <nav aria-label="Main navigation">
+    <a href="/" class="nav-logo">ThriveMom™</a>
+    <div class="nav-links" id="navLinks">
+      <a href="/#features">Features</a>
+      <a href="/#proof">About</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/#waitlist" class="nav-cta">I need this</a>
+      <a href="/es/accessibility.html" class="lang-toggle" aria-label="Switch language">
+        <span class="lang-en">EN</span> | <span class="lang-es">ES</span>
+      </a>
+    </div>
+    <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <main id="main" class="policy-container">
+    <h1>Accessibility Statement</h1>
+    <p class="policy-date">Last updated: April 14, 2026</p>
+
+    <h2>Our Commitment</h2>
+    <p>At ThriveMom, we are committed to making our website and app accessible to as many people as possible, including individuals with disabilities. We design ThriveMom to be simple, supportive, and usable in real-life moments, including when users feel overwhelmed, distracted, or cognitively overloaded. Accessibility is built into how we design, test, and improve the product.</p>
+
+    <h2>Conformance Status</h2>
+    <p>The Web Content Accessibility Guidelines (WCAG) define requirements for improving accessibility for people with disabilities.</p>
+    <p><strong>ThriveMom is substantially compliant with WCAG 2.2 Level AA.</strong></p>
+    <p>We continuously audit and improve accessibility across the website and app. Our current efforts include:</p>
+    <ul>
+      <li>Color contrast designed to meet or exceed WCAG AA ratios (4.5:1 for standard text, 3:1 for large text)</li>
+      <li>Touch targets designed to meet or exceed the recommended 44x44px minimum</li>
+      <li>Visible focus indicators for interactive elements and assistive navigation</li>
+      <li>Keyboard-operable interactions throughout</li>
+      <li>Skip links and proper landmark regions for screen reader users</li>
+    </ul>
+    <p>While we aim for full compliance, accessibility is an ongoing process and we continue to refine and validate across devices and use cases.</p>
+
+    <h2>Supported Environments</h2>
+    <p>ThriveMom is designed to work with built-in accessibility tools on modern devices:</p>
+    <ul>
+      <li>iOS: VoiceOver screen reader</li>
+      <li>Android: TalkBack screen reader</li>
+      <li>Desktop: NVDA, JAWS, and VoiceOver screen readers</li>
+      <li>Dynamic text resizing</li>
+      <li>Bold text</li>
+      <li>High-contrast display settings</li>
+      <li>Reduced motion settings</li>
+    </ul>
+    <p>We use the Lexend font throughout to support readability and reduce visual strain.</p>
+    <p>We test key user flows such as joining the waitlist, browsing the FAQ, and submitting questions using these tools.</p>
+
+    <h2>Accessibility Features and Ongoing Work</h2>
+
+    <h3>Chat Interface (App)</h3>
+    <p>The chat experience is designed to work with screen readers using live regions and focus management. New messages are announced when possible, and focus is guided to relevant content.</p>
+    <p>We continue refining this behavior, especially for longer or fast-paced conversations.</p>
+
+    <h3>Motion and Animations</h3>
+    <p>ThriveMom respects your device's reduced motion settings by minimizing or disabling animations automatically.</p>
+    <p>A manual "Reduce Animations" toggle is also available in the app's Profile settings for additional control.</p>
+
+    <h3>Color Contrast</h3>
+    <p>We design text and interface elements to meet WCAG AA contrast standards across light and dark modes.</p>
+    <p>We periodically audit contrast across screens and continue improving consistency.</p>
+
+    <h3>Touch Target Sizes</h3>
+    <p>Interactive elements are designed to meet recommended minimum touch target sizes for improved usability.</p>
+    <p>We continue validating new features to maintain consistency.</p>
+
+    <p>If you experience an issue not listed here, please contact us. Your feedback directly shapes our improvements.</p>
+
+    <h2>Feedback and Contact</h2>
+    <p>We welcome your feedback and are committed to improving accessibility. If you encounter any barriers or need assistance:</p>
+    <p><a href="mailto:support@thrivemom.app">support@thrivemom.app</a></p>
+    <p>Response time: Within 2 business days</p>
+
+    <h2>Assessment Approach</h2>
+    <p>We assess accessibility through:</p>
+    <ul>
+      <li>Internal testing by our development team</li>
+      <li>Manual testing using VoiceOver and TalkBack</li>
+      <li>Automated testing with axe DevTools and Lighthouse</li>
+      <li>Ongoing iteration based on real user feedback</li>
+    </ul>
+
+    <a href="/" class="back-link">&larr; Back to ThriveMom™</a>
+  </main>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ThriveMom™. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

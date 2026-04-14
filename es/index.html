@@ -165,7 +165,7 @@
   <script defer data-domain="thrivemom.app" src="https://plausible.io/js/script.js"></script>
 
   <link rel="preload" href="../fonts/lexend-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../styles.css?v=9">
+  <link rel="stylesheet" href="../styles.css?v=10">
 </head>
 <body class="es">
 
@@ -220,11 +220,12 @@
       <!-- Waitlist form -->
       <form id="heroForm" class="hero-form" onsubmit="return handleWaitlist(event, 'hero')" aria-label="Únete a la lista de espera de ThriveMom™">
         <label for="heroEmail" class="sr-only">Correo electrónico</label>
-        <input type="email" id="heroEmail" placeholder="Ingresa tu email" autocomplete="email" required aria-label="Correo electrónico para la lista de espera">
+        <input type="email" id="heroEmail" placeholder="Ingresa tu email" autocomplete="email" required aria-label="Correo electrónico para la lista de espera" aria-describedby="heroEmailError">
         <button type="submit" id="heroBtn">&#128073; Lo necesito</button>
       </form>
+      <p class="form-error" id="heroEmailError" role="alert"></p>
       <p class="hero-beta">&#10024; Sé parte del <strong>grupo Beta</strong> y pruébalo <strong>gratis</strong></p>
-      <div id="heroSuccess" class="form-success" style="display:none;">
+      <div id="heroSuccess" class="form-success" style="display:none;" aria-live="polite">
         <span class="success-icon">&#10003;</span>
         <p>¡Estás en la lista! Revisa tu bandeja.</p>
       </div>
@@ -527,10 +528,11 @@
         <p>Las primeras 500 mamás obtienen <strong>precio de acceso temprano de por vida</strong>. Sin spam, solo actualizaciones.</p>
         <form id="waitlistForm" class="waitlist-form" onsubmit="return handleWaitlist(event, 'waitlist')" aria-label="Reserva tu lugar en la lista de espera de ThriveMom™">
           <label for="waitlistEmail" class="sr-only">Correo electrónico</label>
-          <input type="email" id="waitlistEmail" placeholder="Tu mejor email" autocomplete="email" required aria-label="Correo electrónico para acceso temprano">
+          <input type="email" id="waitlistEmail" placeholder="Tu mejor email" autocomplete="email" required aria-label="Correo electrónico para acceso temprano" aria-describedby="waitlistEmailError">
           <button type="submit" id="waitlistBtn">Lo necesito</button>
         </form>
-        <div id="waitlistSuccess" class="form-success" style="display:none;">
+        <p class="form-error" id="waitlistEmailError" role="alert"></p>
+        <div id="waitlistSuccess" class="form-success" style="display:none;" aria-live="polite">
           <span class="success-icon">&#10003;</span>
           <p>¡Estás dentro! Te escribiremos antes que a nadie.</p>
         </div>
@@ -555,6 +557,7 @@
       <div class="footer-links">
         <a href="/es/faq.html">Preguntas</a>
         <a href="mailto:support@thrivemom.app">Contacto</a>
+        <a href="/es/accessibility.html">Accesibilidad</a>
         <a href="/privacy.html">Política de Privacidad</a>
         <a href="/terms.html">Términos y Condiciones</a>
       </div>
@@ -565,7 +568,6 @@
     </div>
   </footer>
 
-  <script defer src="../script.js?v=18"></script>
-  <script>document.addEventListener('contextmenu',function(e){e.preventDefault()});document.onkeydown=function(e){if(e.ctrlKey&&(e.key==='u'||e.key==='s'||e.key==='c'))return false};</script>
+  <script defer src="../script.js?v=19"></script>
 </body>
 </html>
