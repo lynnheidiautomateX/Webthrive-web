@@ -180,7 +180,7 @@ var currentLang = urlLang === 'es' ? 'es' : (localStorage.getItem(LANG_KEY) || '
 var translations = [
   // Nav
   { s: '.nav-links a[href="#features"]', en: 'Features', es: 'Funciones' },
-  { s: '.nav-links a[href="#proof"]', en: 'About', es: 'Nosotras' },
+  { s: '.nav-links a[href="/story.html"]', en: 'My Story', es: 'Mi Historia' },
   { s: '.nav-links a[href="/faq.html"]', en: 'FAQ', es: 'Preguntas' },
   { s: '.nav-cta', en: 'I need this', es: 'Lo necesito' },
   // Hero
@@ -284,6 +284,7 @@ var translations = [
   { s: '.chaos-word:nth-child(6)', en: 'prep dinner', es: 'preparar cena' },
   // Footer
   { s: '.footer-brand p', en: 'For ADHD moms, by an ADHD mom.<br>Built with love by a mama who gets it.', es: 'Para mamás con TDAH, por una mamá con TDAH.<br>Hecha con amor por una mamá que entiende.', html: true },
+  { s: '.footer-links a[href="/story.html"]', en: 'My Story', es: 'Mi Historia' },
   { s: '.footer-links a[href="/faq.html"]', en: 'FAQ', es: 'Preguntas' },
   { s: '.footer-links a[href="mailto:support@thrivemom.app"]', en: 'Contact', es: 'Contacto' },
   { s: '.footer-links a[href="/accessibility.html"]', en: 'Accessibility', es: 'Accesibilidad' },
